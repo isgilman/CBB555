@@ -1,0 +1,32 @@
+# Main dir
+/Defining_Affinities_and_Distances.ipynb
+/gilman_FFNN.ipynb
+/notebook.tex
+
+# Assignment 1
+/gilman_ian_ps1/gilman_ian_ps1_report.pdf
+/gilman_ian_ps1/gilman_ian_ps1_report.tex
+/gilman_ian_ps1/gilman_ian_ps1.aux
+/gilman_ian_ps1/gilman_ian_ps1.log
+/gilman_ian_ps1/gilman_ian_ps1.out
+/gilman_ian_ps1/gilman_ian_ps1.py
+/gilman_ian_ps1/gilman_ian_ps1.synctex.gz
+/gilman_ian_ps1/gilman_ian_ps1.tar.gz
+/gilman_ian_ps1/code/
+
+# Assignment 2
+/gilman_ian_ps2/gilman_ian_ps2.pdf
+/gilman_ian_ps2/gilman_ian_ps2.tar.gz
+/gilman_ian_ps2/ps2_functions.py
+/gilman_ian_ps2/ps2_functions.pyc
+
+# Assignment 3
+/gilman_ian_ps3/gilman_ian_ps3_functions.py
+/gilman_ian_ps3/gilman_ian_ps3.pdf
+/gilman_ian_ps3/gilman_ian_ps3.zip
+
+# Neural nets
+/Neural_nets_deep_learning/mnist_loader.pyc
+/Neural_nets_deep_learning/mnist.pkl.gz
+
+

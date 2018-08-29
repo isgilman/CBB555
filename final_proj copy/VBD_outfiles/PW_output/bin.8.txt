@@ -1,0 +1,7 @@
+locus142
+locus180
+locus408
+locus417
+locus512
+locus632
+locus727

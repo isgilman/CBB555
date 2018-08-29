@@ -1,0 +1,6 @@
+locus0
+locus12
+locus149
+locus235
+locus313
+locus492

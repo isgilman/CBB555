@@ -1,0 +1,266 @@
+
+================== ASTRAL ===================== 
+
+This is ASTRAL version 5.5.9
+Gene trees are treated as unrooted
+19 trees read from CBD_GTCM.tre
+All output trees will be *arbitrarily* rooted at T100_0
+
+======== Running the main analysis
+Number of taxa: 100 (100 species)
+Taxa: [T100_0, T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0, T5_0, T6_0, T7_0, T8_0, T9_0, T1_0, T2_0, T3_0, T4_0, T24_0, T25_0, T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0, T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0, T55_0, T56_0, T57_0, T58_0, T59_0, T60_0, T61_0, T62_0, T63_0, T64_0, T65_0, T66_0, T67_0, T68_0, T69_0, T70_0, T71_0, T72_0, T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0, T82_0, T83_0, T84_0, T85_0, T86_0, T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0, T96_0, T98_0, T97_0, T99_0]
+Taxon occupancy: {T81_0=18, T13_0=18, T59_0=19, T32_0=19, T51_0=19, T97_0=19, T74_0=19, T17_0=18, T55_0=19, T36_0=19, T78_0=18, T93_0=18, T70_0=19, T48_0=18, T8_0=19, T21_0=18, T4_0=19, T40_0=19, T86_0=17, T29_0=19, T63_0=19, T44_0=19, T25_0=19, T67_0=19, T80_0=18, T12_0=18, T35_0=18, T58_0=18, T31_0=19, T50_0=19, T73_0=19, T96_0=19, T16_0=18, T39_0=19, T54_0=19, T77_0=19, T92_0=18, T24_0=18, T47_0=18, T7_0=19, T20_0=18, T3_0=19, T62_0=19, T85_0=18, T28_0=19, T43_0=19, T66_0=19, T89_0=18, T60_0=19, T34_0=18, T11_0=18, T30_0=19, T72_0=19, T19_0=18, T53_0=19, T95_0=18, T38_0=19, T76_0=19, T15_0=17, T57_0=18, T99_0=18, T91_0=18, T2_0=19, T100_0=18, T23_0=18, T69_0=19, T6_0=19, T84_0=18, T61_0=19, T42_0=19, T27_0=19, T65_0=19, T46_0=19, T88_0=18, T82_0=18, T10_0=18, T33_0=18, T18_0=18, T52_0=19, T75_0=19, T94_0=18, T14_0=18, T37_0=19, T56_0=19, T79_0=18, T98_0=19, T71_0=19, T90_0=18, T1_0=19, T9_0=19, T22_0=18, T49_0=19, T5_0=19, T83_0=18, T41_0=17, T64_0=19, T26_0=19, T45_0=19, T68_0=19, T87_0=18}
+Number of gene trees: 19
+3 trees have missing taxa
+Calculating quartet distance matrix (for completion of X)
+Species tree distances calculated ...
+Will attempt to complete bipartitions from X before adding using a distance matrix.
+Building set of clusters (X) from gene trees 
+------------------------------
+gradient0: 1953
+Number of Clusters after addition by distance: 1953
+calculating extra bipartitions to be added at level 1 ...
+Adding to X using resolutions of greedy consensus ...
+Limit for sigma of degrees:2550
+polytomy size limit : 7
+discarded polytomies:  [3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6, 7]
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 1953
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1953
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1953
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1953
+Threshold 0.3333333333333333:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1953
+polytomy of size 7; rounds with additions with at least 5 support: 0; clusters: 1953
+polytomy of size 5; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 6; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 6; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 5; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 1955
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 1955
+max k is :0
+Number of Clusters after addition by greedy: 1955
+gradient0 in heuristiic: 1955
+partitions formed in 1.491 secs
+Dynamic Programming starting after 1.491 secs
+Using tree-based weight calculation.
+Using polytree-based weight calculation.
+Polytree max score: 69066562
+Polytree building time: 0.044 seconds.
+Number of quartet trees in the gene trees: 69066562
+Size of largest cluster: 100
+Greedy score: 54610652
+estimationFactor: 1.264708613989813
+Sub-optimal score: 57018098
+Total Number of elements weighted: 2550
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.8442637553031813
+Optimization score: 58310395
+Optimal tree inferred in 1.921 secs.
+(T86_0,(T85_0,(T84_0,(((T94_0,T95_0),((T87_0,(T88_0,T89_0)),((T92_0,T93_0),(T90_0,T91_0)))),(((T82_0,T83_0),((T81_0,T80_0),(T79_0,(T73_0,(T74_0,((T75_0,T76_0),(T77_0,T78_0))))))),(((T70_0,(T71_0,T72_0)),(T69_0,((T67_0,T68_0),(T64_0,(T65_0,T66_0))))),((T63_0,(T62_0,(T59_0,(T60_0,T61_0)))),(((T100_0,T99_0),(T96_0,(T98_0,T97_0))),(((T55_0,T56_0),(T57_0,T58_0)),((((T2_0,T3_0),(T1_0,T4_0)),((T5_0,((T6_0,T7_0),(T8_0,T9_0))),((T18_0,(T10_0,(T11_0,T12_0))),(((T13_0,T14_0),(T15_0,(T16_0,T17_0))),((T22_0,T23_0),(T20_0,(T19_0,T21_0))))))),((T24_0,T25_0),((((T53_0,T54_0),(T50_0,(T51_0,T52_0))),((T49_0,(T47_0,T48_0)),(T42_0,((T43_0,T44_0),(T45_0,T46_0))))),((T41_0,(T36_0,(T40_0,(T39_0,(T37_0,T38_0))))),((T26_0,(T35_0,(T33_0,T34_0))),((T31_0,T32_0),(T28_0,(T30_0,(T27_0,T29_0))))))))))))))))));
+Final quartet score is: 58310395
+Final normalized quartet score is: 0.8442637553031813
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T98_0, T97_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T96_0, T98_0, T97_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T55_0, T56_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T57_0, T58_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T55_0, T56_0, T57_0, T58_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T2_0, T3_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T1_0, T4_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T1_0, T2_0, T3_0, T4_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T6_0, T7_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T8_0, T9_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T6_0, T7_0, T8_0, T9_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T5_0, T6_0, T7_0, T8_0, T9_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T11_0, T12_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T10_0, T11_0, T12_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T10_0, T11_0, T12_0, T18_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T13_0, T14_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 17:
+	{T16_0, T17_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 17:
+	{T15_0, T16_0, T17_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T13_0, T14_0, T15_0, T16_0, T17_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T22_0, T23_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T19_0, T21_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T19_0, T20_0, T21_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T19_0, T20_0, T21_0, T22_0, T23_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T13_0, T14_0, T15_0, T16_0, T17_0, T19_0, T20_0, T21_0, T22_0, T23_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0, T5_0, T6_0, T7_0, T8_0, T9_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0, T5_0, T6_0, T7_0, T8_0, T9_0, T1_0, T2_0, T3_0, T4_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T24_0, T25_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T53_0, T54_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T51_0, T52_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T50_0, T51_0, T52_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T50_0, T51_0, T52_0, T53_0, T54_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T47_0, T48_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T47_0, T48_0, T49_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T43_0, T44_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T45_0, T46_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T43_0, T44_0, T45_0, T46_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T42_0, T43_0, T44_0, T45_0, T46_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T37_0, T38_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T37_0, T38_0, T39_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T37_0, T38_0, T39_0, T40_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 17:
+	{T36_0, T37_0, T38_0, T39_0, T40_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 17:
+	{T36_0, T37_0, T38_0, T39_0, T40_0, T41_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T33_0, T34_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T33_0, T34_0, T35_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T26_0, T33_0, T34_0, T35_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T31_0, T32_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T27_0, T29_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T27_0, T29_0, T30_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T27_0, T28_0, T29_0, T30_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T27_0, T28_0, T29_0, T30_0, T31_0, T32_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0, T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T24_0, T25_0, T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0, T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0, T5_0, T6_0, T7_0, T8_0, T9_0, T1_0, T2_0, T3_0, T4_0, T24_0, T25_0, T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0, T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0, T5_0, T6_0, T7_0, T8_0, T9_0, T1_0, T2_0, T3_0, T4_0, T24_0, T25_0, T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0, T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0, T55_0, T56_0, T57_0, T58_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T60_0, T61_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T59_0, T60_0, T61_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T59_0, T60_0, T61_0, T62_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T59_0, T60_0, T61_0, T62_0, T63_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T71_0, T72_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T70_0, T71_0, T72_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T67_0, T68_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T65_0, T66_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T64_0, T65_0, T66_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T64_0, T65_0, T66_0, T67_0, T68_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T64_0, T65_0, T66_0, T67_0, T68_0, T69_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T64_0, T65_0, T66_0, T67_0, T68_0, T69_0, T70_0, T71_0, T72_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T82_0, T83_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T81_0, T80_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T75_0, T76_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T77_0, T78_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T75_0, T76_0, T77_0, T78_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T74_0, T75_0, T76_0, T77_0, T78_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T73_0, T74_0, T75_0, T76_0, T77_0, T78_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0, T82_0, T83_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T94_0, T95_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T88_0, T89_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T87_0, T88_0, T89_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T92_0, T93_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T90_0, T91_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T90_0, T91_0, T92_0, T93_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 17:
+	{T85_0, T86_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T84_0, T85_0, T86_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T84_0, T85_0, T86_0, T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0, T82_0, T83_0, T84_0, T85_0, T86_0, T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T64_0, T65_0, T66_0, T67_0, T68_0, T69_0, T70_0, T71_0, T72_0, T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0, T82_0, T83_0, T84_0, T85_0, T86_0, T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 19:
+	{T59_0, T60_0, T61_0, T62_0, T63_0, T64_0, T65_0, T66_0, T67_0, T68_0, T69_0, T70_0, T71_0, T72_0, T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0, T82_0, T83_0, T84_0, T85_0, T86_0, T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0, T5_0, T6_0, T7_0, T8_0, T9_0, T1_0, T2_0, T3_0, T4_0, T24_0, T25_0, T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0, T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0, T55_0, T56_0, T57_0, T58_0, T59_0, T60_0, T61_0, T62_0, T63_0, T64_0, T65_0, T66_0, T67_0, T68_0, T69_0, T70_0, T71_0, T72_0, T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0, T82_0, T83_0, T84_0, T85_0, T86_0, T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 18:
+	{T10_0, T11_0, T12_0, T13_0, T14_0, T15_0, T16_0, T17_0, T18_0, T19_0, T20_0, T21_0, T22_0, T23_0, T5_0, T6_0, T7_0, T8_0, T9_0, T1_0, T2_0, T3_0, T4_0, T24_0, T25_0, T26_0, T33_0, T34_0, T35_0, T27_0, T28_0, T29_0, T30_0, T31_0, T32_0, T36_0, T37_0, T38_0, T39_0, T40_0, T41_0, T42_0, T43_0, T44_0, T45_0, T46_0, T47_0, T48_0, T49_0, T50_0, T51_0, T52_0, T53_0, T54_0, T55_0, T56_0, T57_0, T58_0, T59_0, T60_0, T61_0, T62_0, T63_0, T64_0, T65_0, T66_0, T67_0, T68_0, T69_0, T70_0, T71_0, T72_0, T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T79_0, T81_0, T80_0, T82_0, T83_0, T84_0, T85_0, T86_0, T87_0, T88_0, T89_0, T90_0, T91_0, T92_0, T93_0, T94_0, T95_0, T96_0, T98_0, T97_0}
+(T100_0,(T99_0,((T96_0,(T98_0,T97_0)0.99:0.5342947583068376)1:1.1553145575763906,((((T55_0,T56_0)1:1.6226831391841212,(T57_0,T58_0)1:0.8552791880176838)1:1.2012518329131865,((((T2_0,T3_0)1:0.8703384415940578,(T1_0,T4_0)0.48:0.15882531173982986)1:1.1735020907829028,((T5_0,((T6_0,T7_0)1:0.6539264674066639,(T8_0,T9_0)0.99:0.5887871652357026)1:1.6428720572972089)0.99:0.5990590004939572,((T18_0,(T10_0,(T11_0,T12_0)1:0.9317776890239524)0.99:0.6136982946486075)0.85:0.2675935899703337,(((T13_0,T14_0)1:1.003902242970797,(T15_0,(T16_0,T17_0)1:1.0807318633902614)1:0.8041142841278817)0.92:0.3393770362649353,((T22_0,T23_0)1:0.8795182026647186,(T20_0,(T19_0,T21_0)0.47:0.04894831415056401)1:0.6663487288233984)1:0.9085720596050997)0.58:0.10610453642269181)1:1.0573314398179907)0.77:0.21253631953112997)0.93:0.3677335515207054,((T24_0,T25_0)1:1.553097406659083,((((T53_0,T54_0)1:0.8588592203516908,(T50_0,(T51_0,T52_0)0.77:0.21805861046209749)1:0.7496497974325382)1:0.800901567020395,((T49_0,(T47_0,T48_0)1:0.8486838619950806)1:0.9967807307235661,(T42_0,((T43_0,T44_0)0.91:0.3171239431242909,(T45_0,T46_0)0.83:0.24575633944892253)1:0.7878975738166876)1:0.620451453441793)0.86:0.28074892263560314)1:0.7150331607209081,((T41_0,(T36_0,(T40_0,(T39_0,(T37_0,T38_0)0.51:0.06581191775078826)0.86:0.2700014378150315)0.84:0.2567525250395786)1:1.0242594967722518)1:0.994359529202821,((T26_0,(T35_0,(T33_0,T34_0)0.39:0.007813184133505473)1:0.948463968509694)0.89:0.3008224142822813,((T31_0,T32_0)0.93:0.34987387768887485,(T28_0,(T30_0,(T27_0,T29_0)0.43:0.03413432365484931)0.73:0.18559811450337804)0.94:0.36058635773232917)1:0.9050061116147115)1:0.8613897417444034)0.64:0.13298275817930988)0.87:0.27684693969259705)1:1.0545960014606726)0.98:0.4696115111357663)0.93:0.3486976651243086,((T63_0,(T62_0,(T59_0,(T60_0,T61_0)1:0.6410101700360276)0.79:0.23693127120151972)0.99:0.5533852381847867)1:2.4567357728213035,(((T70_0,(T71_0,T72_0)1:1.4916548767777167)1:0.6671688764655287,(T69_0,((T67_0,T68_0)1:1.6499722292998211,(T64_0,(T65_0,T66_0)0.69:0.17863060139174075)1:1.2594110851891294)1:0.633223909323707)0.95:0.3747717190654228)0.5:0.06049389945239112,(((T82_0,T83_0)1:2.383926605275666,((T81_0,T80_0)1:0.8420762799642172,(T79_0,(T73_0,(T74_0,((T75_0,T76_0)0.44:0.0780878714231526,(T77_0,T78_0)0.79:0.2197953299166891)0.51:0.08214548086204324)0.65:0.13680930216456222)0.59:0.11135143454983662)0.99:0.5926367634745954)1:1.4331550559479833)0.91:0.33232975725444813,(((T94_0,T95_0)1:1.1141432415999228,((T87_0,(T88_0,T89_0)1:0.6508399331775185)0.77:0.23006405573871733,((T92_0,T93_0)0.91:0.3458337105642815,(T90_0,T91_0)0.98:0.47790086319580594)0.98:0.50570842209681)0.93:0.35905351137565716)0.61:0.14075434755981694,(T84_0,(T85_0,T86_0)0.99:0.5523399159063714)0.99:0.5388055334829898)1:0.8445040543155108)0.99:0.5853533065030241)0.99:0.5544194762049839)1:1.2398735414299549)1:1.7478090041749903)1:1.6916760106710729));
+Weight calculation took 0.242715812 secs
+ASTRAL finished in 2.092 secs

@@ -1,0 +1,1791 @@
+#!/bin/bash
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus0 temp.EaPF4 50 1>PW_output/locus0.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus1 temp.EaPF4 50 1>PW_output/locus1.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus10 temp.EaPF4 50 1>PW_output/locus10.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus100 temp.EaPF4 50 1>PW_output/locus100.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus101 temp.EaPF4 50 1>PW_output/locus101.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus102 temp.EaPF4 50 1>PW_output/locus102.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus103 temp.EaPF4 50 1>PW_output/locus103.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus104 temp.EaPF4 50 1>PW_output/locus104.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus105 temp.EaPF4 50 1>PW_output/locus105.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus106 temp.EaPF4 50 1>PW_output/locus106.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus107 temp.EaPF4 50 1>PW_output/locus107.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus108 temp.EaPF4 50 1>PW_output/locus108.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus109 temp.EaPF4 50 1>PW_output/locus109.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus11 temp.EaPF4 50 1>PW_output/locus11.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus110 temp.EaPF4 50 1>PW_output/locus110.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus111 temp.EaPF4 50 1>PW_output/locus111.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus112 temp.EaPF4 50 1>PW_output/locus112.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus113 temp.EaPF4 50 1>PW_output/locus113.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus114 temp.EaPF4 50 1>PW_output/locus114.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus115 temp.EaPF4 50 1>PW_output/locus115.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus116 temp.EaPF4 50 1>PW_output/locus116.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus117 temp.EaPF4 50 1>PW_output/locus117.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus118 temp.EaPF4 50 1>PW_output/locus118.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus119 temp.EaPF4 50 1>PW_output/locus119.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus12 temp.EaPF4 50 1>PW_output/locus12.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus120 temp.EaPF4 50 1>PW_output/locus120.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus121 temp.EaPF4 50 1>PW_output/locus121.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus122 temp.EaPF4 50 1>PW_output/locus122.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus123 temp.EaPF4 50 1>PW_output/locus123.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus124 temp.EaPF4 50 1>PW_output/locus124.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus125 temp.EaPF4 50 1>PW_output/locus125.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus126 temp.EaPF4 50 1>PW_output/locus126.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus127 temp.EaPF4 50 1>PW_output/locus127.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus128 temp.EaPF4 50 1>PW_output/locus128.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus129 temp.EaPF4 50 1>PW_output/locus129.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus13 temp.EaPF4 50 1>PW_output/locus13.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus130 temp.EaPF4 50 1>PW_output/locus130.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus131 temp.EaPF4 50 1>PW_output/locus131.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus132 temp.EaPF4 50 1>PW_output/locus132.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus133 temp.EaPF4 50 1>PW_output/locus133.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus134 temp.EaPF4 50 1>PW_output/locus134.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus135 temp.EaPF4 50 1>PW_output/locus135.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus136 temp.EaPF4 50 1>PW_output/locus136.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus137 temp.EaPF4 50 1>PW_output/locus137.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus138 temp.EaPF4 50 1>PW_output/locus138.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus139 temp.EaPF4 50 1>PW_output/locus139.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus14 temp.EaPF4 50 1>PW_output/locus14.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus140 temp.EaPF4 50 1>PW_output/locus140.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus141 temp.EaPF4 50 1>PW_output/locus141.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus142 temp.EaPF4 50 1>PW_output/locus142.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus143 temp.EaPF4 50 1>PW_output/locus143.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus144 temp.EaPF4 50 1>PW_output/locus144.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus145 temp.EaPF4 50 1>PW_output/locus145.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus146 temp.EaPF4 50 1>PW_output/locus146.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus147 temp.EaPF4 50 1>PW_output/locus147.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus148 temp.EaPF4 50 1>PW_output/locus148.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus149 temp.EaPF4 50 1>PW_output/locus149.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus15 temp.EaPF4 50 1>PW_output/locus15.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus150 temp.EaPF4 50 1>PW_output/locus150.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus151 temp.EaPF4 50 1>PW_output/locus151.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus152 temp.EaPF4 50 1>PW_output/locus152.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus153 temp.EaPF4 50 1>PW_output/locus153.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus154 temp.EaPF4 50 1>PW_output/locus154.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus155 temp.EaPF4 50 1>PW_output/locus155.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus156 temp.EaPF4 50 1>PW_output/locus156.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus157 temp.EaPF4 50 1>PW_output/locus157.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus158 temp.EaPF4 50 1>PW_output/locus158.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus159 temp.EaPF4 50 1>PW_output/locus159.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus16 temp.EaPF4 50 1>PW_output/locus16.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus160 temp.EaPF4 50 1>PW_output/locus160.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus161 temp.EaPF4 50 1>PW_output/locus161.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus162 temp.EaPF4 50 1>PW_output/locus162.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus163 temp.EaPF4 50 1>PW_output/locus163.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus164 temp.EaPF4 50 1>PW_output/locus164.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus165 temp.EaPF4 50 1>PW_output/locus165.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus166 temp.EaPF4 50 1>PW_output/locus166.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus167 temp.EaPF4 50 1>PW_output/locus167.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus168 temp.EaPF4 50 1>PW_output/locus168.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus169 temp.EaPF4 50 1>PW_output/locus169.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus17 temp.EaPF4 50 1>PW_output/locus17.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus170 temp.EaPF4 50 1>PW_output/locus170.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus171 temp.EaPF4 50 1>PW_output/locus171.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus172 temp.EaPF4 50 1>PW_output/locus172.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus173 temp.EaPF4 50 1>PW_output/locus173.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus174 temp.EaPF4 50 1>PW_output/locus174.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus175 temp.EaPF4 50 1>PW_output/locus175.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus176 temp.EaPF4 50 1>PW_output/locus176.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus177 temp.EaPF4 50 1>PW_output/locus177.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus178 temp.EaPF4 50 1>PW_output/locus178.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus179 temp.EaPF4 50 1>PW_output/locus179.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus18 temp.EaPF4 50 1>PW_output/locus18.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus180 temp.EaPF4 50 1>PW_output/locus180.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus181 temp.EaPF4 50 1>PW_output/locus181.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus182 temp.EaPF4 50 1>PW_output/locus182.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus183 temp.EaPF4 50 1>PW_output/locus183.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus184 temp.EaPF4 50 1>PW_output/locus184.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus185 temp.EaPF4 50 1>PW_output/locus185.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus186 temp.EaPF4 50 1>PW_output/locus186.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus187 temp.EaPF4 50 1>PW_output/locus187.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus188 temp.EaPF4 50 1>PW_output/locus188.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus189 temp.EaPF4 50 1>PW_output/locus189.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus19 temp.EaPF4 50 1>PW_output/locus19.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus190 temp.EaPF4 50 1>PW_output/locus190.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus191 temp.EaPF4 50 1>PW_output/locus191.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus192 temp.EaPF4 50 1>PW_output/locus192.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus193 temp.EaPF4 50 1>PW_output/locus193.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus194 temp.EaPF4 50 1>PW_output/locus194.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus195 temp.EaPF4 50 1>PW_output/locus195.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus196 temp.EaPF4 50 1>PW_output/locus196.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus197 temp.EaPF4 50 1>PW_output/locus197.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus198 temp.EaPF4 50 1>PW_output/locus198.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus199 temp.EaPF4 50 1>PW_output/locus199.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus2 temp.EaPF4 50 1>PW_output/locus2.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus20 temp.EaPF4 50 1>PW_output/locus20.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus200 temp.EaPF4 50 1>PW_output/locus200.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus201 temp.EaPF4 50 1>PW_output/locus201.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus202 temp.EaPF4 50 1>PW_output/locus202.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus203 temp.EaPF4 50 1>PW_output/locus203.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus204 temp.EaPF4 50 1>PW_output/locus204.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus205 temp.EaPF4 50 1>PW_output/locus205.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus206 temp.EaPF4 50 1>PW_output/locus206.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus207 temp.EaPF4 50 1>PW_output/locus207.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus208 temp.EaPF4 50 1>PW_output/locus208.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus209 temp.EaPF4 50 1>PW_output/locus209.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus21 temp.EaPF4 50 1>PW_output/locus21.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus210 temp.EaPF4 50 1>PW_output/locus210.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus211 temp.EaPF4 50 1>PW_output/locus211.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus212 temp.EaPF4 50 1>PW_output/locus212.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus213 temp.EaPF4 50 1>PW_output/locus213.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus214 temp.EaPF4 50 1>PW_output/locus214.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus215 temp.EaPF4 50 1>PW_output/locus215.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus216 temp.EaPF4 50 1>PW_output/locus216.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus217 temp.EaPF4 50 1>PW_output/locus217.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus218 temp.EaPF4 50 1>PW_output/locus218.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus219 temp.EaPF4 50 1>PW_output/locus219.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus22 temp.EaPF4 50 1>PW_output/locus22.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus220 temp.EaPF4 50 1>PW_output/locus220.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus221 temp.EaPF4 50 1>PW_output/locus221.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus222 temp.EaPF4 50 1>PW_output/locus222.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus223 temp.EaPF4 50 1>PW_output/locus223.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus224 temp.EaPF4 50 1>PW_output/locus224.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus225 temp.EaPF4 50 1>PW_output/locus225.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus226 temp.EaPF4 50 1>PW_output/locus226.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus227 temp.EaPF4 50 1>PW_output/locus227.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus228 temp.EaPF4 50 1>PW_output/locus228.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus229 temp.EaPF4 50 1>PW_output/locus229.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus23 temp.EaPF4 50 1>PW_output/locus23.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus230 temp.EaPF4 50 1>PW_output/locus230.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus231 temp.EaPF4 50 1>PW_output/locus231.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus232 temp.EaPF4 50 1>PW_output/locus232.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus233 temp.EaPF4 50 1>PW_output/locus233.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus234 temp.EaPF4 50 1>PW_output/locus234.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus235 temp.EaPF4 50 1>PW_output/locus235.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus236 temp.EaPF4 50 1>PW_output/locus236.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus237 temp.EaPF4 50 1>PW_output/locus237.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus238 temp.EaPF4 50 1>PW_output/locus238.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus239 temp.EaPF4 50 1>PW_output/locus239.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus24 temp.EaPF4 50 1>PW_output/locus24.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus240 temp.EaPF4 50 1>PW_output/locus240.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus241 temp.EaPF4 50 1>PW_output/locus241.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus242 temp.EaPF4 50 1>PW_output/locus242.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus243 temp.EaPF4 50 1>PW_output/locus243.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus244 temp.EaPF4 50 1>PW_output/locus244.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus245 temp.EaPF4 50 1>PW_output/locus245.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus246 temp.EaPF4 50 1>PW_output/locus246.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus247 temp.EaPF4 50 1>PW_output/locus247.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus248 temp.EaPF4 50 1>PW_output/locus248.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus249 temp.EaPF4 50 1>PW_output/locus249.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus25 temp.EaPF4 50 1>PW_output/locus25.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus250 temp.EaPF4 50 1>PW_output/locus250.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus251 temp.EaPF4 50 1>PW_output/locus251.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus252 temp.EaPF4 50 1>PW_output/locus252.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus253 temp.EaPF4 50 1>PW_output/locus253.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus254 temp.EaPF4 50 1>PW_output/locus254.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus255 temp.EaPF4 50 1>PW_output/locus255.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus256 temp.EaPF4 50 1>PW_output/locus256.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus257 temp.EaPF4 50 1>PW_output/locus257.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus258 temp.EaPF4 50 1>PW_output/locus258.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus259 temp.EaPF4 50 1>PW_output/locus259.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus26 temp.EaPF4 50 1>PW_output/locus26.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus260 temp.EaPF4 50 1>PW_output/locus260.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus261 temp.EaPF4 50 1>PW_output/locus261.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus262 temp.EaPF4 50 1>PW_output/locus262.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus263 temp.EaPF4 50 1>PW_output/locus263.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus264 temp.EaPF4 50 1>PW_output/locus264.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus265 temp.EaPF4 50 1>PW_output/locus265.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus266 temp.EaPF4 50 1>PW_output/locus266.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus267 temp.EaPF4 50 1>PW_output/locus267.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus268 temp.EaPF4 50 1>PW_output/locus268.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus269 temp.EaPF4 50 1>PW_output/locus269.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus27 temp.EaPF4 50 1>PW_output/locus27.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus270 temp.EaPF4 50 1>PW_output/locus270.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus271 temp.EaPF4 50 1>PW_output/locus271.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus272 temp.EaPF4 50 1>PW_output/locus272.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus273 temp.EaPF4 50 1>PW_output/locus273.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus274 temp.EaPF4 50 1>PW_output/locus274.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus275 temp.EaPF4 50 1>PW_output/locus275.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus276 temp.EaPF4 50 1>PW_output/locus276.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus277 temp.EaPF4 50 1>PW_output/locus277.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus278 temp.EaPF4 50 1>PW_output/locus278.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus279 temp.EaPF4 50 1>PW_output/locus279.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus28 temp.EaPF4 50 1>PW_output/locus28.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus280 temp.EaPF4 50 1>PW_output/locus280.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus281 temp.EaPF4 50 1>PW_output/locus281.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus282 temp.EaPF4 50 1>PW_output/locus282.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus283 temp.EaPF4 50 1>PW_output/locus283.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus284 temp.EaPF4 50 1>PW_output/locus284.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus285 temp.EaPF4 50 1>PW_output/locus285.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus286 temp.EaPF4 50 1>PW_output/locus286.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus287 temp.EaPF4 50 1>PW_output/locus287.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus288 temp.EaPF4 50 1>PW_output/locus288.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus289 temp.EaPF4 50 1>PW_output/locus289.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus29 temp.EaPF4 50 1>PW_output/locus29.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus290 temp.EaPF4 50 1>PW_output/locus290.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus291 temp.EaPF4 50 1>PW_output/locus291.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus292 temp.EaPF4 50 1>PW_output/locus292.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus293 temp.EaPF4 50 1>PW_output/locus293.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus294 temp.EaPF4 50 1>PW_output/locus294.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus295 temp.EaPF4 50 1>PW_output/locus295.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus296 temp.EaPF4 50 1>PW_output/locus296.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus297 temp.EaPF4 50 1>PW_output/locus297.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus298 temp.EaPF4 50 1>PW_output/locus298.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus299 temp.EaPF4 50 1>PW_output/locus299.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus3 temp.EaPF4 50 1>PW_output/locus3.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus30 temp.EaPF4 50 1>PW_output/locus30.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus300 temp.EaPF4 50 1>PW_output/locus300.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus301 temp.EaPF4 50 1>PW_output/locus301.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus302 temp.EaPF4 50 1>PW_output/locus302.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus303 temp.EaPF4 50 1>PW_output/locus303.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus304 temp.EaPF4 50 1>PW_output/locus304.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus305 temp.EaPF4 50 1>PW_output/locus305.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus306 temp.EaPF4 50 1>PW_output/locus306.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus307 temp.EaPF4 50 1>PW_output/locus307.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus308 temp.EaPF4 50 1>PW_output/locus308.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus309 temp.EaPF4 50 1>PW_output/locus309.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus31 temp.EaPF4 50 1>PW_output/locus31.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus310 temp.EaPF4 50 1>PW_output/locus310.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus311 temp.EaPF4 50 1>PW_output/locus311.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus312 temp.EaPF4 50 1>PW_output/locus312.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus313 temp.EaPF4 50 1>PW_output/locus313.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus314 temp.EaPF4 50 1>PW_output/locus314.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus315 temp.EaPF4 50 1>PW_output/locus315.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus316 temp.EaPF4 50 1>PW_output/locus316.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus317 temp.EaPF4 50 1>PW_output/locus317.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus318 temp.EaPF4 50 1>PW_output/locus318.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus319 temp.EaPF4 50 1>PW_output/locus319.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus32 temp.EaPF4 50 1>PW_output/locus32.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus320 temp.EaPF4 50 1>PW_output/locus320.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus321 temp.EaPF4 50 1>PW_output/locus321.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus322 temp.EaPF4 50 1>PW_output/locus322.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus323 temp.EaPF4 50 1>PW_output/locus323.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus324 temp.EaPF4 50 1>PW_output/locus324.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus325 temp.EaPF4 50 1>PW_output/locus325.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus326 temp.EaPF4 50 1>PW_output/locus326.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus327 temp.EaPF4 50 1>PW_output/locus327.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus328 temp.EaPF4 50 1>PW_output/locus328.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus329 temp.EaPF4 50 1>PW_output/locus329.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus33 temp.EaPF4 50 1>PW_output/locus33.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus330 temp.EaPF4 50 1>PW_output/locus330.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus331 temp.EaPF4 50 1>PW_output/locus331.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus332 temp.EaPF4 50 1>PW_output/locus332.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus333 temp.EaPF4 50 1>PW_output/locus333.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus334 temp.EaPF4 50 1>PW_output/locus334.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus335 temp.EaPF4 50 1>PW_output/locus335.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus336 temp.EaPF4 50 1>PW_output/locus336.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus337 temp.EaPF4 50 1>PW_output/locus337.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus338 temp.EaPF4 50 1>PW_output/locus338.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus339 temp.EaPF4 50 1>PW_output/locus339.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus34 temp.EaPF4 50 1>PW_output/locus34.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus340 temp.EaPF4 50 1>PW_output/locus340.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus341 temp.EaPF4 50 1>PW_output/locus341.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus342 temp.EaPF4 50 1>PW_output/locus342.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus343 temp.EaPF4 50 1>PW_output/locus343.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus344 temp.EaPF4 50 1>PW_output/locus344.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus345 temp.EaPF4 50 1>PW_output/locus345.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus346 temp.EaPF4 50 1>PW_output/locus346.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus347 temp.EaPF4 50 1>PW_output/locus347.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus348 temp.EaPF4 50 1>PW_output/locus348.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus349 temp.EaPF4 50 1>PW_output/locus349.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus35 temp.EaPF4 50 1>PW_output/locus35.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus350 temp.EaPF4 50 1>PW_output/locus350.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus351 temp.EaPF4 50 1>PW_output/locus351.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus352 temp.EaPF4 50 1>PW_output/locus352.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus353 temp.EaPF4 50 1>PW_output/locus353.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus354 temp.EaPF4 50 1>PW_output/locus354.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus355 temp.EaPF4 50 1>PW_output/locus355.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus356 temp.EaPF4 50 1>PW_output/locus356.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus357 temp.EaPF4 50 1>PW_output/locus357.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus358 temp.EaPF4 50 1>PW_output/locus358.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus359 temp.EaPF4 50 1>PW_output/locus359.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus36 temp.EaPF4 50 1>PW_output/locus36.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus360 temp.EaPF4 50 1>PW_output/locus360.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus361 temp.EaPF4 50 1>PW_output/locus361.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus362 temp.EaPF4 50 1>PW_output/locus362.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus363 temp.EaPF4 50 1>PW_output/locus363.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus364 temp.EaPF4 50 1>PW_output/locus364.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus365 temp.EaPF4 50 1>PW_output/locus365.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus366 temp.EaPF4 50 1>PW_output/locus366.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus367 temp.EaPF4 50 1>PW_output/locus367.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus368 temp.EaPF4 50 1>PW_output/locus368.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus369 temp.EaPF4 50 1>PW_output/locus369.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus37 temp.EaPF4 50 1>PW_output/locus37.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus370 temp.EaPF4 50 1>PW_output/locus370.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus371 temp.EaPF4 50 1>PW_output/locus371.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus372 temp.EaPF4 50 1>PW_output/locus372.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus373 temp.EaPF4 50 1>PW_output/locus373.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus374 temp.EaPF4 50 1>PW_output/locus374.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus375 temp.EaPF4 50 1>PW_output/locus375.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus376 temp.EaPF4 50 1>PW_output/locus376.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus377 temp.EaPF4 50 1>PW_output/locus377.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus378 temp.EaPF4 50 1>PW_output/locus378.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus379 temp.EaPF4 50 1>PW_output/locus379.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus38 temp.EaPF4 50 1>PW_output/locus38.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus380 temp.EaPF4 50 1>PW_output/locus380.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus381 temp.EaPF4 50 1>PW_output/locus381.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus382 temp.EaPF4 50 1>PW_output/locus382.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus383 temp.EaPF4 50 1>PW_output/locus383.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus384 temp.EaPF4 50 1>PW_output/locus384.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus385 temp.EaPF4 50 1>PW_output/locus385.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus386 temp.EaPF4 50 1>PW_output/locus386.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus387 temp.EaPF4 50 1>PW_output/locus387.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus388 temp.EaPF4 50 1>PW_output/locus388.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus389 temp.EaPF4 50 1>PW_output/locus389.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus39 temp.EaPF4 50 1>PW_output/locus39.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus390 temp.EaPF4 50 1>PW_output/locus390.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus391 temp.EaPF4 50 1>PW_output/locus391.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus392 temp.EaPF4 50 1>PW_output/locus392.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus393 temp.EaPF4 50 1>PW_output/locus393.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus394 temp.EaPF4 50 1>PW_output/locus394.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus395 temp.EaPF4 50 1>PW_output/locus395.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus396 temp.EaPF4 50 1>PW_output/locus396.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus397 temp.EaPF4 50 1>PW_output/locus397.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus398 temp.EaPF4 50 1>PW_output/locus398.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus399 temp.EaPF4 50 1>PW_output/locus399.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus4 temp.EaPF4 50 1>PW_output/locus4.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus40 temp.EaPF4 50 1>PW_output/locus40.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus400 temp.EaPF4 50 1>PW_output/locus400.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus401 temp.EaPF4 50 1>PW_output/locus401.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus402 temp.EaPF4 50 1>PW_output/locus402.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus403 temp.EaPF4 50 1>PW_output/locus403.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus404 temp.EaPF4 50 1>PW_output/locus404.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus405 temp.EaPF4 50 1>PW_output/locus405.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus406 temp.EaPF4 50 1>PW_output/locus406.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus407 temp.EaPF4 50 1>PW_output/locus407.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus408 temp.EaPF4 50 1>PW_output/locus408.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus409 temp.EaPF4 50 1>PW_output/locus409.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus41 temp.EaPF4 50 1>PW_output/locus41.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus410 temp.EaPF4 50 1>PW_output/locus410.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus411 temp.EaPF4 50 1>PW_output/locus411.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus412 temp.EaPF4 50 1>PW_output/locus412.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus413 temp.EaPF4 50 1>PW_output/locus413.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus414 temp.EaPF4 50 1>PW_output/locus414.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus415 temp.EaPF4 50 1>PW_output/locus415.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus416 temp.EaPF4 50 1>PW_output/locus416.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus417 temp.EaPF4 50 1>PW_output/locus417.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus418 temp.EaPF4 50 1>PW_output/locus418.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus419 temp.EaPF4 50 1>PW_output/locus419.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus42 temp.EaPF4 50 1>PW_output/locus42.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus420 temp.EaPF4 50 1>PW_output/locus420.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus421 temp.EaPF4 50 1>PW_output/locus421.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus422 temp.EaPF4 50 1>PW_output/locus422.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus423 temp.EaPF4 50 1>PW_output/locus423.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus424 temp.EaPF4 50 1>PW_output/locus424.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus425 temp.EaPF4 50 1>PW_output/locus425.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus426 temp.EaPF4 50 1>PW_output/locus426.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus427 temp.EaPF4 50 1>PW_output/locus427.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus428 temp.EaPF4 50 1>PW_output/locus428.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus429 temp.EaPF4 50 1>PW_output/locus429.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus43 temp.EaPF4 50 1>PW_output/locus43.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus430 temp.EaPF4 50 1>PW_output/locus430.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus431 temp.EaPF4 50 1>PW_output/locus431.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus432 temp.EaPF4 50 1>PW_output/locus432.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus433 temp.EaPF4 50 1>PW_output/locus433.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus434 temp.EaPF4 50 1>PW_output/locus434.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus435 temp.EaPF4 50 1>PW_output/locus435.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus436 temp.EaPF4 50 1>PW_output/locus436.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus437 temp.EaPF4 50 1>PW_output/locus437.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus438 temp.EaPF4 50 1>PW_output/locus438.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus439 temp.EaPF4 50 1>PW_output/locus439.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus44 temp.EaPF4 50 1>PW_output/locus44.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus440 temp.EaPF4 50 1>PW_output/locus440.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus441 temp.EaPF4 50 1>PW_output/locus441.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus442 temp.EaPF4 50 1>PW_output/locus442.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus443 temp.EaPF4 50 1>PW_output/locus443.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus444 temp.EaPF4 50 1>PW_output/locus444.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus445 temp.EaPF4 50 1>PW_output/locus445.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus446 temp.EaPF4 50 1>PW_output/locus446.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus447 temp.EaPF4 50 1>PW_output/locus447.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus448 temp.EaPF4 50 1>PW_output/locus448.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus449 temp.EaPF4 50 1>PW_output/locus449.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus45 temp.EaPF4 50 1>PW_output/locus45.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus450 temp.EaPF4 50 1>PW_output/locus450.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus451 temp.EaPF4 50 1>PW_output/locus451.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus452 temp.EaPF4 50 1>PW_output/locus452.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus453 temp.EaPF4 50 1>PW_output/locus453.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus454 temp.EaPF4 50 1>PW_output/locus454.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus455 temp.EaPF4 50 1>PW_output/locus455.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus456 temp.EaPF4 50 1>PW_output/locus456.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus457 temp.EaPF4 50 1>PW_output/locus457.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus458 temp.EaPF4 50 1>PW_output/locus458.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus459 temp.EaPF4 50 1>PW_output/locus459.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus46 temp.EaPF4 50 1>PW_output/locus46.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus460 temp.EaPF4 50 1>PW_output/locus460.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus461 temp.EaPF4 50 1>PW_output/locus461.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus462 temp.EaPF4 50 1>PW_output/locus462.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus463 temp.EaPF4 50 1>PW_output/locus463.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus464 temp.EaPF4 50 1>PW_output/locus464.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus465 temp.EaPF4 50 1>PW_output/locus465.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus466 temp.EaPF4 50 1>PW_output/locus466.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus467 temp.EaPF4 50 1>PW_output/locus467.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus468 temp.EaPF4 50 1>PW_output/locus468.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus469 temp.EaPF4 50 1>PW_output/locus469.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus47 temp.EaPF4 50 1>PW_output/locus47.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus470 temp.EaPF4 50 1>PW_output/locus470.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus471 temp.EaPF4 50 1>PW_output/locus471.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus472 temp.EaPF4 50 1>PW_output/locus472.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus473 temp.EaPF4 50 1>PW_output/locus473.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus474 temp.EaPF4 50 1>PW_output/locus474.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus475 temp.EaPF4 50 1>PW_output/locus475.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus476 temp.EaPF4 50 1>PW_output/locus476.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus477 temp.EaPF4 50 1>PW_output/locus477.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus478 temp.EaPF4 50 1>PW_output/locus478.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus479 temp.EaPF4 50 1>PW_output/locus479.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus48 temp.EaPF4 50 1>PW_output/locus48.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus480 temp.EaPF4 50 1>PW_output/locus480.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus481 temp.EaPF4 50 1>PW_output/locus481.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus482 temp.EaPF4 50 1>PW_output/locus482.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus483 temp.EaPF4 50 1>PW_output/locus483.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus484 temp.EaPF4 50 1>PW_output/locus484.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus485 temp.EaPF4 50 1>PW_output/locus485.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus486 temp.EaPF4 50 1>PW_output/locus486.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus487 temp.EaPF4 50 1>PW_output/locus487.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus488 temp.EaPF4 50 1>PW_output/locus488.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus489 temp.EaPF4 50 1>PW_output/locus489.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus49 temp.EaPF4 50 1>PW_output/locus49.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus490 temp.EaPF4 50 1>PW_output/locus490.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus491 temp.EaPF4 50 1>PW_output/locus491.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus492 temp.EaPF4 50 1>PW_output/locus492.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus493 temp.EaPF4 50 1>PW_output/locus493.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus494 temp.EaPF4 50 1>PW_output/locus494.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus495 temp.EaPF4 50 1>PW_output/locus495.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus496 temp.EaPF4 50 1>PW_output/locus496.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus497 temp.EaPF4 50 1>PW_output/locus497.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus498 temp.EaPF4 50 1>PW_output/locus498.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus499 temp.EaPF4 50 1>PW_output/locus499.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus5 temp.EaPF4 50 1>PW_output/locus5.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus50 temp.EaPF4 50 1>PW_output/locus50.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus500 temp.EaPF4 50 1>PW_output/locus500.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus501 temp.EaPF4 50 1>PW_output/locus501.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus502 temp.EaPF4 50 1>PW_output/locus502.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus503 temp.EaPF4 50 1>PW_output/locus503.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus504 temp.EaPF4 50 1>PW_output/locus504.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus505 temp.EaPF4 50 1>PW_output/locus505.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus506 temp.EaPF4 50 1>PW_output/locus506.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus507 temp.EaPF4 50 1>PW_output/locus507.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus508 temp.EaPF4 50 1>PW_output/locus508.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus509 temp.EaPF4 50 1>PW_output/locus509.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus51 temp.EaPF4 50 1>PW_output/locus51.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus510 temp.EaPF4 50 1>PW_output/locus510.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus511 temp.EaPF4 50 1>PW_output/locus511.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus512 temp.EaPF4 50 1>PW_output/locus512.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus513 temp.EaPF4 50 1>PW_output/locus513.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus514 temp.EaPF4 50 1>PW_output/locus514.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus515 temp.EaPF4 50 1>PW_output/locus515.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus516 temp.EaPF4 50 1>PW_output/locus516.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus517 temp.EaPF4 50 1>PW_output/locus517.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus518 temp.EaPF4 50 1>PW_output/locus518.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus519 temp.EaPF4 50 1>PW_output/locus519.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus52 temp.EaPF4 50 1>PW_output/locus52.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus520 temp.EaPF4 50 1>PW_output/locus520.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus521 temp.EaPF4 50 1>PW_output/locus521.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus522 temp.EaPF4 50 1>PW_output/locus522.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus523 temp.EaPF4 50 1>PW_output/locus523.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus524 temp.EaPF4 50 1>PW_output/locus524.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus525 temp.EaPF4 50 1>PW_output/locus525.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus526 temp.EaPF4 50 1>PW_output/locus526.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus527 temp.EaPF4 50 1>PW_output/locus527.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus528 temp.EaPF4 50 1>PW_output/locus528.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus529 temp.EaPF4 50 1>PW_output/locus529.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus53 temp.EaPF4 50 1>PW_output/locus53.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus530 temp.EaPF4 50 1>PW_output/locus530.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus531 temp.EaPF4 50 1>PW_output/locus531.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus532 temp.EaPF4 50 1>PW_output/locus532.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus533 temp.EaPF4 50 1>PW_output/locus533.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus534 temp.EaPF4 50 1>PW_output/locus534.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus535 temp.EaPF4 50 1>PW_output/locus535.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus536 temp.EaPF4 50 1>PW_output/locus536.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus537 temp.EaPF4 50 1>PW_output/locus537.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus538 temp.EaPF4 50 1>PW_output/locus538.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus539 temp.EaPF4 50 1>PW_output/locus539.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus54 temp.EaPF4 50 1>PW_output/locus54.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus540 temp.EaPF4 50 1>PW_output/locus540.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus541 temp.EaPF4 50 1>PW_output/locus541.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus542 temp.EaPF4 50 1>PW_output/locus542.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus543 temp.EaPF4 50 1>PW_output/locus543.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus544 temp.EaPF4 50 1>PW_output/locus544.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus545 temp.EaPF4 50 1>PW_output/locus545.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus546 temp.EaPF4 50 1>PW_output/locus546.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus547 temp.EaPF4 50 1>PW_output/locus547.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus548 temp.EaPF4 50 1>PW_output/locus548.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus549 temp.EaPF4 50 1>PW_output/locus549.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus55 temp.EaPF4 50 1>PW_output/locus55.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus550 temp.EaPF4 50 1>PW_output/locus550.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus551 temp.EaPF4 50 1>PW_output/locus551.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus552 temp.EaPF4 50 1>PW_output/locus552.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus553 temp.EaPF4 50 1>PW_output/locus553.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus554 temp.EaPF4 50 1>PW_output/locus554.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus555 temp.EaPF4 50 1>PW_output/locus555.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus556 temp.EaPF4 50 1>PW_output/locus556.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus557 temp.EaPF4 50 1>PW_output/locus557.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus558 temp.EaPF4 50 1>PW_output/locus558.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus559 temp.EaPF4 50 1>PW_output/locus559.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus56 temp.EaPF4 50 1>PW_output/locus56.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus560 temp.EaPF4 50 1>PW_output/locus560.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus561 temp.EaPF4 50 1>PW_output/locus561.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus562 temp.EaPF4 50 1>PW_output/locus562.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus563 temp.EaPF4 50 1>PW_output/locus563.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus564 temp.EaPF4 50 1>PW_output/locus564.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus565 temp.EaPF4 50 1>PW_output/locus565.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus566 temp.EaPF4 50 1>PW_output/locus566.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus567 temp.EaPF4 50 1>PW_output/locus567.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus568 temp.EaPF4 50 1>PW_output/locus568.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus569 temp.EaPF4 50 1>PW_output/locus569.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus57 temp.EaPF4 50 1>PW_output/locus57.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus570 temp.EaPF4 50 1>PW_output/locus570.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus571 temp.EaPF4 50 1>PW_output/locus571.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus572 temp.EaPF4 50 1>PW_output/locus572.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus573 temp.EaPF4 50 1>PW_output/locus573.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus574 temp.EaPF4 50 1>PW_output/locus574.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus575 temp.EaPF4 50 1>PW_output/locus575.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus576 temp.EaPF4 50 1>PW_output/locus576.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus577 temp.EaPF4 50 1>PW_output/locus577.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus578 temp.EaPF4 50 1>PW_output/locus578.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus579 temp.EaPF4 50 1>PW_output/locus579.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus58 temp.EaPF4 50 1>PW_output/locus58.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus580 temp.EaPF4 50 1>PW_output/locus580.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus581 temp.EaPF4 50 1>PW_output/locus581.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus582 temp.EaPF4 50 1>PW_output/locus582.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus583 temp.EaPF4 50 1>PW_output/locus583.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus584 temp.EaPF4 50 1>PW_output/locus584.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus585 temp.EaPF4 50 1>PW_output/locus585.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus586 temp.EaPF4 50 1>PW_output/locus586.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus587 temp.EaPF4 50 1>PW_output/locus587.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus588 temp.EaPF4 50 1>PW_output/locus588.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus589 temp.EaPF4 50 1>PW_output/locus589.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus59 temp.EaPF4 50 1>PW_output/locus59.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus590 temp.EaPF4 50 1>PW_output/locus590.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus591 temp.EaPF4 50 1>PW_output/locus591.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus592 temp.EaPF4 50 1>PW_output/locus592.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus593 temp.EaPF4 50 1>PW_output/locus593.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus594 temp.EaPF4 50 1>PW_output/locus594.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus595 temp.EaPF4 50 1>PW_output/locus595.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus596 temp.EaPF4 50 1>PW_output/locus596.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus597 temp.EaPF4 50 1>PW_output/locus597.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus598 temp.EaPF4 50 1>PW_output/locus598.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus599 temp.EaPF4 50 1>PW_output/locus599.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus6 temp.EaPF4 50 1>PW_output/locus6.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus60 temp.EaPF4 50 1>PW_output/locus60.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus600 temp.EaPF4 50 1>PW_output/locus600.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus601 temp.EaPF4 50 1>PW_output/locus601.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus602 temp.EaPF4 50 1>PW_output/locus602.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus603 temp.EaPF4 50 1>PW_output/locus603.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus604 temp.EaPF4 50 1>PW_output/locus604.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus605 temp.EaPF4 50 1>PW_output/locus605.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus606 temp.EaPF4 50 1>PW_output/locus606.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus607 temp.EaPF4 50 1>PW_output/locus607.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus608 temp.EaPF4 50 1>PW_output/locus608.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus609 temp.EaPF4 50 1>PW_output/locus609.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus61 temp.EaPF4 50 1>PW_output/locus61.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus610 temp.EaPF4 50 1>PW_output/locus610.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus611 temp.EaPF4 50 1>PW_output/locus611.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus612 temp.EaPF4 50 1>PW_output/locus612.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus613 temp.EaPF4 50 1>PW_output/locus613.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus614 temp.EaPF4 50 1>PW_output/locus614.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus615 temp.EaPF4 50 1>PW_output/locus615.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus616 temp.EaPF4 50 1>PW_output/locus616.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus617 temp.EaPF4 50 1>PW_output/locus617.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus618 temp.EaPF4 50 1>PW_output/locus618.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus619 temp.EaPF4 50 1>PW_output/locus619.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus62 temp.EaPF4 50 1>PW_output/locus62.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus620 temp.EaPF4 50 1>PW_output/locus620.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus621 temp.EaPF4 50 1>PW_output/locus621.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus622 temp.EaPF4 50 1>PW_output/locus622.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus623 temp.EaPF4 50 1>PW_output/locus623.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus624 temp.EaPF4 50 1>PW_output/locus624.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus625 temp.EaPF4 50 1>PW_output/locus625.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus626 temp.EaPF4 50 1>PW_output/locus626.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus627 temp.EaPF4 50 1>PW_output/locus627.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus628 temp.EaPF4 50 1>PW_output/locus628.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus629 temp.EaPF4 50 1>PW_output/locus629.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus63 temp.EaPF4 50 1>PW_output/locus63.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus630 temp.EaPF4 50 1>PW_output/locus630.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus631 temp.EaPF4 50 1>PW_output/locus631.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus632 temp.EaPF4 50 1>PW_output/locus632.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus633 temp.EaPF4 50 1>PW_output/locus633.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus634 temp.EaPF4 50 1>PW_output/locus634.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus635 temp.EaPF4 50 1>PW_output/locus635.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus636 temp.EaPF4 50 1>PW_output/locus636.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus637 temp.EaPF4 50 1>PW_output/locus637.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus638 temp.EaPF4 50 1>PW_output/locus638.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus639 temp.EaPF4 50 1>PW_output/locus639.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus64 temp.EaPF4 50 1>PW_output/locus64.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus640 temp.EaPF4 50 1>PW_output/locus640.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus641 temp.EaPF4 50 1>PW_output/locus641.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus642 temp.EaPF4 50 1>PW_output/locus642.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus643 temp.EaPF4 50 1>PW_output/locus643.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus644 temp.EaPF4 50 1>PW_output/locus644.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus645 temp.EaPF4 50 1>PW_output/locus645.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus646 temp.EaPF4 50 1>PW_output/locus646.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus647 temp.EaPF4 50 1>PW_output/locus647.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus648 temp.EaPF4 50 1>PW_output/locus648.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus649 temp.EaPF4 50 1>PW_output/locus649.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus65 temp.EaPF4 50 1>PW_output/locus65.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus650 temp.EaPF4 50 1>PW_output/locus650.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus651 temp.EaPF4 50 1>PW_output/locus651.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus652 temp.EaPF4 50 1>PW_output/locus652.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus653 temp.EaPF4 50 1>PW_output/locus653.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus654 temp.EaPF4 50 1>PW_output/locus654.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus655 temp.EaPF4 50 1>PW_output/locus655.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus656 temp.EaPF4 50 1>PW_output/locus656.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus657 temp.EaPF4 50 1>PW_output/locus657.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus658 temp.EaPF4 50 1>PW_output/locus658.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus659 temp.EaPF4 50 1>PW_output/locus659.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus66 temp.EaPF4 50 1>PW_output/locus66.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus660 temp.EaPF4 50 1>PW_output/locus660.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus661 temp.EaPF4 50 1>PW_output/locus661.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus662 temp.EaPF4 50 1>PW_output/locus662.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus663 temp.EaPF4 50 1>PW_output/locus663.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus664 temp.EaPF4 50 1>PW_output/locus664.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus665 temp.EaPF4 50 1>PW_output/locus665.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus666 temp.EaPF4 50 1>PW_output/locus666.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus667 temp.EaPF4 50 1>PW_output/locus667.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus668 temp.EaPF4 50 1>PW_output/locus668.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus669 temp.EaPF4 50 1>PW_output/locus669.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus67 temp.EaPF4 50 1>PW_output/locus67.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus670 temp.EaPF4 50 1>PW_output/locus670.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus671 temp.EaPF4 50 1>PW_output/locus671.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus672 temp.EaPF4 50 1>PW_output/locus672.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus673 temp.EaPF4 50 1>PW_output/locus673.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus674 temp.EaPF4 50 1>PW_output/locus674.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus675 temp.EaPF4 50 1>PW_output/locus675.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus676 temp.EaPF4 50 1>PW_output/locus676.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus677 temp.EaPF4 50 1>PW_output/locus677.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus678 temp.EaPF4 50 1>PW_output/locus678.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus679 temp.EaPF4 50 1>PW_output/locus679.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus68 temp.EaPF4 50 1>PW_output/locus68.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus680 temp.EaPF4 50 1>PW_output/locus680.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus681 temp.EaPF4 50 1>PW_output/locus681.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus682 temp.EaPF4 50 1>PW_output/locus682.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus683 temp.EaPF4 50 1>PW_output/locus683.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus684 temp.EaPF4 50 1>PW_output/locus684.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus685 temp.EaPF4 50 1>PW_output/locus685.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus686 temp.EaPF4 50 1>PW_output/locus686.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus687 temp.EaPF4 50 1>PW_output/locus687.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus688 temp.EaPF4 50 1>PW_output/locus688.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus689 temp.EaPF4 50 1>PW_output/locus689.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus69 temp.EaPF4 50 1>PW_output/locus69.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus690 temp.EaPF4 50 1>PW_output/locus690.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus691 temp.EaPF4 50 1>PW_output/locus691.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus692 temp.EaPF4 50 1>PW_output/locus692.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus693 temp.EaPF4 50 1>PW_output/locus693.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus694 temp.EaPF4 50 1>PW_output/locus694.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus695 temp.EaPF4 50 1>PW_output/locus695.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus696 temp.EaPF4 50 1>PW_output/locus696.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus697 temp.EaPF4 50 1>PW_output/locus697.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus698 temp.EaPF4 50 1>PW_output/locus698.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus699 temp.EaPF4 50 1>PW_output/locus699.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus7 temp.EaPF4 50 1>PW_output/locus7.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus70 temp.EaPF4 50 1>PW_output/locus70.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus700 temp.EaPF4 50 1>PW_output/locus700.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus701 temp.EaPF4 50 1>PW_output/locus701.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus702 temp.EaPF4 50 1>PW_output/locus702.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus703 temp.EaPF4 50 1>PW_output/locus703.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus704 temp.EaPF4 50 1>PW_output/locus704.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus705 temp.EaPF4 50 1>PW_output/locus705.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus706 temp.EaPF4 50 1>PW_output/locus706.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus707 temp.EaPF4 50 1>PW_output/locus707.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus708 temp.EaPF4 50 1>PW_output/locus708.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus709 temp.EaPF4 50 1>PW_output/locus709.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus71 temp.EaPF4 50 1>PW_output/locus71.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus710 temp.EaPF4 50 1>PW_output/locus710.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus711 temp.EaPF4 50 1>PW_output/locus711.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus712 temp.EaPF4 50 1>PW_output/locus712.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus713 temp.EaPF4 50 1>PW_output/locus713.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus714 temp.EaPF4 50 1>PW_output/locus714.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus715 temp.EaPF4 50 1>PW_output/locus715.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus716 temp.EaPF4 50 1>PW_output/locus716.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus717 temp.EaPF4 50 1>PW_output/locus717.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus718 temp.EaPF4 50 1>PW_output/locus718.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus719 temp.EaPF4 50 1>PW_output/locus719.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus72 temp.EaPF4 50 1>PW_output/locus72.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus720 temp.EaPF4 50 1>PW_output/locus720.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus721 temp.EaPF4 50 1>PW_output/locus721.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus722 temp.EaPF4 50 1>PW_output/locus722.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus723 temp.EaPF4 50 1>PW_output/locus723.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus724 temp.EaPF4 50 1>PW_output/locus724.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus725 temp.EaPF4 50 1>PW_output/locus725.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus726 temp.EaPF4 50 1>PW_output/locus726.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus727 temp.EaPF4 50 1>PW_output/locus727.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus728 temp.EaPF4 50 1>PW_output/locus728.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus729 temp.EaPF4 50 1>PW_output/locus729.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus73 temp.EaPF4 50 1>PW_output/locus73.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus730 temp.EaPF4 50 1>PW_output/locus730.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus731 temp.EaPF4 50 1>PW_output/locus731.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus732 temp.EaPF4 50 1>PW_output/locus732.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus733 temp.EaPF4 50 1>PW_output/locus733.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus734 temp.EaPF4 50 1>PW_output/locus734.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus735 temp.EaPF4 50 1>PW_output/locus735.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus736 temp.EaPF4 50 1>PW_output/locus736.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus737 temp.EaPF4 50 1>PW_output/locus737.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus738 temp.EaPF4 50 1>PW_output/locus738.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus739 temp.EaPF4 50 1>PW_output/locus739.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus74 temp.EaPF4 50 1>PW_output/locus74.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus740 temp.EaPF4 50 1>PW_output/locus740.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus741 temp.EaPF4 50 1>PW_output/locus741.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus742 temp.EaPF4 50 1>PW_output/locus742.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus743 temp.EaPF4 50 1>PW_output/locus743.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus744 temp.EaPF4 50 1>PW_output/locus744.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus745 temp.EaPF4 50 1>PW_output/locus745.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus746 temp.EaPF4 50 1>PW_output/locus746.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus747 temp.EaPF4 50 1>PW_output/locus747.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus748 temp.EaPF4 50 1>PW_output/locus748.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus749 temp.EaPF4 50 1>PW_output/locus749.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus75 temp.EaPF4 50 1>PW_output/locus75.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus750 temp.EaPF4 50 1>PW_output/locus750.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus751 temp.EaPF4 50 1>PW_output/locus751.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus752 temp.EaPF4 50 1>PW_output/locus752.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus753 temp.EaPF4 50 1>PW_output/locus753.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus754 temp.EaPF4 50 1>PW_output/locus754.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus755 temp.EaPF4 50 1>PW_output/locus755.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus756 temp.EaPF4 50 1>PW_output/locus756.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus757 temp.EaPF4 50 1>PW_output/locus757.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus758 temp.EaPF4 50 1>PW_output/locus758.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus759 temp.EaPF4 50 1>PW_output/locus759.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus76 temp.EaPF4 50 1>PW_output/locus76.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus760 temp.EaPF4 50 1>PW_output/locus760.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus761 temp.EaPF4 50 1>PW_output/locus761.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus762 temp.EaPF4 50 1>PW_output/locus762.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus763 temp.EaPF4 50 1>PW_output/locus763.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus764 temp.EaPF4 50 1>PW_output/locus764.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus765 temp.EaPF4 50 1>PW_output/locus765.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus766 temp.EaPF4 50 1>PW_output/locus766.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus767 temp.EaPF4 50 1>PW_output/locus767.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus768 temp.EaPF4 50 1>PW_output/locus768.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus769 temp.EaPF4 50 1>PW_output/locus769.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus77 temp.EaPF4 50 1>PW_output/locus77.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus770 temp.EaPF4 50 1>PW_output/locus770.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus771 temp.EaPF4 50 1>PW_output/locus771.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus772 temp.EaPF4 50 1>PW_output/locus772.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus773 temp.EaPF4 50 1>PW_output/locus773.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus774 temp.EaPF4 50 1>PW_output/locus774.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus775 temp.EaPF4 50 1>PW_output/locus775.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus776 temp.EaPF4 50 1>PW_output/locus776.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus777 temp.EaPF4 50 1>PW_output/locus777.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus778 temp.EaPF4 50 1>PW_output/locus778.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus779 temp.EaPF4 50 1>PW_output/locus779.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus78 temp.EaPF4 50 1>PW_output/locus78.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus780 temp.EaPF4 50 1>PW_output/locus780.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus781 temp.EaPF4 50 1>PW_output/locus781.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus782 temp.EaPF4 50 1>PW_output/locus782.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus783 temp.EaPF4 50 1>PW_output/locus783.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus784 temp.EaPF4 50 1>PW_output/locus784.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus785 temp.EaPF4 50 1>PW_output/locus785.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus786 temp.EaPF4 50 1>PW_output/locus786.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus787 temp.EaPF4 50 1>PW_output/locus787.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus788 temp.EaPF4 50 1>PW_output/locus788.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus789 temp.EaPF4 50 1>PW_output/locus789.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus79 temp.EaPF4 50 1>PW_output/locus79.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus790 temp.EaPF4 50 1>PW_output/locus790.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus791 temp.EaPF4 50 1>PW_output/locus791.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus792 temp.EaPF4 50 1>PW_output/locus792.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus793 temp.EaPF4 50 1>PW_output/locus793.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus794 temp.EaPF4 50 1>PW_output/locus794.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus795 temp.EaPF4 50 1>PW_output/locus795.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus796 temp.EaPF4 50 1>PW_output/locus796.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus797 temp.EaPF4 50 1>PW_output/locus797.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus798 temp.EaPF4 50 1>PW_output/locus798.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus799 temp.EaPF4 50 1>PW_output/locus799.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus8 temp.EaPF4 50 1>PW_output/locus8.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus80 temp.EaPF4 50 1>PW_output/locus80.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus800 temp.EaPF4 50 1>PW_output/locus800.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus801 temp.EaPF4 50 1>PW_output/locus801.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus802 temp.EaPF4 50 1>PW_output/locus802.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus803 temp.EaPF4 50 1>PW_output/locus803.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus804 temp.EaPF4 50 1>PW_output/locus804.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus805 temp.EaPF4 50 1>PW_output/locus805.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus806 temp.EaPF4 50 1>PW_output/locus806.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus807 temp.EaPF4 50 1>PW_output/locus807.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus808 temp.EaPF4 50 1>PW_output/locus808.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus809 temp.EaPF4 50 1>PW_output/locus809.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus81 temp.EaPF4 50 1>PW_output/locus81.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus810 temp.EaPF4 50 1>PW_output/locus810.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus811 temp.EaPF4 50 1>PW_output/locus811.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus812 temp.EaPF4 50 1>PW_output/locus812.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus813 temp.EaPF4 50 1>PW_output/locus813.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus814 temp.EaPF4 50 1>PW_output/locus814.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus815 temp.EaPF4 50 1>PW_output/locus815.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus816 temp.EaPF4 50 1>PW_output/locus816.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus817 temp.EaPF4 50 1>PW_output/locus817.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus818 temp.EaPF4 50 1>PW_output/locus818.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus819 temp.EaPF4 50 1>PW_output/locus819.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus82 temp.EaPF4 50 1>PW_output/locus82.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus820 temp.EaPF4 50 1>PW_output/locus820.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus821 temp.EaPF4 50 1>PW_output/locus821.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus822 temp.EaPF4 50 1>PW_output/locus822.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus823 temp.EaPF4 50 1>PW_output/locus823.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus824 temp.EaPF4 50 1>PW_output/locus824.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus825 temp.EaPF4 50 1>PW_output/locus825.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus826 temp.EaPF4 50 1>PW_output/locus826.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus827 temp.EaPF4 50 1>PW_output/locus827.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus828 temp.EaPF4 50 1>PW_output/locus828.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus829 temp.EaPF4 50 1>PW_output/locus829.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus83 temp.EaPF4 50 1>PW_output/locus83.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus830 temp.EaPF4 50 1>PW_output/locus830.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus831 temp.EaPF4 50 1>PW_output/locus831.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus832 temp.EaPF4 50 1>PW_output/locus832.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus833 temp.EaPF4 50 1>PW_output/locus833.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus834 temp.EaPF4 50 1>PW_output/locus834.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus835 temp.EaPF4 50 1>PW_output/locus835.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus836 temp.EaPF4 50 1>PW_output/locus836.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus837 temp.EaPF4 50 1>PW_output/locus837.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus838 temp.EaPF4 50 1>PW_output/locus838.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus839 temp.EaPF4 50 1>PW_output/locus839.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus84 temp.EaPF4 50 1>PW_output/locus84.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus840 temp.EaPF4 50 1>PW_output/locus840.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus841 temp.EaPF4 50 1>PW_output/locus841.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus842 temp.EaPF4 50 1>PW_output/locus842.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus843 temp.EaPF4 50 1>PW_output/locus843.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus844 temp.EaPF4 50 1>PW_output/locus844.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus845 temp.EaPF4 50 1>PW_output/locus845.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus846 temp.EaPF4 50 1>PW_output/locus846.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus847 temp.EaPF4 50 1>PW_output/locus847.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus848 temp.EaPF4 50 1>PW_output/locus848.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus849 temp.EaPF4 50 1>PW_output/locus849.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus85 temp.EaPF4 50 1>PW_output/locus85.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus850 temp.EaPF4 50 1>PW_output/locus850.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus851 temp.EaPF4 50 1>PW_output/locus851.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus852 temp.EaPF4 50 1>PW_output/locus852.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus853 temp.EaPF4 50 1>PW_output/locus853.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus854 temp.EaPF4 50 1>PW_output/locus854.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus855 temp.EaPF4 50 1>PW_output/locus855.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus856 temp.EaPF4 50 1>PW_output/locus856.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus857 temp.EaPF4 50 1>PW_output/locus857.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus858 temp.EaPF4 50 1>PW_output/locus858.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus859 temp.EaPF4 50 1>PW_output/locus859.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus86 temp.EaPF4 50 1>PW_output/locus86.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus860 temp.EaPF4 50 1>PW_output/locus860.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus861 temp.EaPF4 50 1>PW_output/locus861.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus862 temp.EaPF4 50 1>PW_output/locus862.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus863 temp.EaPF4 50 1>PW_output/locus863.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus864 temp.EaPF4 50 1>PW_output/locus864.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus865 temp.EaPF4 50 1>PW_output/locus865.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus866 temp.EaPF4 50 1>PW_output/locus866.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus867 temp.EaPF4 50 1>PW_output/locus867.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus868 temp.EaPF4 50 1>PW_output/locus868.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus869 temp.EaPF4 50 1>PW_output/locus869.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus87 temp.EaPF4 50 1>PW_output/locus87.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus870 temp.EaPF4 50 1>PW_output/locus870.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus871 temp.EaPF4 50 1>PW_output/locus871.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus872 temp.EaPF4 50 1>PW_output/locus872.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus873 temp.EaPF4 50 1>PW_output/locus873.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus874 temp.EaPF4 50 1>PW_output/locus874.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus875 temp.EaPF4 50 1>PW_output/locus875.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus876 temp.EaPF4 50 1>PW_output/locus876.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus877 temp.EaPF4 50 1>PW_output/locus877.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus878 temp.EaPF4 50 1>PW_output/locus878.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus879 temp.EaPF4 50 1>PW_output/locus879.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus88 temp.EaPF4 50 1>PW_output/locus88.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus880 temp.EaPF4 50 1>PW_output/locus880.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus881 temp.EaPF4 50 1>PW_output/locus881.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus882 temp.EaPF4 50 1>PW_output/locus882.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus883 temp.EaPF4 50 1>PW_output/locus883.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus884 temp.EaPF4 50 1>PW_output/locus884.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus885 temp.EaPF4 50 1>PW_output/locus885.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus886 temp.EaPF4 50 1>PW_output/locus886.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus887 temp.EaPF4 50 1>PW_output/locus887.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus888 temp.EaPF4 50 1>PW_output/locus888.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus889 temp.EaPF4 50 1>PW_output/locus889.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus89 temp.EaPF4 50 1>PW_output/locus89.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus890 temp.EaPF4 50 1>PW_output/locus890.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus891 temp.EaPF4 50 1>PW_output/locus891.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus892 temp.EaPF4 50 1>PW_output/locus892.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus893 temp.EaPF4 50 1>PW_output/locus893.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus894 temp.EaPF4 50 1>PW_output/locus894.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus9 temp.EaPF4 50 1>PW_output/locus9.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus90 temp.EaPF4 50 1>PW_output/locus90.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus91 temp.EaPF4 50 1>PW_output/locus91.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus92 temp.EaPF4 50 1>PW_output/locus92.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus93 temp.EaPF4 50 1>PW_output/locus93.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus94 temp.EaPF4 50 1>PW_output/locus94.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus95 temp.EaPF4 50 1>PW_output/locus95.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus96 temp.EaPF4 50 1>PW_output/locus96.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus97 temp.EaPF4 50 1>PW_output/locus97.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus98 temp.EaPF4 50 1>PW_output/locus98.50
+
+/Users/iangilman/binning/runcompat.sh  genes_dir pauptree.tre locus99 temp.EaPF4 50 1>PW_output/locus99.50

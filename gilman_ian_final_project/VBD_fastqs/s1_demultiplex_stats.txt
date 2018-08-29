@@ -1,0 +1,207 @@
+raw_file                               total_reads    cut_found  bar_matched
+VBD_R1_.fastq                              1444710      1444710      1444710
+
+sample_name                            total_reads
+T100_0                                       14660
+T10_0                                        14680
+T11_0                                        14520
+T12_0                                        14380
+T13_0                                        14410
+T14_0                                        14220
+T15_0                                        14140
+T16_0                                        14590
+T17_0                                        14530
+T18_0                                        14540
+T19_0                                        14130
+T1_0                                         14660
+T20_0                                        14340
+T21_0                                        14350
+T22_0                                        14230
+T23_0                                        14490
+T24_0                                        14320
+T25_0                                        14410
+T26_0                                        14390
+T27_0                                        14640
+T28_0                                        14670
+T29_0                                        14720
+T2_0                                         14580
+T30_0                                        14660
+T31_0                                        14690
+T32_0                                        14590
+T33_0                                        14650
+T34_0                                        14280
+T35_0                                        14210
+T36_0                                        14110
+T37_0                                        14370
+T38_0                                        14340
+T39_0                                        14260
+T3_0                                         14540
+T40_0                                        14530
+T41_0                                        14550
+T42_0                                        14500
+T43_0                                        14290
+T44_0                                        14280
+T45_0                                        14250
+T46_0                                        14250
+T47_0                                        14310
+T48_0                                        14190
+T49_0                                        14180
+T4_0                                         14570
+T50_0                                        14250
+T51_0                                        14190
+T52_0                                        14310
+T53_0                                        14070
+T54_0                                        14280
+T55_0                                        14330
+T56_0                                        14270
+T57_0                                        14150
+T58_0                                        14210
+T59_0                                        14280
+T5_0                                         14240
+T60_0                                        14380
+T61_0                                        14390
+T62_0                                        14330
+T63_0                                        14210
+T64_0                                        14290
+T65_0                                        14240
+T66_0                                        14320
+T67_0                                        14350
+T68_0                                        14480
+T69_0                                        14510
+T6_0                                         14640
+T70_0                                        14390
+T71_0                                        14330
+T72_0                                        14600
+T73_0                                        14680
+T74_0                                        14710
+T75_0                                        14580
+T76_0                                        14700
+T77_0                                        14470
+T78_0                                        14530
+T79_0                                        14650
+T7_0                                         14670
+T80_0                                        14490
+T81_0                                        14640
+T82_0                                        14530
+T83_0                                        14740
+T84_0                                        14690
+T85_0                                        14750
+T86_0                                        14680
+T87_0                                        14380
+T88_0                                        14610
+T89_0                                        14540
+T8_0                                         14580
+T90_0                                        14500
+T91_0                                        14610
+T92_0                                        14550
+T93_0                                        14470
+T94_0                                        14600
+T95_0                                        14570
+T96_0                                        14360
+T97_0                                        14470
+T98_0                                        14570
+T99_0                                        14480
+T9_0                                         14670
+
+sample_name                               true_bar       obs_bar     N_records
+T100_0                                   CTCGTCCGC     CTCGTCCGC         14660
+T10_0                                    CCTTATGTC     CCTTATGTC         14680
+T11_0                                    ACGTGTGTG     ACGTGTGTG         14520
+T12_0                                    TTACTAACA     TTACTAACA         14380
+T13_0                                    TAGAGTGAT     TAGAGTGAT         14410
+T14_0                                    GCTGCAAGA     GCTGCAAGA         14220
+T15_0                                    GGTAAGGTA     GGTAAGGTA         14140
+T16_0                                    CGTCGACAT     CGTCGACAT         14590
+T17_0                                    ACCCCAGTG     ACCCCAGTG         14530
+T18_0                                    GGTGGGGGT     GGTGGGGGT         14540
+T19_0                                    ACTAGCTGG     ACTAGCTGG         14130
+T1_0                                     CATCATCAT     CATCATCAT         14660
+T20_0                                    TTCTTAATC     TTCTTAATC         14340
+T21_0                                    ACAATCCCA     ACAATCCCA         14350
+T22_0                                    TAACCGTAG     TAACCGTAG         14230
+T23_0                                    TTGGGAGAG     TTGGGAGAG         14490
+T24_0                                    CTGGCGAAC     CTGGCGAAC         14320
+T25_0                                    GCTGAGCAC     GCTGAGCAC         14410
+T26_0                                    AACTCTGCA     AACTCTGCA         14390
+T27_0                                    GGGGTGTAG     GGGGTGTAG         14640
+T28_0                                    GTTTTTGCT     GTTTTTGCT         14670
+T29_0                                    ATCGTGAGT     ATCGTGAGT         14720
+T2_0                                     CCAGTGATA     CCAGTGATA         14580
+T30_0                                    AATAGAAGT     AATAGAAGT         14660
+T31_0                                    CCTTAAACC     CCTTAAACC         14690
+T32_0                                    GATCACGTT     GATCACGTT         14590
+T33_0                                    GAAAACAAG     GAAAACAAG         14650
+T34_0                                    AGCAATTTC     AGCAATTTC         14280
+T35_0                                    CGTCATGCA     CGTCATGCA         14210
+T36_0                                    GCTACTTAA     GCTACTTAA         14110
+T37_0                                    CAGCTCTAG     CAGCTCTAG         14370
+T38_0                                    CATAACTTT     CATAACTTT         14340
+T39_0                                    GTATAACTT     GTATAACTT         14260
+T3_0                                     TGGCCTAGT     TGGCCTAGT         14540
+T40_0                                    GCCAACTAT     GCCAACTAT         14530
+T41_0                                    CGTGCACTT     CGTGCACTT         14550
+T42_0                                    ACACAATCC     ACACAATCC         14500
+T43_0                                    ACATATTAG     ACATATTAG         14290
+T44_0                                    GTTTGTCAT     GTTTGTCAT         14280
+T45_0                                    CCTTCTAAG     CCTTCTAAG         14250
+T46_0                                    GATACGAGC     GATACGAGC         14250
+T47_0                                    CAAGGCGCA     CAAGGCGCA         14310
+T48_0                                    CCCATTAGC     CCCATTAGC         14190
+T49_0                                    GTTAGTCGC     GTTAGTCGC         14180
+T4_0                                     GGGAAAAAC     GGGAAAAAC         14570
+T50_0                                    CCTATAGAA     CCTATAGAA         14250
+T51_0                                    CAAGGCAGG     CAAGGCAGG         14190
+T52_0                                    TGAGATTTG     TGAGATTTG         14310
+T53_0                                    CAATTGGGG     CAATTGGGG         14070
+T54_0                                    TAATGGGGA     TAATGGGGA         14280
+T55_0                                    ACTCACACA     ACTCACACA         14330
+T56_0                                    ACATCAAGA     ACATCAAGA         14270
+T57_0                                    GATAGGTGG     GATAGGTGG         14150
+T58_0                                    CAGCGATTT     CAGCGATTT         14210
+T59_0                                    GGAGAACAG     GGAGAACAG         14280
+T5_0                                     GTGGATATC     GTGGATATC         14240
+T60_0                                    AGCGTAAAA     AGCGTAAAA         14380
+T61_0                                    GGTCGCGAC     GGTCGCGAC         14390
+T62_0                                    AGGTCAGCT     AGGTCAGCT         14330
+T63_0                                    CGCACTGAG     CGCACTGAG         14210
+T64_0                                    GTAACCTCC     GTAACCTCC         14290
+T65_0                                    TAAGTCTTG     TAAGTCTTG         14240
+T66_0                                    AAAGCTCCT     AAAGCTCCT         14320
+T67_0                                    CATCCCTTC     CATCCCTTC         14350
+T68_0                                    CCTTTACAT     CCTTTACAT         14480
+T69_0                                    GTTCAGGAA     GTTCAGGAA         14510
+T6_0                                     AGAGCCGAG     AGAGCCGAG         14640
+T70_0                                    CCCGAGTTG     CCCGAGTTG         14390
+T71_0                                    CCAACCTCG     CCAACCTCG         14330
+T72_0                                    ATGAAATAA     ATGAAATAA         14600
+T73_0                                    CCGCATGGA     CCGCATGGA         14680
+T74_0                                    TCTTGAGTG     TCTTGAGTG         14710
+T75_0                                    TACGTCGAT     TACGTCGAT         14580
+T76_0                                    GGACACCTC     GGACACCTC         14700
+T77_0                                    GAACGTTGT     GAACGTTGT         14470
+T78_0                                    TCAGCGTTA     TCAGCGTTA         14530
+T79_0                                    AGAAGGGGC     AGAAGGGGC         14650
+T7_0                                     CTCCAATCC     CTCCAATCC         14670
+T80_0                                    CGCTTGCCA     CGCTTGCCA         14490
+T81_0                                    TCTCTGGCG     TCTCTGGCG         14640
+T82_0                                    TAGAACAGT     TAGAACAGT         14530
+T83_0                                    GGAGCTGGT     GGAGCTGGT         14740
+T84_0                                    TGAGACAAC     TGAGACAAC         14690
+T85_0                                    GACCCATCA     GACCCATCA         14750
+T86_0                                    TCAGCTTAG     TCAGCTTAG         14680
+T87_0                                    TGTTCCGTA     TGTTCCGTA         14380
+T88_0                                    ACATTTCGT     ACATTTCGT         14610
+T89_0                                    CATCAGAGC     CATCAGAGC         14540
+T8_0                                     CTCACTGCA     CTCACTGCA         14580
+T90_0                                    GACGTCTAG     GACGTCTAG         14500
+T91_0                                    CAGTTCGTA     CAGTTCGTA         14610
+T92_0                                    GACTCTTCT     GACTCTTCT         14550
+T93_0                                    ATGGAGTTT     ATGGAGTTT         14470
+T94_0                                    TCACCCTGC     TCACCCTGC         14600
+T95_0                                    GGACAGTCA     GGACAGTCA         14570
+T96_0                                    CCAGAACCC     CCAGAACCC         14360
+T97_0                                    AGTTTCCAC     AGTTTCCAC         14470
+T98_0                                    ATGGTCAAT     ATGGTCAAT         14570
+T99_0                                    TTGTCTTGA     TTGTCTTGA         14480
+T9_0                                     GGCGCATAC     GGCGCATAC         14670
+no_match                                         _            _            0

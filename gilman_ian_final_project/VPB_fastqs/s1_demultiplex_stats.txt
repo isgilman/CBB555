@@ -1,0 +1,207 @@
+raw_file                               total_reads    cut_found  bar_matched
+VPB_R1_.fastq                              1640900      1640900      1640900
+
+sample_name                            total_reads
+T100_0                                       16490
+T10_0                                        16170
+T11_0                                        16070
+T12_0                                        16160
+T13_0                                        15980
+T14_0                                        15900
+T15_0                                        16000
+T16_0                                        15900
+T17_0                                        16020
+T18_0                                        16170
+T19_0                                        16240
+T1_0                                         16480
+T20_0                                        16150
+T21_0                                        16120
+T22_0                                        16200
+T23_0                                        16200
+T24_0                                        16170
+T25_0                                        16010
+T26_0                                        16130
+T27_0                                        16040
+T28_0                                        15970
+T29_0                                        16020
+T2_0                                         16570
+T30_0                                        16360
+T31_0                                        16260
+T32_0                                        16260
+T33_0                                        16430
+T34_0                                        16320
+T35_0                                        16330
+T36_0                                        16440
+T37_0                                        16610
+T38_0                                        17090
+T39_0                                        16940
+T3_0                                         16410
+T40_0                                        17010
+T41_0                                        16890
+T42_0                                        16840
+T43_0                                        16900
+T44_0                                        16920
+T45_0                                        16770
+T46_0                                        16710
+T47_0                                        16560
+T48_0                                        16070
+T49_0                                        16180
+T4_0                                         16460
+T50_0                                        16100
+T51_0                                        16230
+T52_0                                        16250
+T53_0                                        16310
+T54_0                                        16220
+T55_0                                        16100
+T56_0                                        16220
+T57_0                                        16360
+T58_0                                        16350
+T59_0                                        16350
+T5_0                                         16310
+T60_0                                        16460
+T61_0                                        16320
+T62_0                                        16410
+T63_0                                        16320
+T64_0                                        16390
+T65_0                                        16620
+T66_0                                        16390
+T67_0                                        16750
+T68_0                                        16430
+T69_0                                        16470
+T6_0                                         16180
+T70_0                                        16580
+T71_0                                        16650
+T72_0                                        16530
+T73_0                                        16170
+T74_0                                        16330
+T75_0                                        16430
+T76_0                                        16670
+T77_0                                        16560
+T78_0                                        16750
+T79_0                                        16500
+T7_0                                         16270
+T80_0                                        16610
+T81_0                                        16770
+T82_0                                        16390
+T83_0                                        16510
+T84_0                                        16590
+T85_0                                        16540
+T86_0                                        16580
+T87_0                                        16650
+T88_0                                        16600
+T89_0                                        16690
+T8_0                                         16310
+T90_0                                        16460
+T91_0                                        16780
+T92_0                                        16430
+T93_0                                        16640
+T94_0                                        16720
+T95_0                                        16710
+T96_0                                        16590
+T97_0                                        16360
+T98_0                                        16290
+T99_0                                        16600
+T9_0                                         16180
+
+sample_name                               true_bar       obs_bar     N_records
+T100_0                                   CTCGTCCGC     CTCGTCCGC         16490
+T10_0                                    CCTTATGTC     CCTTATGTC         16170
+T11_0                                    ACGTGTGTG     ACGTGTGTG         16070
+T12_0                                    TTACTAACA     TTACTAACA         16160
+T13_0                                    TAGAGTGAT     TAGAGTGAT         15980
+T14_0                                    GCTGCAAGA     GCTGCAAGA         15900
+T15_0                                    GGTAAGGTA     GGTAAGGTA         16000
+T16_0                                    CGTCGACAT     CGTCGACAT         15900
+T17_0                                    ACCCCAGTG     ACCCCAGTG         16020
+T18_0                                    GGTGGGGGT     GGTGGGGGT         16170
+T19_0                                    ACTAGCTGG     ACTAGCTGG         16240
+T1_0                                     CATCATCAT     CATCATCAT         16480
+T20_0                                    TTCTTAATC     TTCTTAATC         16150
+T21_0                                    ACAATCCCA     ACAATCCCA         16120
+T22_0                                    TAACCGTAG     TAACCGTAG         16200
+T23_0                                    TTGGGAGAG     TTGGGAGAG         16200
+T24_0                                    CTGGCGAAC     CTGGCGAAC         16170
+T25_0                                    GCTGAGCAC     GCTGAGCAC         16010
+T26_0                                    AACTCTGCA     AACTCTGCA         16130
+T27_0                                    GGGGTGTAG     GGGGTGTAG         16040
+T28_0                                    GTTTTTGCT     GTTTTTGCT         15970
+T29_0                                    ATCGTGAGT     ATCGTGAGT         16020
+T2_0                                     CCAGTGATA     CCAGTGATA         16570
+T30_0                                    AATAGAAGT     AATAGAAGT         16360
+T31_0                                    CCTTAAACC     CCTTAAACC         16260
+T32_0                                    GATCACGTT     GATCACGTT         16260
+T33_0                                    GAAAACAAG     GAAAACAAG         16430
+T34_0                                    AGCAATTTC     AGCAATTTC         16320
+T35_0                                    CGTCATGCA     CGTCATGCA         16330
+T36_0                                    GCTACTTAA     GCTACTTAA         16440
+T37_0                                    CAGCTCTAG     CAGCTCTAG         16610
+T38_0                                    CATAACTTT     CATAACTTT         17090
+T39_0                                    GTATAACTT     GTATAACTT         16940
+T3_0                                     TGGCCTAGT     TGGCCTAGT         16410
+T40_0                                    GCCAACTAT     GCCAACTAT         17010
+T41_0                                    CGTGCACTT     CGTGCACTT         16890
+T42_0                                    ACACAATCC     ACACAATCC         16840
+T43_0                                    ACATATTAG     ACATATTAG         16900
+T44_0                                    GTTTGTCAT     GTTTGTCAT         16920
+T45_0                                    CCTTCTAAG     CCTTCTAAG         16770
+T46_0                                    GATACGAGC     GATACGAGC         16710
+T47_0                                    CAAGGCGCA     CAAGGCGCA         16560
+T48_0                                    CCCATTAGC     CCCATTAGC         16070
+T49_0                                    GTTAGTCGC     GTTAGTCGC         16180
+T4_0                                     GGGAAAAAC     GGGAAAAAC         16460
+T50_0                                    CCTATAGAA     CCTATAGAA         16100
+T51_0                                    CAAGGCAGG     CAAGGCAGG         16230
+T52_0                                    TGAGATTTG     TGAGATTTG         16250
+T53_0                                    CAATTGGGG     CAATTGGGG         16310
+T54_0                                    TAATGGGGA     TAATGGGGA         16220
+T55_0                                    ACTCACACA     ACTCACACA         16100
+T56_0                                    ACATCAAGA     ACATCAAGA         16220
+T57_0                                    GATAGGTGG     GATAGGTGG         16360
+T58_0                                    CAGCGATTT     CAGCGATTT         16350
+T59_0                                    GGAGAACAG     GGAGAACAG         16350
+T5_0                                     GTGGATATC     GTGGATATC         16310
+T60_0                                    AGCGTAAAA     AGCGTAAAA         16460
+T61_0                                    GGTCGCGAC     GGTCGCGAC         16320
+T62_0                                    AGGTCAGCT     AGGTCAGCT         16410
+T63_0                                    CGCACTGAG     CGCACTGAG         16320
+T64_0                                    GTAACCTCC     GTAACCTCC         16390
+T65_0                                    TAAGTCTTG     TAAGTCTTG         16620
+T66_0                                    AAAGCTCCT     AAAGCTCCT         16390
+T67_0                                    CATCCCTTC     CATCCCTTC         16750
+T68_0                                    CCTTTACAT     CCTTTACAT         16430
+T69_0                                    GTTCAGGAA     GTTCAGGAA         16470
+T6_0                                     AGAGCCGAG     AGAGCCGAG         16180
+T70_0                                    CCCGAGTTG     CCCGAGTTG         16580
+T71_0                                    CCAACCTCG     CCAACCTCG         16650
+T72_0                                    ATGAAATAA     ATGAAATAA         16530
+T73_0                                    CCGCATGGA     CCGCATGGA         16170
+T74_0                                    TCTTGAGTG     TCTTGAGTG         16330
+T75_0                                    TACGTCGAT     TACGTCGAT         16430
+T76_0                                    GGACACCTC     GGACACCTC         16670
+T77_0                                    GAACGTTGT     GAACGTTGT         16560
+T78_0                                    TCAGCGTTA     TCAGCGTTA         16750
+T79_0                                    AGAAGGGGC     AGAAGGGGC         16500
+T7_0                                     CTCCAATCC     CTCCAATCC         16270
+T80_0                                    CGCTTGCCA     CGCTTGCCA         16610
+T81_0                                    TCTCTGGCG     TCTCTGGCG         16770
+T82_0                                    TAGAACAGT     TAGAACAGT         16390
+T83_0                                    GGAGCTGGT     GGAGCTGGT         16510
+T84_0                                    TGAGACAAC     TGAGACAAC         16590
+T85_0                                    GACCCATCA     GACCCATCA         16540
+T86_0                                    TCAGCTTAG     TCAGCTTAG         16580
+T87_0                                    TGTTCCGTA     TGTTCCGTA         16650
+T88_0                                    ACATTTCGT     ACATTTCGT         16600
+T89_0                                    CATCAGAGC     CATCAGAGC         16690
+T8_0                                     CTCACTGCA     CTCACTGCA         16310
+T90_0                                    GACGTCTAG     GACGTCTAG         16460
+T91_0                                    CAGTTCGTA     CAGTTCGTA         16780
+T92_0                                    GACTCTTCT     GACTCTTCT         16430
+T93_0                                    ATGGAGTTT     ATGGAGTTT         16640
+T94_0                                    TCACCCTGC     TCACCCTGC         16720
+T95_0                                    GGACAGTCA     GGACAGTCA         16710
+T96_0                                    CCAGAACCC     CCAGAACCC         16590
+T97_0                                    AGTTTCCAC     AGTTTCCAC         16360
+T98_0                                    ATGGTCAAT     ATGGTCAAT         16290
+T99_0                                    TTGTCTTGA     TTGTCTTGA         16600
+T9_0                                     GGCGCATAC     GGCGCATAC         16180
+no_match                                         _            _            0

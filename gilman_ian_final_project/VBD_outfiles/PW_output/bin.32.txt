@@ -1,0 +1,7 @@
+locus199
+locus220
+locus243
+locus256
+locus301
+locus384
+locus854

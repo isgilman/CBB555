@@ -1,0 +1,71 @@
+
+================== ASTRAL ===================== 
+
+This is ASTRAL version 5.5.9
+Gene trees are treated as unrooted
+139 trees read from VPB_bin.tre
+All output trees will be *arbitrarily* rooted at T100_0
+
+======== Running the main analysis
+Number of taxa: 100 (100 species)
+Taxa: [T100_0, T10_0, T8_0, T11_0, T12_0, T13_0, T15_0, T16_0, T17_0, T14_0, T20_0, T21_0, T19_0, T18_0, T6_0, T9_0, T7_0, T22_0, T23_0, T24_0, T25_0, T26_0, T27_0, T28_0, T29_0, T30_0, T32_0, T31_0, T33_0, T35_0, T36_0, T34_0, T1_0, T4_0, T5_0, T3_0, T2_0, T37_0, T43_0, T44_0, T40_0, T39_0, T38_0, T42_0, T45_0, T46_0, T47_0, T41_0, T94_0, T95_0, T96_0, T65_0, T67_0, T68_0, T69_0, T85_0, T89_0, T87_0, T88_0, T86_0, T90_0, T91_0, T93_0, T92_0, T82_0, T83_0, T84_0, T66_0, T97_0, T98_0, T70_0, T71_0, T72_0, T73_0, T74_0, T75_0, T76_0, T77_0, T78_0, T80_0, T79_0, T81_0, T48_0, T49_0, T51_0, T55_0, T56_0, T57_0, T58_0, T50_0, T52_0, T53_0, T54_0, T59_0, T60_0, T61_0, T62_0, T63_0, T64_0, T99_0]
+Taxon occupancy: {T81_0=139, T13_0=139, T59_0=139, T32_0=139, T97_0=139, T51_0=139, T74_0=139, T17_0=139, T55_0=139, T36_0=139, T78_0=139, T93_0=139, T70_0=139, T48_0=139, T8_0=139, T21_0=139, T4_0=139, T40_0=139, T86_0=139, T29_0=139, T63_0=139, T44_0=139, T25_0=139, T67_0=139, T80_0=139, T12_0=139, T35_0=139, T58_0=139, T31_0=139, T96_0=139, T73_0=139, T50_0=139, T16_0=139, T39_0=139, T77_0=139, T54_0=139, T92_0=139, T24_0=139, T47_0=139, T7_0=139, T20_0=139, T3_0=139, T62_0=139, T85_0=139, T28_0=139, T43_0=139, T89_0=139, T66_0=139, T60_0=139, T34_0=139, T11_0=139, T30_0=139, T72_0=139, T19_0=139, T95_0=139, T53_0=139, T38_0=139, T76_0=139, T15_0=139, T57_0=139, T99_0=139, T91_0=139, T2_0=139, T100_0=139, T23_0=139, T69_0=139, T6_0=139, T84_0=139, T61_0=139, T42_0=139, T27_0=139, T65_0=139, T46_0=139, T88_0=139, T82_0=139, T10_0=139, T33_0=139, T18_0=139, T94_0=139, T75_0=139, T52_0=139, T14_0=139, T37_0=139, T98_0=139, T79_0=139, T56_0=139, T90_0=139, T71_0=139, T1_0=139, T9_0=139, T22_0=139, T49_0=139, T5_0=139, T83_0=139, T41_0=139, T64_0=139, T26_0=139, T45_0=139, T68_0=139, T87_0=139}
+Number of gene trees: 139
+0 trees have missing taxa
+Calculating quartet distance matrix (for completion of X)
+Species tree distances calculated ...
+Building set of clusters (X) from gene trees 
+------------------------------
+gradient0: 6387
+Number of Clusters after addition by distance: 6387
+calculating extra bipartitions to be added at level 1 ...
+Adding to X using resolutions of greedy consensus ...
+Limit for sigma of degrees:2550
+polytomy size limit : 14
+discarded polytomies:  [3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 6, 8, 14]
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 6387
+Threshold 0.2:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 6; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 6387
+Threshold 0.3333333333333333:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 8; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 5; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 4; rounds with additions with at least 5 support: 0; clusters: 6387
+polytomy of size 14; rounds with additions with at least 5 support: 0; clusters: 6387
+max k is :0
+Number of Clusters after addition by greedy: 6387
+gradient0 in heuristiic: 6387
+partitions formed in 2.541 secs
+Dynamic Programming starting after 2.541 secs
+Using tree-based weight calculation.
+Using polytree-based weight calculation.
+Polytree max score: 545050275
+Polytree building time: 0.562 seconds.
+Number of quartet trees in the gene trees: 545050275
+Size of largest cluster: 100
+Greedy score: 417603097
+estimationFactor: 1.3051873391638185
+Sub-optimal score: 447420826
+Total Number of elements weighted: 16169
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.8626030195104479
+Optimization score: 470162013
+Optimal tree inferred in 5.731 secs.
+(T56_0,((T57_0,T58_0),(T55_0,(T54_0,((T52_0,T53_0),((T51_0,(T50_0,(T48_0,T49_0))),(T59_0,((T62_0,(T60_0,T61_0)),((T63_0,T64_0),(((T65_0,(T66_0,(T67_0,(T68_0,T69_0)))),(T70_0,((((T71_0,T72_0),(T73_0,(T74_0,T75_0))),((T76_0,T77_0),(T78_0,(T79_0,(T80_0,T81_0))))),((T84_0,(T82_0,T83_0)),((T91_0,(T93_0,T92_0)),(T90_0,(T89_0,(T85_0,(T88_0,(T87_0,T86_0)))))))))),(((T100_0,T99_0),((T97_0,T98_0),(T96_0,(T94_0,T95_0)))),((T37_0,((T45_0,(T46_0,T47_0)),((T43_0,T44_0),((T42_0,T41_0),(T40_0,(T39_0,T38_0)))))),(((T4_0,T5_0),(T1_0,(T3_0,T2_0))),(((T30_0,(T32_0,T31_0)),((T33_0,T34_0),(T35_0,T36_0))),(((T22_0,T23_0),((T29_0,(T27_0,T28_0)),(T24_0,(T25_0,T26_0)))),(T6_0,(((T10_0,T9_0),(T8_0,T7_0)),((T11_0,T12_0),(((T20_0,T21_0),(T19_0,T18_0)),((T13_0,T14_0),(T15_0,(T16_0,T17_0))))))))))))))))))))));
+Final quartet score is: 470162013
+Final normalized quartet score is: 0.8626030195104479
+(T100_0,(T99_0,(((T97_0,T98_0)1:2.3261692975392436,(T96_0,(T94_0,T95_0)1:0.3019214112332508)1:3.1010927892118203)1:1.4672079035691532,(((T37_0,((T45_0,(T46_0,T47_0)1:0.8155894335020633)1:1.547293837328409,((T43_0,T44_0)1:0.974337314483864,((T42_0,T41_0)0.99:0.1889600844931195,(T40_0,(T39_0,T38_0)0.88:0.10462440962532388)1:0.729456346908517)0.99:0.17720792561006585)1:1.230947118547887)0.97:0.1488078354167629)1:4.517485181488975,(((T4_0,T5_0)1:1.3158989648588533,(T1_0,(T3_0,T2_0)1:0.6838386514412514)1:0.41423465140302385)1:1.6319339859506916,(((T30_0,(T32_0,T31_0)1:0.37745532659087017)1:0.7216900819528543,((T33_0,T34_0)0.86:0.10164718053316522,(T35_0,T36_0)1:0.2379003365600537)1:0.7827803408142496)1:1.8355722314576464,(((T22_0,T23_0)1:1.7681278646947771,((T29_0,(T27_0,T28_0)0.42:0.016183264627264663)1:1.2880870281544128,(T24_0,(T25_0,T26_0)1:0.8111051210547348)1:0.3400424319781945)1:0.5185872929987154)1:0.5806569491679486,(T6_0,(((T10_0,T9_0)1:0.25676612405099153,(T8_0,T7_0)1:0.744792980679364)1:1.3508085036223898,((T11_0,T12_0)1:2.2414884836293196,(((T20_0,T21_0)1:0.46830863798395694,(T19_0,T18_0)1:0.8848428949410543)1:0.4917966819648501,((T13_0,T14_0)1:0.8947205389388109,(T15_0,(T16_0,T17_0)0.96:0.1438941796600693)1:1.015950111390296)0.78:0.07965481522646484)1:0.3779528046950054)0.99:0.18953871440563538)1:0.36789840630858167)1:0.26150971898122694)0.63:0.05715788373674345)1:0.9603177392131703)1:2.1505407948871995)1:1.6150780487154597,(((T65_0,(T66_0,(T67_0,(T68_0,T69_0)1:1.8253817444817364)1:1.8095507278259941)1:0.5548246521993446)0.83:0.09093861848436564,(T70_0,((((T71_0,T72_0)1:3.0722723506763208,(T73_0,(T74_0,T75_0)1:0.47591206593190183)1:1.4408378862810474)1:0.42114722354436773,((T76_0,T77_0)1:3.0596630766540183,(T78_0,(T79_0,(T80_0,T81_0)1:0.27277169535670254)1:0.5468075398703665)1:2.151914190492825)1:0.6501868639289919)0.9:0.11180560336116112,((T84_0,(T82_0,T83_0)1:2.1096426709350475)1:0.3250228798540041,((T91_0,(T93_0,T92_0)1:0.8945299606183671)1:0.25066006740486996,(T90_0,(T89_0,(T85_0,(T88_0,(T87_0,T86_0)1:0.4402875549589727)1:0.3793308087668953)1:0.5975636273258151)1:0.45284171065653106)1:0.5811369239893032)1:0.22260538897061227)1:0.46810666460574596)0.48:0.026718704655579482)1:0.8539056820001439)0.99:0.18221897101964019,((T63_0,T64_0)1:3.835827221647135,((T62_0,(T60_0,T61_0)1:0.63347597160013)1:1.2240076014285828,(T59_0,((T51_0,(T50_0,(T48_0,T49_0)1:0.899676931211499)1:1.085363390637234)0.94:0.13382625707092133,((T52_0,T53_0)1:1.061742795460989,(T54_0,(T55_0,((T57_0,T58_0)1:0.5241690389396753,T56_0)0.8:0.08401263097295013)1:0.20152736973805152)0.99:0.17810809567110836)1:1.0822116032554199)0.55:0.0418162632822017)1:1.7153927817498407)1:0.43996034301192166)1:0.5107579680847316)1:0.599312085347245)1:0.3869053431135728)1:2.609811761518796));
+Weight calculation took 2.325923084 secs
+ASTRAL finished in 6.221 secs

@@ -1,0 +1,22 @@
+
+ -------------------------------------------------------------
+  ipyrad [v.0.7.19]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  Begin run: 2017-12-18 21:33
+  Using args {'preview': False, 'force': False, 'threads': 2, 'results': False, 'quiet': False, 'merge': None, 'ipcluster': None, 'cores': 0, 'params': 'params-CBD.txt', 'branch': None, 'steps': '1234567', 'debug': False, 'new': None, 'MPI': False}
+  Platform info: ('Darwin', 'vpn172022168059.its.yale.internal', '16.7.0', 'Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64', 'x86_64')
+ -------------------------------------------------------------
+  ipyrad [v.0.7.19]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  Begin run: 2017-12-18 22:05
+  Using args {'preview': False, 'force': False, 'threads': 2, 'results': False, 'quiet': False, 'merge': None, 'ipcluster': None, 'cores': 0, 'params': 'params-VBD.txt', 'branch': None, 'steps': '1234567', 'debug': False, 'new': None, 'MPI': False}
+  Platform info: ('Darwin', 'vpn172022168059.its.yale.internal', '16.7.0', 'Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64', 'x86_64')
+ -------------------------------------------------------------
+  ipyrad [v.0.7.19]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  Begin run: 2017-12-18 22:20
+  Using args {'preview': False, 'force': False, 'threads': 2, 'results': False, 'quiet': False, 'merge': None, 'ipcluster': None, 'cores': 0, 'params': 'params-VPB.txt', 'branch': None, 'steps': '1234567', 'debug': False, 'new': None, 'MPI': False}
+  Platform info: ('Darwin', 'vpn172022168059.its.yale.internal', '16.7.0', 'Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64', 'x86_64')

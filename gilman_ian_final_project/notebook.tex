@@ -1,0 +1,2051 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{gilman\_ian\_final}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \section{CBB 500 Final project}\label{cbb-500-final-project}
+
+\section{Gene Tree Clustering with
+Modularity}\label{gene-tree-clustering-with-modularity}
+
+Species trees provide foundational data for biological studies from
+ecology to epidemiology. There has been a boom in software to accurately
+estimate species trees as sequencing techniques and technology have
+expanded the types, and reduced the per base-pair cost, of sequencing.
+One, increasingly popular sequencing technique is the creation of
+reduced representation libraries, primarily with restriction
+site-associated DNA sequencing (RADseq, Baird et al, 2008). In this
+family of methods hundreds to thousands of short
+(\textasciitilde{}30-600bp) loci are generated that are often not
+present for all taxa. Therfore these loci have information to connect
+only a handful of taxa and their short length implies low phylogenetic
+signal; often RAD loci with more than one SNP per locus are discarded or
+subsampled. Hence, gene tree estimation from these loci not only lacks
+precision but often is inaccurate. Because gene trees serve as the input
+data into many species tree estimation programs, accurate gene tree
+estimation is necessary for species tree construction.
+
+It has long been known that different genes have different evolutionary
+history due to 1) incomplete lineage sorting (coalescent stochasticity),
+2) horizontal gene transfer (including hybridization/introgression), and
+3) gene duplication and extinction (reviewed in Maddison, 1997). For
+these reasons, as well among-site rate heterogeneity (e.g. second vs.
+third codon position), concatenating multiple loci and treating them as
+a single evolutionary unit can be not only wrong, but "positively
+midleading" (Roch and Steel, 2014); showing strong support for incorrect
+phylogenetic hypotheses. Hence, discordance among gene trees and the low
+signal in RADseq loci pose serious challenges to species tree
+construction.
+
+Recent studies have found that naively (randomly) binning loci that
+share similar evolutionary histories into "supergenes" results in more
+accurate gene tree estimation, and, in turn, more accurate species tree
+estimation (Bayzid and Warnow, 2013; Jarvis et al, 2014; Mirarab et al.
+2014). While this process makes progress in species tree estimation
+through combining information, it neglects much of the rich biological
+information present in genes and their repsective gene trees. Here I
+present Gene Tree Clustering with Modularity (GTCM), a method to cluster
+genes using the information in their gene trees. The Robinson-Foulds
+distance (Robinson and Foulds, 1981) is used to measure the similarity
+in gene trees, gene trees are then clustered through greedy modularity
+maximization (Louvain method, Blondell et al, 2008), and, finally, gene
+clusters are extracted and concatenated for species tree estimation.
+
+\subsection{\texorpdfstring{0. Load libraries and define functions\emph{
+}Functions that do not require motivation (i.e. from previous homework,
+used for bookkeeping or
+parsing)}{0. Load libraries and define functions Functions that do not require motivation (i.e. from previous homework, used for bookkeeping or parsing)}}\label{load-libraries-and-define-functions-functions-that-do-not-require-motivation-i.e.-from-previous-homework-used-for-bookkeeping-or-parsing}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}102}]:} \PY{c+c1}{\PYZsh{} I/O and basics}
+          \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+          \PY{k+kn}{import} \PY{n+nn}{codecs}\PY{o}{,} \PY{n+nn}{json}\PY{o}{,} \PY{n+nn}{sys}\PY{o}{,} \PY{n+nn}{os}\PY{o}{,} \PY{n+nn}{csv}\PY{o}{,} \PY{n+nn}{re}
+          \PY{k+kn}{from} \PY{n+nn}{shutil} \PY{k+kn}{import} \PY{n}{move}
+          \PY{k+kn}{from} \PY{n+nn}{StringIO} \PY{k+kn}{import} \PY{n}{StringIO}
+          \PY{k+kn}{from} \PY{n+nn}{tqdm} \PY{k+kn}{import} \PY{n}{tqdm\PYZus{}notebook}
+          \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k+kn}{as} \PY{n+nn}{pd}
+          \PY{c+c1}{\PYZsh{} Plotting}
+          \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+          \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+          \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+          \PY{k+kn}{import} \PY{n+nn}{matplotlib.cm} \PY{k+kn}{as} \PY{n+nn}{mplcm}
+          \PY{k+kn}{import} \PY{n+nn}{matplotlib.colors} \PY{k+kn}{as} \PY{n+nn}{colors}
+          \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k+kn}{as} \PY{n+nn}{sns}
+          \PY{c+c1}{\PYZsh{} Bioinformatics}
+          \PY{k+kn}{import} \PY{n+nn}{ete3} \PY{k+kn}{as} \PY{n+nn}{ete}
+          \PY{k+kn}{from} \PY{n+nn}{Bio} \PY{k+kn}{import} \PY{n}{AlignIO}\PY{p}{,} \PY{n}{Alphabet}
+          \PY{k+kn}{from} \PY{n+nn}{Bio.Nexus} \PY{k+kn}{import} \PY{n}{Nexus}
+          \PY{k+kn}{import} \PY{n+nn}{dendropy}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k}{def} \PY{n+nf}{listabs}\PY{p}{(}\PY{n}{directory}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Returns the absolute path of all items in a directory}
+        
+        \PY{l+s+sd}{    Parameters}
+        \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+        \PY{l+s+sd}{    directory : path to directory\PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{k}{return} \PY{p}{[}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{directory}\PY{p}{,} \PY{n}{filename}\PY{p}{)} \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{os}\PY{o}{.}\PY{n}{listdir}\PY{p}{(}\PY{n}{directory}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k}{class} \PY{n+nc}{Vividict}\PY{p}{(}\PY{n+nb}{dict}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}An inifinitely nestable dictionary created by user Aaron Hall on StackOverflow\PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}missing\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{key}\PY{p}{)}\PY{p}{:}
+                \PY{n}{value} \PY{o}{=} \PY{n+nb+bp}{self}\PY{p}{[}\PY{n}{key}\PY{p}{]} \PY{o}{=} \PY{n+nb}{type}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{(}\PY{p}{)}
+                \PY{k}{return} \PY{n}{value}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{k}{def} \PY{n+nf}{round\PYZus{}up\PYZus{}to\PYZus{}even}\PY{p}{(}\PY{n}{f}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Rounds an integer f up to the nearest even number}
+        
+        \PY{l+s+sd}{    Parameters}
+        \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+        \PY{l+s+sd}{    f: int\PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{k}{if} \PY{n}{f}\PY{o}{\PYZpc{}}\PY{k}{2}==0: return f
+            \PY{k}{else}\PY{p}{:} \PY{k}{return} \PY{n}{f}\PY{o}{+}\PY{l+m+mi}{1}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}178}]:} \PY{k}{def} \PY{n+nf}{flatten}\PY{p}{(}\PY{n}{l}\PY{p}{)}\PY{p}{:}
+              \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Creates a 1\PYZhy{}D list from a list of sublists}
+          
+          \PY{l+s+sd}{    Parameters}
+          \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+          \PY{l+s+sd}{    l : a list\PYZsq{}\PYZsq{}\PYZsq{}}
+              \PY{k}{return} \PY{p}{[}\PY{n}{item} \PY{k}{for} \PY{n}{sublist} \PY{o+ow}{in} \PY{n}{l} \PY{k}{for} \PY{n}{item} \PY{o+ow}{in} \PY{n}{sublist}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{k}{def} \PY{n+nf}{compute\PYZus{}affinity\PYZus{}matrix}\PY{p}{(}\PY{n}{D}\PY{p}{,} \PY{n}{kernel\PYZus{}type}\PY{p}{,} \PY{n}{sigma}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Construct an affinity matrix from a distance matrix via gaussian kernel.}
+        
+        \PY{l+s+sd}{    Inputs:}
+        \PY{l+s+sd}{        D               a numpy array of size n x n containing the distances between}
+        \PY{l+s+sd}{points}
+        \PY{l+s+sd}{        kernel\PYZus{}type     a string, either \PYZdq{}gaussian\PYZdq{} or \PYZdq{}adaptive\PYZdq{}.}
+        \PY{l+s+sd}{                            If kernel\PYZus{}type = \PYZdq{}gaussian\PYZdq{}, then sigma must be a positive}
+        \PY{l+s+sd}{number}
+        \PY{l+s+sd}{                            If kernel\PYZus{}type = \PYZdq{}adaptive\PYZdq{}, then k must be a positive}
+        \PY{l+s+sd}{integer}
+        \PY{l+s+sd}{        sigma           the non\PYZhy{}adaptive gaussian kernel parameter}
+        \PY{l+s+sd}{        k               the adaptive kernel parameter}
+        \PY{l+s+sd}{    Outputs:}
+        \PY{l+s+sd}{        W       a numpy array of size n x n that is the affinity matrix\PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{c+c1}{\PYZsh{} Check if all affinity conditions are met}
+            \PY{k}{if} \PY{o+ow}{not} \PY{p}{(}\PY{p}{(}\PY{n}{kernel\PYZus{}type}\PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gaussian}\PY{l+s+s1}{\PYZsq{}} \PY{o+ow}{and} \PY{n}{sigma}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{)} \PY{o+ow}{or} \PY{p}{(}\PY{p}{(}\PY{n}{kernel\PYZus{}type}\PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}} \PY{o+ow}{and}
+        \PY{n+nb}{type}\PY{p}{(}\PY{n}{k}\PY{p}{)}\PY{o}{==}\PY{n+nb}{int} \PY{o+ow}{and} \PY{n}{k}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                \PY{k}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Kernel must be of type }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{gaussian}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ with sigma\PYZgt{}0, or }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{adaptive}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ with k a}
+        \PY{n}{positive} \PY{n}{integer}\PY{o}{.}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{)}
+                \PY{k}{return}
+            \PY{c+c1}{\PYZsh{} Compute with Gaussian kernel}
+            \PY{k}{elif} \PY{n}{kernel\PYZus{}type}\PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gaussian}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                \PY{n}{W} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{np}\PY{o}{.}\PY{n}{square}\PY{p}{(}\PY{n}{distances}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{sigma}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+            \PY{c+c1}{\PYZsh{} Compute with adaptive kernel}
+            \PY{k}{elif} \PY{n}{kernel\PYZus{}type}\PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                \PY{n}{W} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n}{shape}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{shape}\PY{p}{(}\PY{n}{D}\PY{p}{)}\PY{p}{)}
+                \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{shape}\PY{p}{(}\PY{n}{D}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{:}
+                    \PY{n}{sigma} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sort}\PY{p}{(}\PY{n}{D}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{[}\PY{n}{k}\PY{p}{]}
+                    \PY{k}{if} \PY{n}{sigma}\PY{o}{==}\PY{l+m+mi}{0}\PY{p}{:} \PY{n}{sigma}\PY{o}{=}\PY{l+m+mf}{1e\PYZhy{}9}
+                    \PY{n}{W}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{np}\PY{o}{.}\PY{n}{square}\PY{p}{(}\PY{n}{D}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{sigma}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+        
+            \PY{c+c1}{\PYZsh{} return the affinity matrix}
+            \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{asarray}\PY{p}{(}\PY{n}{W}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{k}{def} \PY{n+nf}{dict\PYZus{}modularity}\PY{p}{(}\PY{n}{affinity\PYZus{}matrix}\PY{p}{,} \PY{n}{assignments}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Calculates modularity}
+        
+        \PY{l+s+sd}{    Parameters}
+        \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+        \PY{l+s+sd}{    affinity\PYZus{}matrix : an affinity matrix as an ndarry}
+        \PY{l+s+sd}{    assignments : a dictionary where the keys are indicies}
+        \PY{l+s+sd}{    and values are cluster assignments\PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{n}{modularity}\PY{o}{=}\PY{l+m+mi}{0}
+            \PY{n}{m} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{affinity\PYZus{}matrix}\PY{p}{)}
+            \PY{c+c1}{\PYZsh{} Loop over all clusters}
+            \PY{k}{for} \PY{n}{l} \PY{o+ow}{in} \PY{n+nb}{set}\PY{p}{(}\PY{n}{assignments}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                \PY{n}{c\PYZus{}pts} \PY{o}{=} \PY{p}{[}\PY{n}{node} \PY{k}{for} \PY{n}{node}\PY{p}{,} \PY{n}{cluster} \PY{o+ow}{in} \PY{n}{assignments}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{cluster} \PY{o}{==} \PY{n}{l}\PY{p}{]}
+                \PY{c+c1}{\PYZsh{} Get cluster\PYZsq{}s slice of affinity matrix}
+                \PY{n}{l\PYZus{}aff} \PY{o}{=} \PY{n}{affinity\PYZus{}matrix}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{ix\PYZus{}}\PY{p}{(}\PY{n}{c\PYZus{}pts}\PY{p}{,}\PY{n}{c\PYZus{}pts}\PY{p}{)}\PY{p}{]}
+                \PY{c+c1}{\PYZsh{} Calculate degree. Note that we\PYZsq{}re adding each}
+                \PY{c+c1}{\PYZsh{} point again for the self loops}
+                \PY{n}{degree} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{l\PYZus{}aff}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}\PY{o}{+}\PY{n}{l\PYZus{}aff}\PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{x}\PY{p}{]} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{c\PYZus{}pts}\PY{p}{)}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+                \PY{c+c1}{\PYZsh{} Calculate addition to modularity of cluster}
+                \PY{n}{l\PYZus{}mod} \PY{o}{=} \PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{l\PYZus{}aff}\PY{p}{)}\PY{o}{/}\PY{n}{m}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{p}{(}\PY{n}{degree}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{m}\PY{p}{)}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
+                \PY{n}{modularity}\PY{o}{+}\PY{o}{=}\PY{n}{l\PYZus{}mod}
+        
+            \PY{k}{return} \PY{n}{modularity}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{k}{def} \PY{n+nf}{phase\PYZus{}one}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{,} \PY{n}{k}\PY{p}{,} \PY{n}{merge\PYZus{}tol}\PY{p}{,} \PY{n}{verbose}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Phase One of the two phase modularity clustering algorithm. In this}
+         \PY{l+s+sd}{    phase, greedily form clusters, using a random ordering of elements}
+         \PY{l+s+sd}{    Inputs:}
+         \PY{l+s+sd}{        clust\PYZus{}affinity  a numpy array of size n x n containing the affinities between}
+         \PY{l+s+sd}{clusters}
+         \PY{l+s+sd}{        k               the number of nearest neighbors to check}
+         \PY{l+s+sd}{        merge\PYZus{}tol       the tolerance for merging}
+         \PY{l+s+sd}{    Outputs:}
+         \PY{l+s+sd}{        clust\PYZus{}assignments   a dictionary where keys are 0 ... n\PYZhy{}1 and with values are 0}
+         \PY{l+s+sd}{... c\PYZhy{}1 where}
+         \PY{l+s+sd}{                            clust\PYZus{}assignments[i] = j if point i is in cluster j}
+         \PY{l+s+sd}{                            Hint: the condition that the values are 0...c\PYZhy{}1 need only be}
+         \PY{l+s+sd}{true upon returning}
+         \PY{l+s+sd}{        modularity\PYZus{}increase a float that keeps track of the increase in modularity}
+         \PY{l+s+sd}{during this phase\PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{c+c1}{\PYZsh{} Initialize random clustering and calculate modularity}
+             \PY{n}{clust\PYZus{}assignments} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{n+nb}{zip}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+         \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+             \PY{n}{init\PYZus{}mod} \PY{o}{=} \PY{n}{dict\PYZus{}modularity}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{,} \PY{n}{clust\PYZus{}assignments}\PY{p}{)}
+             \PY{n}{modularities} \PY{o}{=} \PY{p}{[}\PY{n}{init\PYZus{}mod}\PY{p}{]}
+             \PY{k}{if} \PY{n}{verbose}\PY{p}{:} \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Initial modularity: }\PY{l+s+si}{\PYZpc{}f}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{init\PYZus{}mod}\PY{p}{)}
+         
+             \PY{c+c1}{\PYZsh{} Initialize nested dictionary of clusterings}
+             \PY{n}{clustdicts} \PY{o}{=} \PY{n}{Vividict}\PY{p}{(}\PY{p}{)}
+             \PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{n}{clust\PYZus{}assignments}\PY{p}{)}
+             \PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{init\PYZus{}mod}
+             \PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}clusters}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{} Set initial merge tolerance}
+             \PY{n}{new\PYZus{}merge\PYZus{}tol} \PY{o}{=} \PY{l+m+mi}{0}
+             \PY{c+c1}{\PYZsh{} Initialize loop}
+             \PY{n}{stationary} \PY{o}{=} \PY{n+nb+bp}{False}
+             \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{1}
+             \PY{k}{while} \PY{n}{stationary}\PY{o}{==}\PY{n+nb+bp}{False} \PY{o+ow}{and} \PY{n+nb}{len}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{set}\PY{p}{(}\PY{n}{clust\PYZus{}assignments}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{o}{\PYZgt{}}\PY{l+m+mi}{1}\PY{p}{:}
+                 \PY{k}{if} \PY{n}{verbose}\PY{p}{:} \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Merge tolerance: }\PY{l+s+si}{\PYZpc{}.7f}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{new\PYZus{}merge\PYZus{}tol}\PY{p}{)}
+                 \PY{c+c1}{\PYZsh{} Set initial total modularity increase to be 0}
+                 \PY{n}{mod\PYZus{}increase} \PY{o}{=} \PY{l+m+mi}{0}
+                 \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{tqdm\PYZus{}notebook}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{permutation}\PY{p}{(}\PY{n}{clust\PYZus{}assignments}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+         \PY{n}{leave}\PY{o}{=}\PY{n}{verbose}\PY{p}{)}\PY{p}{:}
+                     \PY{c+c1}{\PYZsh{} Set initial modularity difference for x}
+                     \PY{n}{pointmoddiff}\PY{o}{=}\PY{l+m+mi}{0}
+                     \PY{c+c1}{\PYZsh{} Check k nearest neighbors for greatest modularity increase}
+                     \PY{k}{for} \PY{n}{n} \PY{o+ow}{in} \PY{n}{np}\PY{o}{.}\PY{n}{argsort}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{n}{k}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{:}
+                         \PY{n}{newmoddiff} \PY{o}{=} \PY{n}{modularity\PYZus{}diff}\PY{p}{(}\PY{n}{v}\PY{o}{=}\PY{n}{x}\PY{p}{,} \PY{n}{clust}\PY{o}{=}\PY{n}{clust\PYZus{}assignments}\PY{p}{[}\PY{n}{n}\PY{p}{]}\PY{p}{,}
+         \PY{n}{clust\PYZus{}affinity}\PY{o}{=}\PY{n}{clust\PYZus{}affinity}\PY{p}{,}
+                                                      \PY{n}{clust\PYZus{}assignment}\PY{o}{=}\PY{n}{clust\PYZus{}assignments}\PY{p}{)}
+                         \PY{k}{if} \PY{n}{newmoddiff} \PY{o}{\PYZgt{}} \PY{n}{pointmoddiff}\PY{p}{:}
+                             \PY{n}{pointmoddiff} \PY{o}{=} \PY{n}{newmoddiff}
+                             \PY{n}{moveto} \PY{o}{=} \PY{n}{clust\PYZus{}assignments}\PY{p}{[}\PY{n}{n}\PY{p}{]} \PY{c+c1}{\PYZsh{} Keep track of cluster}
+                     \PY{k}{if} \PY{n}{pointmoddiff} \PY{o}{\PYZgt{}} \PY{n}{new\PYZus{}merge\PYZus{}tol}\PY{p}{:} \PY{c+c1}{\PYZsh{} If increase \PYZgt{} tolerance, move x}
+                         \PY{n}{clust\PYZus{}assignments}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{moveto}
+                         \PY{n}{mod\PYZus{}increase} \PY{o}{+}\PY{o}{=} \PY{n}{pointmoddiff}
+                 \PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{n}{clust\PYZus{}assignments}\PY{p}{)}
+                 \PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{dict\PYZus{}modularity}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{,}
+         \PY{n}{clust\PYZus{}assignments}\PY{p}{)}
+                 \PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}clusters}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=}
+         \PY{n+nb}{len}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{set}\PY{p}{(}\PY{n}{clust\PYZus{}assignments}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+                 \PY{c+c1}{\PYZsh{} Set merge tolerance to fraction of updated modularity}
+                 \PY{n}{new\PYZus{}merge\PYZus{}tol} \PY{o}{=} \PY{n}{merge\PYZus{}tol}\PY{o}{*}\PY{n}{dict\PYZus{}modularity}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{,} \PY{n}{clust\PYZus{}assignments}\PY{p}{)}
+                 \PY{k}{if} \PY{n}{verbose}\PY{p}{:}
+                     \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{There are }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s1}{ clusters}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{Modularity: }\PY{l+s+si}{\PYZpc{}.10f}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{Modulary increase=}\PY{l+s+si}{\PYZpc{}f}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{o}{\PYZpc{}} \PYZbs{}
+                     \PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{set}\PY{p}{(}\PY{n}{clust\PYZus{}assignments}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{dict\PYZus{}modularity}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{,}
+                                                                 \PY{n}{clust\PYZus{}assignments}\PY{p}{)}\PY{p}{,}
+         \PY{n}{mod\PYZus{}increase}\PY{p}{)}
+                 \PY{c+c1}{\PYZsh{} Exit when starting and ending dict are the same}
+                 \PY{k}{if} \PY{n}{clust\PYZus{}assignments}\PY{o}{==}\PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]} \PY{o+ow}{or} \PY{n}{mod\PYZus{}increase}\PY{o}{==}\PY{l+m+mi}{0}\PY{p}{:}
+                     \PY{n}{stationary}\PY{o}{=}\PY{n+nb+bp}{True}
+                     \PY{k}{del} \PY{n}{clustdicts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}
+                     \PY{k}{if} \PY{n}{verbose}\PY{p}{:} \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Reached stationarity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{i}\PY{o}{+}\PY{o}{=}\PY{l+m+mi}{1}
+             \PY{c+c1}{\PYZsh{} Calculate increase in modularity}
+             \PY{n}{modularity\PYZus{}increase} \PY{o}{=} \PY{n}{dict\PYZus{}modularity}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{,}\PY{n}{clust\PYZus{}assignments}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{init\PYZus{}mod}
+             \PY{k}{return} \PY{n}{clustdicts}\PY{p}{,} \PY{n}{modularity\PYZus{}increase}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{k}{def} \PY{n+nf}{phase\PYZus{}two}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{,} \PY{n}{clust\PYZus{}assignments}\PY{p}{,} \PY{n}{verbose}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    Phase Two of the two phase modularity clustering algorithm.}
+         \PY{l+s+sd}{    In this phase, combine merged clusters into a larger graph}
+         
+         \PY{l+s+sd}{    Inputs:}
+         \PY{l+s+sd}{        clust\PYZus{}affinity      a numpy array of size n x n containing the affinities}
+         \PY{l+s+sd}{between points}
+         \PY{l+s+sd}{        clust\PYZus{}assignments   a dictionary where keys are 0 ... n\PYZhy{}1 and with values are 0}
+         \PY{l+s+sd}{... c\PYZhy{}1 where}
+         \PY{l+s+sd}{                            clust\PYZus{}assignments[i] = j if point i is in cluster j}
+         \PY{l+s+sd}{    Outputs:}
+         \PY{l+s+sd}{        new\PYZus{}clust\PYZus{}affinity  a numpy array of size c x c containing the affinities}
+         \PY{l+s+sd}{between clusters\PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{new\PYZus{}clust\PYZus{}affinity} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+             \PY{n}{unique\PYZus{}clust} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{set}\PY{p}{(}\PY{n}{clust\PYZus{}assignments}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+             \PY{k}{for} \PY{n}{l} \PY{o+ow}{in} \PY{n}{tqdm\PYZus{}notebook}\PY{p}{(}\PY{n}{unique\PYZus{}clust}\PY{p}{,} \PY{n}{leave}\PY{o}{=}\PY{n}{verbose}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{row} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+                 \PY{n}{l\PYZus{}pts} \PY{o}{=} \PY{p}{[}\PY{n}{node} \PY{k}{for} \PY{n}{node}\PY{p}{,} \PY{n}{cluster} \PY{o+ow}{in} \PY{n}{clust\PYZus{}assignments}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{cluster} \PY{o}{==} \PY{n}{l}\PY{p}{]} \PY{c+c1}{\PYZsh{}}
+         \PY{n}{Cluster} \PY{n}{by} \PY{n}{label}
+                 \PY{n}{l\PYZus{}vol} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{ix\PYZus{}}\PY{p}{(}\PY{n}{l\PYZus{}pts}\PY{p}{,} \PY{n}{l\PYZus{}pts}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+                 \PY{k}{for} \PY{n}{r} \PY{o+ow}{in} \PY{n}{unique\PYZus{}clust}\PY{p}{:}
+                     \PY{k}{if} \PY{n}{l}\PY{o}{==}\PY{n}{r}\PY{p}{:}
+                         \PY{n}{wlr} \PY{o}{=} \PY{n}{l\PYZus{}vol}
+                     \PY{k}{else}\PY{p}{:}
+                         \PY{n}{r\PYZus{}pts} \PY{o}{=} \PY{p}{[}\PY{n}{node} \PY{k}{for} \PY{n}{node}\PY{p}{,} \PY{n}{cluster} \PY{o+ow}{in} \PY{n}{clust\PYZus{}assignments}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{cluster}
+         \PY{o}{==} \PY{n}{r}\PY{p}{]} \PY{c+c1}{\PYZsh{} Cluster by label}
+                         \PY{n}{r\PYZus{}vol} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{ix\PYZus{}}\PY{p}{(}\PY{n}{r\PYZus{}pts}\PY{p}{,} \PY{n}{r\PYZus{}pts}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+                         \PY{n}{lr\PYZus{}aff} \PY{o}{=} \PY{n}{clust\PYZus{}affinity}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{ix\PYZus{}}\PY{p}{(}\PY{n}{l\PYZus{}pts}\PY{o}{+}\PY{n}{r\PYZus{}pts}\PY{p}{,} \PY{n}{l\PYZus{}pts}\PY{o}{+}\PY{n}{r\PYZus{}pts}\PY{p}{)}\PY{p}{]}
+                         \PY{n}{wlr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{lr\PYZus{}aff}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{l\PYZus{}vol}\PY{o}{\PYZhy{}}\PY{n}{r\PYZus{}vol}
+                     \PY{n}{row}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{wlr}\PY{p}{)}
+                 \PY{n}{new\PYZus{}clust\PYZus{}affinity}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{row}\PY{p}{)}
+             \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{new\PYZus{}clust\PYZus{}affinity}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{k}{def} \PY{n+nf}{plot\PYZus{}affinity}\PY{p}{(}\PY{n}{affinity\PYZus{}matrix}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{,} \PY{n}{inline\PYZus{}plot} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Produces a heat map of an affinity matrix}
+         
+         \PY{l+s+sd}{    Parameters}
+         \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+         \PY{l+s+sd}{    affinity\PYZus{}matrix : an affinity matrix as an ndarry}
+         \PY{l+s+sd}{    size : tuple (width,height) designating the figure size}
+         \PY{l+s+sd}{    inline\PYZus{}plot : bool, whether or not to display the plot\PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{n}{size}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{imshow}\PY{p}{(}\PY{n}{affinity\PYZus{}matrix}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RdYlGn}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{interpolation}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nearest}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{k}{if} \PY{o+ow}{not} \PY{n}{inline\PYZus{}plot}\PY{p}{:} \PY{n}{plt}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+             \PY{k}{return} \PY{n}{fig}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{k}{def} \PY{n+nf}{modVclust\PYZus{}plot}\PY{p}{(}\PY{n}{clusterdicts}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{,} \PY{n}{inline\PYZus{}plot}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Create a plot of modularity and number of clusters}
+         
+         \PY{l+s+sd}{    Pameters:}
+         \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+         \PY{l+s+sd}{    clusterdicts : a clustering dictionary}
+         \PY{l+s+sd}{    size : figsize}
+         \PY{l+s+sd}{    inline\PYZus{}plot : whether to display the plot\PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{iterations} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n+nb}{sorted}\PY{p}{(}\PY{n}{clusterdicts}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+             \PY{n}{sizes} \PY{o}{=} \PY{p}{[}\PY{n}{clusterdicts}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}clusters}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{sorted}\PY{p}{(}\PY{n}{clusterdicts}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{]}
+             \PY{n}{mods} \PY{o}{=} \PY{p}{[}\PY{n}{clusterdicts}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{sorted}\PY{p}{(}\PY{n}{clusterdicts}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{]}
+         
+             \PY{n}{fig}\PY{p}{,} \PY{n}{ax1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{n}{size}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{iterations}\PY{p}{,} \PY{n}{mods}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{o:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:denim blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Phase I iteration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:denim blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{colors}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:denim blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}xticks}\PY{p}{(}\PY{n}{iterations}\PY{p}{)}
+         
+             \PY{n}{ax2} \PY{o}{=} \PY{n}{ax1}\PY{o}{.}\PY{n}{twinx}\PY{p}{(}\PY{p}{)}
+             \PY{n}{ax2}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{iterations}\PY{p}{,} \PY{n}{sizes}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZca{}:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:pale red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Clusters}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:pale red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}  \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+             \PY{n}{ax2}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{colors}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:pale red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{k}{if} \PY{o+ow}{not} \PY{n}{inline\PYZus{}plot}\PY{p}{:} \PY{n}{plt}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+             \PY{k}{return} \PY{n}{fig}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{k}{def} \PY{n+nf}{greedy\PYZus{}modularity\PYZus{}clustering}\PY{p}{(}\PY{n}{affinity}\PY{p}{,} \PY{n}{k}\PY{p}{,} \PY{n}{merge\PYZus{}tol}\PY{p}{,} \PY{n}{max\PYZus{}iter}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{verbose}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}
+         \PY{n}{inline\PYZus{}plot}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    Two\PYZhy{}phase greedy modularity clustering algorithm}
+         \PY{l+s+sd}{    Iteratively call the two phases until no merging or maximum}
+         \PY{l+s+sd}{    iteration limit reached}
+         
+         \PY{l+s+sd}{    Note: be sure to keep track of how the individual points move}
+         \PY{l+s+sd}{    around throughout the iterations!}
+         \PY{l+s+sd}{    Inputs:}
+         \PY{l+s+sd}{        affinity        a numpy array of size n x n containing the}
+         \PY{l+s+sd}{                        affinities between points}
+         \PY{l+s+sd}{        k               the number of nearest neighbors to check}
+         \PY{l+s+sd}{        merge\PYZus{}tol       the tolerance for merging}
+         \PY{l+s+sd}{        max\PYZus{}iter        the maximum number of iterations to run}
+         \PY{l+s+sd}{                        the two\PYZhy{}phase procedure}
+         \PY{l+s+sd}{    Outputs:}
+         \PY{l+s+sd}{        clust\PYZus{}assignments\PYZus{}list  a list of cluster assignments at}
+         \PY{l+s+sd}{                                each round of the two\PYZhy{}phase procedure,}
+         \PY{l+s+sd}{                                a list of dictionaries where keys are 0 ... n\PYZhy{}1}
+         \PY{l+s+sd}{                                and with values are 0 ... c\PYZhy{}1 where}
+         \PY{l+s+sd}{                                clust\PYZus{}assignments\PYZus{}list[r][i] = j}
+         \PY{l+s+sd}{                                if point i is in cluster j at round r}
+         \PY{l+s+sd}{        modularity          a list of modularity at each round of the}
+         \PY{l+s+sd}{                            two\PYZhy{}phase procedure\PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{greedy\PYZus{}iters} \PY{o}{=} \PY{n}{Vividict}\PY{p}{(}\PY{p}{)}
+             \PY{n}{iteration} \PY{o}{=} \PY{l+m+mi}{0}
+             \PY{n}{nclusters} \PY{o}{=} \PY{l+m+mf}{1e10}
+             \PY{k}{while} \PY{n}{iteration} \PY{o}{\PYZlt{}}\PY{o}{=} \PY{n}{max\PYZus{}iter} \PY{o+ow}{and} \PY{n}{nclusters}\PY{o}{\PYZgt{}}\PY{l+m+mi}{1}\PY{p}{:}
+                 \PY{k}{if} \PY{n}{verbose}\PY{p}{:} \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{ITERATION }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{ENTERING PHASE 1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{iteration}\PY{p}{)}
+                 \PY{n}{string} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{iteration}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
+                 \PY{n}{old\PYZus{}aff} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{affinity}\PY{p}{)}
+                 \PY{n}{old\PYZus{}clustdicts}\PY{p}{,} \PY{n}{old\PYZus{}modinc} \PY{o}{=} \PY{n}{phase\PYZus{}one}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{o}{=}\PY{n}{old\PYZus{}aff}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{n}{k}\PY{p}{,}
+         \PY{n}{merge\PYZus{}tol}\PY{o}{=}\PY{n}{merge\PYZus{}tol}\PY{p}{,} \PY{n}{verbose}\PY{o}{=}\PY{n}{verbose}\PY{p}{)}
+                 \PY{n}{old\PYZus{}mod} \PY{o}{=} \PY{n}{old\PYZus{}clustdicts}\PY{p}{[}\PY{n+nb}{sorted}\PY{p}{(}\PY{n}{old\PYZus{}clustdicts}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+                 \PY{n}{nclusters} \PY{o}{=} \PY{n}{old\PYZus{}clustdicts}\PY{p}{[}\PY{n+nb}{sorted}\PY{p}{(}\PY{n}{old\PYZus{}clustdicts}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}clusters}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+                 \PY{n}{greedy\PYZus{}iters}\PY{p}{[}\PY{n}{string}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{aff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{old\PYZus{}aff}
+                 \PY{n}{greedy\PYZus{}iters}\PY{p}{[}\PY{n}{string}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{old\PYZus{}clustdicts}
+                 \PY{n}{greedy\PYZus{}iters}\PY{p}{[}\PY{n}{string}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{aff\PYZus{}plot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=}
+         \PY{n}{plot\PYZus{}affinity}\PY{p}{(}\PY{n}{affinity\PYZus{}matrix}\PY{o}{=}\PY{n}{greedy\PYZus{}iters}\PY{p}{[}\PY{n}{string}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{aff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{inline\PYZus{}plot}\PY{o}{=}\PY{n}{inline\PYZus{}plot}\PY{p}{)}
+                 \PY{n}{greedy\PYZus{}iters}\PY{p}{[}\PY{n}{string}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modVclust\PYZus{}plot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=}
+         \PY{n}{modVclust\PYZus{}plot}\PY{p}{(}\PY{n}{clusterdicts}\PY{o}{=}\PY{n}{greedy\PYZus{}iters}\PY{p}{[}\PY{n}{string}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{inline\PYZus{}plot}\PY{o}{=}\PY{n}{inline\PYZus{}plot}\PY{p}{)}
+                 \PY{n}{greedy\PYZus{}iters}\PY{p}{[}\PY{n}{string}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{old\PYZus{}mod}
+         
+                 \PY{k}{if} \PY{n}{verbose}\PY{p}{:} \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Modularity before iteration: }\PY{l+s+si}{\PYZpc{}f}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{ENTERING PHASE 2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{o}{\PYZpc{}}
+         \PY{p}{(}\PY{n}{old\PYZus{}mod}\PY{p}{)}
+                 \PY{n}{affinity} \PY{o}{=} \PY{n}{phase\PYZus{}two}\PY{p}{(}\PY{n}{clust\PYZus{}affinity}\PY{o}{=}\PY{n}{old\PYZus{}aff}\PY{p}{,} \PY{n}{clust\PYZus{}assignments} \PY{o}{=}
+         \PY{n}{old\PYZus{}clustdicts}\PY{p}{[}\PY{n+nb}{sorted}\PY{p}{(}\PY{n}{old\PYZus{}clustdicts}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{verbose}\PY{o}{=}\PY{n}{verbose}\PY{p}{)}
+                 \PY{n}{new\PYZus{}assignments} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{n+nb}{zip}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{affinity}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{affinity}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{modularity} \PY{o}{=} \PY{n}{dict\PYZus{}modularity}\PY{p}{(}\PY{n}{affinity\PYZus{}matrix}\PY{o}{=}\PY{n}{affinity}\PY{p}{,}
+         \PY{n}{assignments}\PY{o}{=}\PY{n}{new\PYZus{}assignments}\PY{p}{)}
+                 \PY{k}{if} \PY{n}{verbose}\PY{p}{:} \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Modularity after iteration: }\PY{l+s+si}{\PYZpc{}f}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{modularity}\PY{p}{)}
+                 \PY{n}{iteration}\PY{o}{+}\PY{o}{=}\PY{l+m+mi}{1}
+         
+             \PY{k}{return} \PY{n}{greedy\PYZus{}iters}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{k}{def} \PY{n+nf}{extract\PYZus{}plot\PYZus{}info}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Extracts the cluster sizes and modularities from a dictionary}
+         \PY{l+s+sd}{    created via greedy clustering}
+         
+         \PY{l+s+sd}{    Parameters}
+         \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+         \PY{l+s+sd}{    final\PYZus{}dict : a dictionary resulting from greedy clustering\PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{clustsizes} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+             \PY{n}{modularities} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+             \PY{k}{for} \PY{n}{iteration} \PY{o+ow}{in} \PY{n+nb}{sorted}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{finaliter} \PY{o}{=} \PY{n+nb}{sorted}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{p}{[}\PY{n}{iteration}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
+                 \PY{n}{clustsizes}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{p}{[}\PY{n}{iteration}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{finaliter}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{n\PYZus{}clusters}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+                 \PY{n}{modularities}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{p}{[}\PY{n}{iteration}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+             \PY{k}{return} \PY{n}{clustsizes}\PY{p}{,} \PY{n}{modularities}
+\end{Verbatim}
+
+    \subsection{1. Simulate data}\label{simulate-data}
+
+\subsubsection{1.1 Library simulation}\label{library-simulation}
+
+To build and test GTCM, 1,000 RADseq loci were simulated under multiple
+100 leaf trees. First, three tree topologies were created under
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  a constant birth-death model, "CDB", (birth rate = 1.0, death rate =
+  0.5),
+\item
+  a variable birth-death model, "VBD", in which birth and death rates
+  evolve along the branches from the root to the leaves (birth rate =
+  1.0, \(\sigma_{birth rate}\) = 0.1, death rate = 1.0,
+  \(\sigma_{death rate}\) = 0.1), and
+\item
+  a variable pure birth model, "VPB" (birth rate = 1.0,
+  \(\sigma_{birth rate}\) = 0.1, death rate = 0.0,
+  \(\sigma_{death rate}\) = 0.0).
+\end{enumerate}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}76}]:} \PY{c+c1}{\PYZsh{} Simulate tree and write tree to file}
+         \PY{n}{t\PYZus{}CBD} \PY{o}{=} \PY{n}{dp}\PY{o}{.}\PY{n}{treesim}\PY{o}{.}\PY{n}{birth\PYZus{}death}\PY{p}{(}\PY{n}{birth\PYZus{}rate}\PY{o}{=}\PY{l+m+mf}{1.0}\PY{p}{,} \PY{n}{death\PYZus{}rate}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{ntax}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CBD.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+             \PY{n}{treestring} \PY{o}{=} \PY{n}{t\PYZus{}CBD}\PY{o}{.}\PY{n}{as\PYZus{}newick\PYZus{}string}\PY{p}{(}\PY{p}{)}
+             \PY{n}{treestring} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{(}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{treestring}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{;}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+             \PY{n}{f}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{treestring}\PY{p}{)}
+         \PY{n}{t\PYZus{}VBD} \PY{o}{=} \PY{n}{dp}\PY{o}{.}\PY{n}{treesim}\PY{o}{.}\PY{n}{birth\PYZus{}death}\PY{p}{(}\PY{n}{birth\PYZus{}rate}\PY{o}{=}\PY{l+m+mf}{1.0}\PY{p}{,} \PY{n}{death\PYZus{}rate}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{birth\PYZus{}rate\PYZus{}sd}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,}
+         \PY{n}{death\PYZus{}rate\PYZus{}sd}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{ntax}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VBD.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+             \PY{n}{treestring} \PY{o}{=} \PY{n}{t\PYZus{}VBD}\PY{o}{.}\PY{n}{as\PYZus{}newick\PYZus{}string}\PY{p}{(}\PY{p}{)}
+             \PY{n}{treestring} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{(}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{treestring}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{;}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+             \PY{n}{f}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{treestring}\PY{p}{)}
+         \PY{n}{t\PYZus{}VPB} \PY{o}{=} \PY{n}{dp}\PY{o}{.}\PY{n}{treesim}\PY{o}{.}\PY{n}{birth\PYZus{}death}\PY{p}{(}\PY{n}{birth\PYZus{}rate}\PY{o}{=}\PY{l+m+mf}{1.0}\PY{p}{,} \PY{n}{death\PYZus{}rate}\PY{o}{=}\PY{l+m+mf}{0.0}\PY{p}{,} \PY{n}{birth\PYZus{}rate\PYZus{}sd}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,}
+         \PY{n}{death\PYZus{}rate\PYZus{}sd}\PY{o}{=}\PY{l+m+mf}{0.0}\PY{p}{,} \PY{n}{ntax}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VPB.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+             \PY{n}{treestring} \PY{o}{=} \PY{n}{t\PYZus{}VPB}\PY{o}{.}\PY{n}{as\PYZus{}newick\PYZus{}string}\PY{p}{(}\PY{p}{)}
+             \PY{n}{treestring} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{(}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{treestring}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{;}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+             \PY{n}{f}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{treestring}\PY{p}{)}
+\end{Verbatim}
+
+    Next, loci were simulated under each topology using \emph{simRRLs}
+(Eaton et al, 2017; available at https://github.com/dereneaton/simrrls)
+in bash, where \texttt{-N} is the effective population size of each
+species, \texttt{-mc\ 1} and \texttt{-ms\ 1} allows random allele gain
+and dropout, \texttt{-L} is the number of loci to be simulated, and
+\texttt{-l} is the length of the loci, in basepairs, to be simulated.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}78}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+         simrrls \PYZhy{}o CBD \PYZhy{}t CBD.tre \PYZhy{}N 1e6 \PYZhy{}mc 1 \PYZhy{}ms 1 \PYZhy{}n 1 \PYZhy{}L 1000 \PYZhy{}l 100
+         simrrls \PYZhy{}o VBD \PYZhy{}t VBD.tre \PYZhy{}N 1e6 \PYZhy{}mc 1 \PYZhy{}ms 1 \PYZhy{}n 1 \PYZhy{}L 1000 \PYZhy{}l 100
+         simrrls \PYZhy{}o VPB \PYZhy{}t VPB.tre \PYZhy{}N 1e6 \PYZhy{}mc 1 \PYZhy{}ms 1 \PYZhy{}n 1 \PYZhy{}L 1000 \PYZhy{}l 100
+\end{Verbatim}
+
+    The outputs of \emph{simRLLs} are raw multiplexed sequence data
+('.fastq.gz' file) and barcodes ('barcodes.txt' file). These were then
+input into ipyrad (Eaton, 2014), which assembles raw reads into
+libraries of aligned, concatenated reads.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}79}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+         ipyrad \PYZhy{}n CBD
+         ipyrad \PYZhy{}n VBD
+         ipyrad \PYZhy{}n VPB
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+  New file 'params-CBD.txt' created in
+/Users/iangilman/pythonscripts/CBB555/final\_proj
+
+
+  New file 'params-VBD.txt' created in
+/Users/iangilman/pythonscripts/CBB555/final\_proj
+
+
+  New file 'params-VPB.txt' created in
+/Users/iangilman/pythonscripts/CBB555/final\_proj
+
+
+    \end{Verbatim}
+
+    The initial ipyrad command creates a parameters file, which is hand
+edited to reflect the respective input files. Afterwards, ipyrad was run
+through all steps from demultiplexing through output file creation
+(briefly outlined in the output below).
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}82}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+         ipyrad \PYZhy{}p params\PYZhy{}CBD.txt \PYZhy{}s 1234567
+         ipyrad \PYZhy{}p params\PYZhy{}VBD.txt \PYZhy{}s 1234567
+         ipyrad \PYZhy{}p params\PYZhy{}VPB.txt \PYZhy{}s 1234567
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+ -------------------------------------------------------------
+  ipyrad [v.0.7.19]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  New Assembly: VBD
+  establishing parallel connection:
+  host compute node: [4 cores] on vpn172022168059.its.yale.internal
+
+  Step 1: Demultiplexing fastq data to Samples
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  sorting reads         | 0:00:25
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  writing/compressing   | 0:00:05
+
+  Step 2: Filtering reads
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  processing reads      | 0:01:10
+
+  Step 3: Clustering/Mapping reads
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  dereplicating         | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  clustering            | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building clusters     | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  chunking              | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  aligning              | 0:01:41
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  concatenating         | 0:00:00
+
+  Step 4: Joint estimation of error rate and heterozygosity
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  inferring [H, E]      | 0:00:14
+
+  Step 5: Consensus base calling
+  Mean error  [0.00075 sd=0.00002]
+  Mean hetero [0.00385 sd=0.00029]
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  calculating depths    | 0:00:16
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  chunking clusters     | 0:00:21
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  consens calling       | 0:04:04
+
+  Step 6: Clustering at 0.85 similarity across 100 samples
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  concat/shuffle input  | 0:00:01
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  clustering across     | 0:00:06
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building clusters     | 0:00:02
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  aligning clusters     | 0:01:26
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  database indels       | 0:00:03
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  indexing clusters     | 0:00:28
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building database     | 0:00:05
+
+  Step 7: Filter and write output files for 100 Samples
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  filtering loci        | 0:00:13
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building loci/stats   | 0:00:02
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building alleles      | 0:00:04
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building vcf file     | 0:00:48
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  writing vcf file      | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building arrays       | 0:00:01
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  writing outfiles      | 0:00:06
+  Outfiles written to: \textasciitilde{}/pythonscripts/CBB555/final\_proj/VBD\_outfiles
+
+
+ -------------------------------------------------------------
+  ipyrad [v.0.7.19]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  New Assembly: VPB
+  establishing parallel connection:
+  host compute node: [4 cores] on vpn172022168059.its.yale.internal
+
+  Step 1: Demultiplexing fastq data to Samples
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  sorting reads         | 0:00:28
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  writing/compressing   | 0:00:05
+
+  Step 2: Filtering reads
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  processing reads      | 0:01:21
+
+  Step 3: Clustering/Mapping reads
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  dereplicating         | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  clustering            | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building clusters     | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  chunking              | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  aligning              | 0:02:08
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  concatenating         | 0:00:00
+
+  Step 4: Joint estimation of error rate and heterozygosity
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  inferring [H, E]      | 0:00:16
+
+  Step 5: Consensus base calling
+  Mean error  [0.00074 sd=0.00002]
+  Mean hetero [0.00385 sd=0.00027]
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  calculating depths    | 0:00:13
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  chunking clusters     | 0:00:15
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  consens calling       | 0:03:39
+
+  Step 6: Clustering at 0.85 similarity across 100 samples
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  concat/shuffle input  | 0:00:02
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  clustering across     | 0:00:07
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building clusters     | 0:00:02
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  aligning clusters     | 0:01:30
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  database indels       | 0:00:03
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  indexing clusters     | 0:00:27
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building database     | 0:00:06
+
+  Step 7: Filter and write output files for 100 Samples
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  filtering loci        | 0:00:13
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building loci/stats   | 0:00:02
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building alleles      | 0:00:04
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building vcf file     | 0:00:56
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  writing vcf file      | 0:00:00
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  building arrays       | 0:00:02
+  [\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#] 100\%  writing outfiles      | 0:00:07
+  Outfiles written to: \textasciitilde{}/pythonscripts/CBB555/final\_proj/VPB\_outfiles
+
+
+    \end{Verbatim}
+
+    \subsubsection{1.2 Gene tree estimation}\label{gene-tree-estimation}
+
+After library construction, gene trees were estimated in PAUP*
+(Swofford, 2002). Because the libraries output from ipyrad are
+concatenated, individual loci needed ot be separated prior to gene tree
+estimation. As this was not the primary goal of this project, code to do
+this was separated and written to \texttt{G2Genes.py}, which was called
+as below.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}84}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+         cd CBD\PYZus{}outfiles
+         python ../G2Genes.py \PYZhy{}i *.gphocs
+         cd ../VBD\PYZus{}outfiles
+         python ../G2Genes.py \PYZhy{}i *.gphocs
+         cd ../VPB\PYZus{}outfiles
+         python ../G2Genes.py \PYZhy{}i *.gphocs
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+++++++++ G2Genes ++++++++
+
+
+Wrote 995 nexus to
+/Users/iangilman/pythonscripts/CBB555/final\_proj/CBD\_outfiles/nexus\_gfiles
+Wrote 995 phylip to
+/Users/iangilman/pythonscripts/CBB555/final\_proj/CBD\_outfiles/phylip\_gfiles
+
+++++++++ G2Genes ++++++++
+
+
+Wrote 895 nexus to
+/Users/iangilman/pythonscripts/CBB555/final\_proj/VBD\_outfiles/nexus\_gfiles
+Wrote 895 phylip to
+/Users/iangilman/pythonscripts/CBB555/final\_proj/VBD\_outfiles/phylip\_gfiles
+
+++++++++ G2Genes ++++++++
+
+
+Wrote 978 nexus to
+/Users/iangilman/pythonscripts/CBB555/final\_proj/VPB\_outfiles/nexus\_gfiles
+Wrote 978 phylip to
+/Users/iangilman/pythonscripts/CBB555/final\_proj/VPB\_outfiles/phylip\_gfiles
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+100\%|\#\#\#\#\#\#\#\#\#\#| 995/995 [00:07<00:00, 134.13it/s]
+100\%|\#\#\#\#\#\#\#\#\#\#| 895/895 [00:07<00:00, 116.69it/s]
+100\%|\#\#\#\#\#\#\#\#\#\#| 978/978 [00:08<00:00, 115.30it/s]
+
+    \end{Verbatim}
+
+    Notice that none of our libraries have 1,000 loci. This is due to
+quality filtering performed in ipyrad to remove loci with erroneous base
+calls or that were not recovered in at least four species (four being
+the minimum number of leaves to construct a rooted tree).
+
+Gene tree estimation in PAUP* involves adding parameter settings to each
+gene file. The string below specifies that we will construct gene trees
+using the neighbor-joining algorithm with Jukes-Cantor adjusted
+distances (Jukes and Cantor, 1969) and ties broken at random.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{paup\PYZus{}lines} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{BEGIN PAUP;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{set autoclose=yes;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{set increase=auto;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{NJ breakties=random distance=JC;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{savetrees format=Phylip from=1 to=1;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{quit;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{End;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{unpauped} \PY{o}{=} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CBD\PYZus{}outfiles/nexus\PYZus{}gfiles}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{+}\PYZbs{}
+                     \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VBD\PYZus{}outfiles/nexus\PYZus{}gfiles}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{+}\PYZbs{}
+                     \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VPB\PYZus{}outfiles/nexus\PYZus{}gfiles}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}95}]:} \PY{c+c1}{\PYZsh{} Write lines to each file}
+         \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{unpauped}\PY{p}{:}
+             \PY{k}{if} \PY{n}{filename}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{filename}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{n}\PY{p}{:}
+                     \PY{n}{n}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{paup\PYZus{}lines}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}105}]:} \PY{c+c1}{\PYZsh{} Run PAUP*}
+          \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+          for f in ./\PYZob{}CBD,VBD,VPB\PYZcb{}\PYZus{}outfiles/nexus\PYZus{}gfiles/*
+          do
+              paup \PYZhy{}n \PYZdl{}f
+          done
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub\_data\_rate\_limit`.
+
+    \end{Verbatim}
+
+    \subsection{2. Construct affinity matrix using Robinson-Foulds
+distance}\label{construct-affinity-matrix-using-robinson-foulds-distance}
+
+PAUP* output a single gene tree ('.tre' file) for each locus. We can
+calculate the Robinson-Foulds distance between each pair of trees
+\(T_i\) and \(T_j\) as
+
+\[d_{RF}(T_i, T_j) = E_{T_i-T_j} + E_{T_j-T_i}\textrm{,}\]
+
+where \(E_{T_i-T_j}\) is the number of edges in \(T_i\) that are not in
+\(T_j\) (Robinson and Foulds, 1981).
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{CBD\PYZus{}trees} \PY{o}{=} \PY{p}{[}\PY{n}{filename} \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD\PYZus{}outfiles/nexus\PYZus{}gfiles}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if}
+         \PY{n}{filename}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{VBD\PYZus{}trees} \PY{o}{=} \PY{p}{[}\PY{n}{filename} \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD\PYZus{}outfiles/nexus\PYZus{}gfiles}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if}
+         \PY{n}{filename}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{VPB\PYZus{}trees} \PY{o}{=} \PY{p}{[}\PY{n}{filename} \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB\PYZus{}outfiles/nexus\PYZus{}gfiles}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if}
+         \PY{n}{filename}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k}{def} \PY{n+nf}{dRF\PYZus{}mat}\PY{p}{(}\PY{n}{directory}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}Constructs a Robinson\PYZhy{}Foulds distance matrix from the tree files in a directory}
+        
+        \PY{l+s+sd}{    Parameters}
+        \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+        \PY{l+s+sd}{    directory : path to directory with .tre files\PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{n}{trees} \PY{o}{=} \PY{p}{[}\PY{n}{filename} \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{n}{directory}\PY{p}{)} \PY{k}{if}
+        \PY{n}{filename}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{10}\PY{p}{]}
+        
+            \PY{n}{eteRF} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{trees}\PY{p}{)}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{trees}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+            \PY{n}{i}\PY{o}{=}\PY{l+m+mi}{0}
+            \PY{n}{j}\PY{o}{=}\PY{l+m+mi}{0}
+            \PY{k}{for} \PY{n}{t1} \PY{o+ow}{in} \PY{n}{tqdm\PYZus{}notebook}\PY{p}{(}\PY{n}{trees}\PY{p}{)}\PY{p}{:}
+                \PY{c+c1}{\PYZsh{} Read tree from file}
+                \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{t1}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:} \PY{n}{tree1}\PY{o}{=}\PY{n}{ete}\PY{o}{.}\PY{n}{Tree}\PY{p}{(}\PY{n}{newick}\PY{o}{=}\PY{n}{t}\PY{o}{.}\PY{n}{readline}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                \PY{k}{for} \PY{n}{t2} \PY{o+ow}{in} \PY{n}{trees}\PY{p}{:}
+                    \PY{c+c1}{\PYZsh{} If on diagonal set distance to 0 without calculation}
+                    \PY{k}{if} \PY{n}{i}\PY{o}{==}\PY{n}{j}\PY{p}{:} \PY{n}{eteRF}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{=}\PY{l+m+mi}{0}
+                    \PY{c+c1}{\PYZsh{} If below diagonal use above diagonal entry to avoid duplicating}
+        \PY{n}{calculations}
+                    \PY{k}{elif} \PY{n}{i}\PY{o}{\PYZgt{}}\PY{n}{j}\PY{p}{:} \PY{n}{eteRF}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{=}\PY{n}{eteRF}\PY{p}{[}\PY{n}{j}\PY{p}{,}\PY{n}{i}\PY{p}{]}
+                    \PY{k}{else}\PY{p}{:}
+                        \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{t2}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:} \PY{n}{tree2}\PY{o}{=}\PY{n}{ete}\PY{o}{.}\PY{n}{Tree}\PY{p}{(}\PY{n}{newick}\PY{o}{=}\PY{n}{t}\PY{o}{.}\PY{n}{readline}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                        \PY{n}{tdict} \PY{o}{=} \PY{n}{tree1}\PY{o}{.}\PY{n}{compare}\PY{p}{(}\PY{n}{ref\PYZus{}tree}\PY{o}{=}\PY{n}{tree2}\PY{p}{,} \PY{n}{unrooted}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+                        \PY{c+c1}{\PYZsh{} Fixes an error when the taxa aren\PYZsq{}t identical between trees}
+                        \PY{k}{try}\PY{p}{:} \PY{n}{eteRF}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]} \PY{o}{=} \PY{n}{tdict}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{rf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+                        \PY{k}{except} \PY{n+ne}{ValueError}\PY{p}{:}
+                            \PY{n}{eteRF}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]} \PY{o}{=}
+        \PY{n+nb}{len}\PY{p}{(}\PY{n}{tree1}\PY{o}{.}\PY{n}{get\PYZus{}descendants}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{+}\PY{n+nb}{len}\PY{p}{(}\PY{n}{tree2}\PY{o}{.}\PY{n}{get\PYZus{}descendants}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                    \PY{n}{j}\PY{o}{+}\PY{o}{=}\PY{l+m+mi}{1}
+                \PY{n}{j}\PY{o}{=}\PY{l+m+mi}{0}
+                \PY{n}{i}\PY{o}{+}\PY{o}{=}\PY{l+m+mi}{1}
+        
+            \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{eteRF}\PY{p}{,} \PY{n}{decimals}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+
+    The distance function above was not efficient on my personal machine
+(\textgreater{}3 hour runtime per matrix), so I wrote a modified version
+that writes the matrix to a '.csv' file, \texttt{RFmatcalc.py}, and ran
+the matrix calculation on Yale's Farnam server using the commands below.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+         python RFmatcalc.py \PYZhy{}d CBD\PYZus{}outfiles/nexus\PYZus{}gfiles/ \PYZhy{}o CBD.csv
+         python RFmatcalc.py \PYZhy{}d VBD\PYZus{}outfiles/nexus\PYZus{}gfiles/ \PYZhy{}o VBD.csv
+         python RFmatcalc.py \PYZhy{}d VPB\PYZus{}outfiles/nexus\PYZus{}gfiles/ \PYZhy{}o VPB.csv
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{c+c1}{\PYZsh{} Read in RF distance matrices}
+         \PY{n}{CBD\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{)}
+         \PY{n}{VBD\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{)}
+         \PY{n}{VPB\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{)}
+         \PY{n}{CBD\PYZus{}RF} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{CBD\PYZus{}df}\PY{p}{)}
+         \PY{n}{VBD\PYZus{}RF} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{VBD\PYZus{}df}\PY{p}{)}
+         \PY{n}{VPB\PYZus{}RF} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{VPB\PYZus{}df}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,}\PY{l+m+mf}{3.5}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{CBD\PYZus{}df}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{xticklabels}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{yticklabels}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{VBD\PYZus{}df}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{xticklabels}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{yticklabels}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{VPB\PYZus{}df}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{xticklabels}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{yticklabels}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Constant birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable pure birth}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{gilman_ian_final_files/gilman_ian_final_35_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    The heatmaps do not show any apparent structure among the gene trees
+although there appears to be some variation across the three species
+tree topologies. Preliminary testing showed almost 0 similarity between
+all gene trees using values of \(k\) less than 100.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{VBD\PYZus{}a100} \PY{o}{=} \PY{n}{compute\PYZus{}affinity\PYZus{}matrix}\PY{p}{(}\PY{n}{D}\PY{o}{=}\PY{n}{VBD\PYZus{}RF}\PY{p}{,} \PY{n}{kernel\PYZus{}type}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+         \PY{n}{VBD\PYZus{}a250} \PY{o}{=} \PY{n}{compute\PYZus{}affinity\PYZus{}matrix}\PY{p}{(}\PY{n}{D}\PY{o}{=}\PY{n}{VBD\PYZus{}RF}\PY{p}{,} \PY{n}{kernel\PYZus{}type}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{250}\PY{p}{)}
+         \PY{n}{CBD\PYZus{}a100} \PY{o}{=} \PY{n}{compute\PYZus{}affinity\PYZus{}matrix}\PY{p}{(}\PY{n}{D}\PY{o}{=}\PY{n}{CBD\PYZus{}RF}\PY{p}{,} \PY{n}{kernel\PYZus{}type}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+         \PY{n}{CBD\PYZus{}a250} \PY{o}{=} \PY{n}{compute\PYZus{}affinity\PYZus{}matrix}\PY{p}{(}\PY{n}{D}\PY{o}{=}\PY{n}{CBD\PYZus{}RF}\PY{p}{,} \PY{n}{kernel\PYZus{}type}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{250}\PY{p}{)}
+         \PY{n}{VPB\PYZus{}a100} \PY{o}{=} \PY{n}{compute\PYZus{}affinity\PYZus{}matrix}\PY{p}{(}\PY{n}{D}\PY{o}{=}\PY{n}{VPB\PYZus{}RF}\PY{p}{,} \PY{n}{kernel\PYZus{}type}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+         \PY{n}{VPB\PYZus{}a250} \PY{o}{=} \PY{n}{compute\PYZus{}affinity\PYZus{}matrix}\PY{p}{(}\PY{n}{D}\PY{o}{=}\PY{n}{VPB\PYZus{}RF}\PY{p}{,} \PY{n}{kernel\PYZus{}type}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{adaptive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{250}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{CBD\PYZus{}a100}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{CBD\PYZus{}a250}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{VBD\PYZus{}a100}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{VBD\PYZus{}a250}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{VPB\PYZus{}a100}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{heatmap}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{VPB\PYZus{}a250}\PY{p}{)}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{:} \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{axis}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{off}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Constant birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable pure birth}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}k=100\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}k=250\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{gilman_ian_final_files/gilman_ian_final_38_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    I've chosen \(k=250\) for the rest of the analyses to increase the
+similarity between gene trees in an attempt to increase clustering. Now
+to run the greedy clustering algorithm.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}56}]:} \PY{n}{CBD\PYZus{}clust} \PY{o}{=} \PY{n}{greedy\PYZus{}modularity\PYZus{}clustering}\PY{p}{(}\PY{n}{affinity}\PY{o}{=}\PY{n}{CBD\PYZus{}a250}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{merge\PYZus{}tol}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,}
+         \PY{n}{max\PYZus{}iter}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+                        ITERATION 0
+                ENTERING PHASE 1
+Initial modularity: 0.001779
+Merge tolerance: 0.0000000
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+There are 19 clusters
+        Modularity: 0.3950157304
+        Modulary increase=0.393236
+Merge tolerance: 0.0395016
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+There are 19 clusters
+        Modularity: 0.3950157304
+        Modulary increase=0.000000
+Reached stationarity
+Modularity before iteration: 0.395016
+                ENTERING PHASE 2
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+Modularity after iteration: 0.216903
+                        ITERATION 1
+                ENTERING PHASE 1
+Initial modularity: 0.216903
+Merge tolerance: 0.0000000
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+There are 1 clusters
+        Modularity: 0.5939775911
+        Modulary increase=0.377075
+Modularity before iteration: 0.593978
+                ENTERING PHASE 2
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+Modularity after iteration: 0.000000
+
+    \end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}57}]:} \PY{n}{VBD\PYZus{}clust} \PY{o}{=} \PY{n}{greedy\PYZus{}modularity\PYZus{}clustering}\PY{p}{(}\PY{n}{affinity}\PY{o}{=}\PY{n}{VBD\PYZus{}a250}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{merge\PYZus{}tol}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,}
+         \PY{n}{max\PYZus{}iter}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}58}]:} \PY{n}{VPB\PYZus{}clust} \PY{o}{=} \PY{n}{greedy\PYZus{}modularity\PYZus{}clustering}\PY{p}{(}\PY{n}{affinity}\PY{o}{=}\PY{n}{VPB\PYZus{}a250}\PY{p}{,} \PY{n}{k}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{merge\PYZus{}tol}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,}
+         \PY{n}{max\PYZus{}iter}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+    
+    
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+
+    \end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}112}]:} \PY{n}{CBD\PYZus{}clustsizes}\PY{p}{,} \PY{n}{CBD\PYZus{}modularities} \PY{o}{=} \PY{n}{extract\PYZus{}plot\PYZus{}info}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{o}{=}\PY{n}{CBD\PYZus{}clust}\PY{p}{)}
+          \PY{n}{CBD\PYZus{}clustsizes} \PY{o}{=} \PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{CBD\PYZus{}a100}\PY{p}{)}\PY{p}{]} \PY{o}{+} \PY{n}{CBD\PYZus{}clustsizes}
+          \PY{n}{CBD\PYZus{}modularities} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{+} \PY{n}{CBD\PYZus{}modularities}
+          \PY{n}{VBD\PYZus{}clustsizes}\PY{p}{,} \PY{n}{VBD\PYZus{}modularities} \PY{o}{=} \PY{n}{extract\PYZus{}plot\PYZus{}info}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{o}{=}\PY{n}{VBD\PYZus{}clust}\PY{p}{)}
+          \PY{n}{VBD\PYZus{}clustsizes} \PY{o}{=} \PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{VBD\PYZus{}a100}\PY{p}{)}\PY{p}{]} \PY{o}{+} \PY{n}{VBD\PYZus{}clustsizes}
+          \PY{n}{VBD\PYZus{}modularities} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{+} \PY{n}{VBD\PYZus{}modularities}
+          \PY{n}{VPB\PYZus{}clustsizes}\PY{p}{,} \PY{n}{VPB\PYZus{}modularities} \PY{o}{=} \PY{n}{extract\PYZus{}plot\PYZus{}info}\PY{p}{(}\PY{n}{final\PYZus{}dict}\PY{o}{=}\PY{n}{VPB\PYZus{}clust}\PY{p}{)}
+          \PY{n}{VPB\PYZus{}clustsizes} \PY{o}{=} \PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{VPB\PYZus{}a100}\PY{p}{)}\PY{p}{]} \PY{o}{+} \PY{n}{VPB\PYZus{}clustsizes}
+          \PY{n}{VPB\PYZus{}modularities} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{+} \PY{n}{VPB\PYZus{}modularities}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}133}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axes} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+          
+          \PY{k}{for} \PY{n}{ax} \PY{o+ow}{in} \PY{n}{axes}\PY{o}{.}\PY{n}{flat}\PY{p}{:}
+              \PY{n}{ax}\PY{o}{.}\PY{n}{hlines}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{xmin}\PY{o}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{xmax}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{linestyles}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{zorder}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+              \PY{n}{ax}\PY{o}{.}\PY{n}{minorticks\PYZus{}on}\PY{p}{(}\PY{p}{)}
+              \PY{n}{ax}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{which}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{minor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{bottom}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{off}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          
+          \PY{n}{foo} \PY{o}{=} \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{CBD\PYZus{}clustsizes}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{CBD\PYZus{}clustsizes}\PY{p}{,}
+          \PY{n}{c}\PY{o}{=}\PY{n}{CBD\PYZus{}modularities}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{75}\PY{p}{,}
+                                \PY{n}{alpha}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{edgecolors}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{black}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linewidths}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Constant birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Clusters}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Iteration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mf}{2.5}\PY{p}{]}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{semilogy}\PY{p}{(}\PY{p}{)}
+          
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{VBD\PYZus{}clustsizes}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{VBD\PYZus{}clustsizes}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{n}{VBD\PYZus{}modularities}\PY{p}{,}
+          \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{75}\PY{p}{,}
+                                \PY{n}{alpha}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{edgecolors}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{black}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linewidths}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Iteration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{VPB\PYZus{}clustsizes}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{VPB\PYZus{}clustsizes}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{n}{VPB\PYZus{}modularities}\PY{p}{,}
+          \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{75}\PY{p}{,}
+                                \PY{n}{alpha}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gnuplot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{edgecolors}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{black}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linewidths}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable pure pirth}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{axes}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Iteration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          
+          \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{right}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+          \PY{n}{cbar\PYZus{}ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{add\PYZus{}axes}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.99}\PY{p}{,} \PY{l+m+mf}{0.15}\PY{p}{,} \PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.7}\PY{p}{]}\PY{p}{)}
+          \PY{n}{fig}\PY{o}{.}\PY{n}{colorbar}\PY{p}{(}\PY{n}{foo}\PY{p}{,} \PY{n}{cax}\PY{o}{=}\PY{n}{cbar\PYZus{}ax}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Modularity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{gilman_ian_final_files/gilman_ian_final_44_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Clustering gene trees from all three topologies took three iterations to
+collapse to a single cluster. My previous modularity clustering method
+performed best on the second to last iteration, the iteration before all
+clusters were merged. Gene cluster assignments will be taken from the
+second iteration.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}154}]:} \PY{n}{CBD\PYZus{}assignments} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CBD}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{+}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{assignment}\PY{p}{)} \PY{k}{for} \PY{n}{assignment} \PY{o+ow}{in}
+          \PY{n}{CBD\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{]}
+          \PY{n}{VBD\PYZus{}assignments} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VBD}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{+}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{assignment}\PY{p}{)} \PY{k}{for} \PY{n}{assignment} \PY{o+ow}{in}
+          \PY{n}{VBD\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{]}
+          \PY{n}{VPB\PYZus{}assignments} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VPB}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{+} \PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{assignment}\PY{p}{)} \PY{k}{for} \PY{n}{assignment} \PY{o+ow}{in}
+          \PY{n}{VPB\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{]}
+          
+          \PY{n}{assign\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{[}\PY{n}{CBD\PYZus{}assignments}\PY{p}{,} \PY{n}{VBD\PYZus{}assignments}\PY{p}{,} \PY{n}{VPB\PYZus{}assignments}\PY{p}{]}\PY{p}{)}
+          \PY{n}{assign\PYZus{}df}\PY{o}{=}\PY{n}{assign\PYZus{}df}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}\PY{o}{.}\PY{n}{transpose}\PY{p}{(}\PY{p}{)}
+          
+          \PY{n}{CBDcounts} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{pd}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{n}{assign\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CBD}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}\PY{p}{)}
+          \PY{n}{VBDcounts} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{pd}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{n}{assign\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VBD}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}\PY{p}{)}
+          \PY{n}{VPBcounts} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{pd}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{n}{assign\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VPB}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}213}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{p}{[}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.30} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{CBDcounts}\PY{p}{)}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{n}{CBDcounts}\PY{p}{,} \PY{n}{width}\PY{o}{=}\PY{l+m+mf}{0.30}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:pale}
+          \PY{n}{red}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{, label=}\PY{l+s+s1}{\PYZsq{}}\PY{n}{CBD}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{VBDcounts}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{VBDcounts}\PY{p}{,} \PY{n}{width}\PY{o}{=}\PY{l+m+mf}{0.30}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:amber}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VBD}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{p}{[}\PY{n}{x}\PY{o}{+}\PY{l+m+mf}{0.30} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{VPBcounts}\PY{p}{)}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{n}{VPBcounts}\PY{p}{,} \PY{n}{width}\PY{o}{=}\PY{l+m+mf}{0.30}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:denim}
+          \PY{n}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{, label=}\PY{l+s+s1}{\PYZsq{}}\PY{n}{VPB}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{)}
+          
+          \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Bin}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Gene count}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          
+          \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+          \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{gilman_ian_final_files/gilman_ian_final_47_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    The bin counts above show that the variable birth-death topology had a
+less skewed distribution of gene trees than either the constant
+birth-death or variable pure birth topology. This in contrast to the
+naive binning method which seeks to equally distribute the loci among
+bins. For each topology, roughly 100 bins of 10 genes were assembled.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}226}]:} \PY{c+c1}{\PYZsh{} Extract gene cluster assignments from clustering dictionaries}
+          \PY{n}{CBD\PYZus{}concat\PYZus{}dict} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{p}{)}
+          \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{set}\PY{p}{(}\PY{n}{CBD\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+              \PY{n}{CBD\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{k}\PY{p}{)}\PY{p}{]} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+          \PY{k}{for} \PY{n}{k}\PY{p}{,} \PY{n}{v} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{iteritems}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+              \PY{n}{filename} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD\PYZus{}outfiles/nexus\PYZus{}gfiles/locus}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{k}\PY{p}{)}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}
+              \PY{n}{CBD\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{v}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{filename}\PY{p}{)}
+          \PY{n}{VBD\PYZus{}concat\PYZus{}dict} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{p}{)}
+          \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{set}\PY{p}{(}\PY{n}{VBD\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+              \PY{n}{VBD\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{k}\PY{p}{)}\PY{p}{]} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+          \PY{k}{for} \PY{n}{k}\PY{p}{,} \PY{n}{v} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{iteritems}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+              \PY{n}{filename} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD\PYZus{}outfiles/nexus\PYZus{}gfiles/locus}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{k}\PY{p}{)}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}
+              \PY{n}{VBD\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{v}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{filename}\PY{p}{)}
+          \PY{n}{VPB\PYZus{}concat\PYZus{}dict} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{p}{)}
+          \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{set}\PY{p}{(}\PY{n}{VPB\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+              \PY{n}{VPB\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{k}\PY{p}{)}\PY{p}{]} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+          \PY{k}{for} \PY{n}{k}\PY{p}{,} \PY{n}{v} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}clust}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dict}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{clustering}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{iteritems}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+              \PY{n}{filename} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB\PYZus{}outfiles/nexus\PYZus{}gfiles/locus}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n}{k}\PY{p}{)}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}
+              \PY{n}{VPB\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{v}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{filename}\PY{p}{)}
+\end{Verbatim}
+
+    The gene cluster assignments above we used to identify the sets of genes
+to be concatenated using the \texttt{combine} function from
+\texttt{Bio}.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}249}]:} \PY{c+c1}{\PYZsh{} Loop over dictionary keys (clusters)}
+          \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}concat\PYZus{}dict}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+              \PY{n}{file\PYZus{}list} \PY{o}{=} \PY{n}{CBD\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n}{k}\PY{p}{]}
+              \PY{c+c1}{\PYZsh{} Read gene files}
+              \PY{n}{nexi} \PY{o}{=}  \PY{p}{[}\PY{p}{(}\PY{n}{fname}\PY{p}{,} \PY{n}{Nexus}\PY{o}{.}\PY{n}{Nexus}\PY{p}{(}\PY{n}{fname}\PY{p}{)}\PY{p}{)} \PY{k}{for} \PY{n}{fname} \PY{o+ow}{in} \PY{n}{file\PYZus{}list}\PY{p}{]}
+              \PY{c+c1}{\PYZsh{} Merge gene information to single file and write output}
+              \PY{n}{combined} \PY{o}{=} \PY{n}{Nexus}\PY{o}{.}\PY{n}{combine}\PY{p}{(}\PY{n}{nexi}\PY{p}{)}
+              \PY{n}{combined}\PY{o}{.}\PY{n}{write\PYZus{}nexus\PYZus{}data}\PY{p}{(}\PY{n}{filename}\PY{o}{=}\PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD\PYZus{}outfiles/GTCM/}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n}{k}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+          
+          \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}concat\PYZus{}dict}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+              \PY{n}{file\PYZus{}list} \PY{o}{=} \PY{n}{VBD\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n}{k}\PY{p}{]}
+              \PY{n}{nexi} \PY{o}{=}  \PY{p}{[}\PY{p}{(}\PY{n}{fname}\PY{p}{,} \PY{n}{Nexus}\PY{o}{.}\PY{n}{Nexus}\PY{p}{(}\PY{n}{fname}\PY{p}{)}\PY{p}{)} \PY{k}{for} \PY{n}{fname} \PY{o+ow}{in} \PY{n}{file\PYZus{}list}\PY{p}{]}
+              \PY{n}{combined} \PY{o}{=} \PY{n}{Nexus}\PY{o}{.}\PY{n}{combine}\PY{p}{(}\PY{n}{nexi}\PY{p}{)}
+              \PY{n}{combined}\PY{o}{.}\PY{n}{write\PYZus{}nexus\PYZus{}data}\PY{p}{(}\PY{n}{filename}\PY{o}{=}\PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD\PYZus{}outfiles/GTCM/}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n}{k}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+          
+          \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}concat\PYZus{}dict}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+              \PY{n}{file\PYZus{}list} \PY{o}{=} \PY{n}{VPB\PYZus{}concat\PYZus{}dict}\PY{p}{[}\PY{n}{k}\PY{p}{]}
+              \PY{n}{nexi} \PY{o}{=}  \PY{p}{[}\PY{p}{(}\PY{n}{fname}\PY{p}{,} \PY{n}{Nexus}\PY{o}{.}\PY{n}{Nexus}\PY{p}{(}\PY{n}{fname}\PY{p}{)}\PY{p}{)} \PY{k}{for} \PY{n}{fname} \PY{o+ow}{in} \PY{n}{file\PYZus{}list}\PY{p}{]}
+              \PY{n}{combined} \PY{o}{=} \PY{n}{Nexus}\PY{o}{.}\PY{n}{combine}\PY{p}{(}\PY{n}{nexi}\PY{p}{)}
+              \PY{n}{combined}\PY{o}{.}\PY{n}{write\PYZus{}nexus\PYZus{}data}\PY{p}{(}\PY{n}{filename}\PY{o}{=}\PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB\PYZus{}outfiles/GTCM/}\PY{l+s+s1}{\PYZsq{}}\PY{o}{+}\PY{n}{k}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    Again, we need to add the PAUP* commands to our newly created supergene
+files in order to build neighbor-joing gene trees.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{CBD\PYZus{}GTCM\PYZus{}nex} \PY{o}{=} \PY{p}{[}\PY{n}{f} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD\PYZus{}outfiles/GTCM/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if} \PY{n}{f}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{VBD\PYZus{}GTCM\PYZus{}nex} \PY{o}{=} \PY{p}{[}\PY{n}{f} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD\PYZus{}outfiles/GTCM/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if} \PY{n}{f}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{VPB\PYZus{}GTCM\PYZus{}nex} \PY{o}{=} \PY{p}{[}\PY{n}{f} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB\PYZus{}outfiles/GTCM/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if} \PY{n}{f}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{GTCM\PYZus{}nex} \PY{o}{=} \PY{n}{flatten}\PY{p}{(}\PY{p}{[}\PY{n}{CBD\PYZus{}GTCM\PYZus{}nex}\PY{p}{,} \PY{n}{VBD\PYZus{}GTCM\PYZus{}nex}\PY{p}{,} \PY{n}{VPB\PYZus{}GTCM\PYZus{}nex}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{GTCM\PYZus{}nex}\PY{p}{:}
+             \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{n}\PY{p}{:}
+                 \PY{n}{n}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{paup\PYZus{}lines}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{CBD\PYZus{}GTCM\PYZus{}tre} \PY{o}{=} \PY{p}{[}\PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{f}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}GTCM\PYZus{}nex}\PY{p}{]}
+         \PY{n}{VBD\PYZus{}GTCM\PYZus{}tre} \PY{o}{=} \PY{p}{[}\PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{f}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}GTCM\PYZus{}nex}\PY{p}{]}
+         \PY{n}{VPB\PYZus{}GTCM\PYZus{}tre} \PY{o}{=} \PY{p}{[}\PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{f}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}GTCM\PYZus{}nex}\PY{p}{]}
+\end{Verbatim}
+
+    To allow me to work on this notebook, I ran PAUP* in the background, but
+the bash command is exaclty as above and the output is one gene tree
+files ('.tre') for each locus. For species tree construction in
+ASTRAL-II, a single gene tree file is created with one gene tree per
+line. This was done for both the GTCM clustered (\texttt{\_GTCM.tre}).
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{c+c1}{\PYZsh{} Write ASTRAL\PYZhy{}II file for GTCM}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/CBD\PYZus{}GTCM.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+             \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}GTCM\PYZus{}tre}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{i}\PY{p}{:}
+                     \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{i}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VBD\PYZus{}GTCM.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+             \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}GTCM\PYZus{}tre}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{i}\PY{p}{:}
+                     \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{i}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VPB\PYZus{}GTCM.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+             \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}GTCM\PYZus{}tre}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{i}\PY{p}{:}
+                     \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{i}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    \subsection{3 Species tree contruction}\label{species-tree-contruction}
+
+To measure the performance of my clustering method I compared it to two
+standard, non-binned, and the only binned approaches. The first,
+unbinned species tree method employs RAxML (Stamatakis, 2014), a maximum
+likelihood based method. The input is simply the concatenated sequence
+data matrix output from ipyrad. The second unbinned species tree method
+employs ASTRAL-II (Mirarab and Warnow, 2015). This is a multi-species
+coalescent based approach based on the Kingman Coalescent (Kingman,
+1982a, 1982b). ASTRAL-II takes unrooted gene trees as input and infers
+all possible unrooted quartets of leaves from each gene tree. It then
+uses a heuristic search of species tree space to maximize the number of
+quartets in common between species tree and gene trees. Finally, the
+naive binning method of Bayzid and Warnow (2013) was applied to each set
+of gene trees and the resulting gene clusters were concatenated into
+supergenes before being input into ASTRAL-II.
+
+\subsubsection{3.1 ASTRAL-II}\label{astral-ii}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}196}]:} \PY{c+c1}{\PYZsh{} Write ASTRAL\PYZhy{}II file for individual genes}
+          \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{allCBD.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+              \PY{k}{for} \PY{n}{tree} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}trees}\PY{p}{:}
+                  \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{tree}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+                      \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{t}\PY{o}{.}\PY{n}{readline}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+          \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{allVBD.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+              \PY{k}{for} \PY{n}{tree} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}trees}\PY{p}{:}
+                  \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{tree}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+                      \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{t}\PY{o}{.}\PY{n}{readline}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+          \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{allVPB.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+              \PY{k}{for} \PY{n}{tree} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}trees}\PY{p}{:}
+                  \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{tree}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+                      \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{t}\PY{o}{.}\PY{n}{readline}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    ASTRAL-II analysis was run using the following commands.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor} }]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+        astral \PYZhy{}i allCBD.tre \PYZhy{}o CBD\PYZus{}ASTRAL.tre 2\PYZgt{}CBD\PYZus{}ASTRAL.log
+        astral \PYZhy{}i allVBD.tre \PYZhy{}o VBD\PYZus{}ASTRAL.tre 2\PYZgt{}VBD\PYZus{}ASTRAL.log
+        astral \PYZhy{}i allVPB.tre \PYZhy{}o VPB\PYZus{}ASTRAL.tre 2\PYZgt{}VPD\PYZus{}ASTRAL.log
+\end{Verbatim}
+
+    \subsubsection{3.2 Naive binning +
+ASTRAL-II}\label{naive-binning-astral-ii}
+
+The naive binning method was run according to
+https://github.com/smirarab/binning, mostly in the background, but a lot
+of data parsing was done in python. The binning method requires a
+precise file and directory structure. All gene sequence files are first
+converted to \texttt{.fasta} format and separated into different
+directories, each labeled \texttt{genes\_dir}.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}208}]:} \PY{n}{CBD\PYZus{}nexus} \PY{o}{=} \PY{p}{[}\PY{n}{f}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}trees}\PY{p}{]}
+          \PY{n}{VBD\PYZus{}nexus} \PY{o}{=} \PY{p}{[}\PY{n}{f}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}trees}\PY{p}{]}
+          \PY{n}{VPB\PYZus{}nexus} \PY{o}{=} \PY{p}{[}\PY{n}{f}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}trees}\PY{p}{]}
+          \PY{n}{CBD\PYZus{}fasta} \PY{o}{=} \PY{p}{[}\PY{n}{f}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.fasta}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}trees}\PY{p}{]}
+          \PY{n}{VBD\PYZus{}fasta} \PY{o}{=} \PY{p}{[}\PY{n}{f}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.fasta}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}trees}\PY{p}{]}
+          \PY{n}{VPB\PYZus{}fasta} \PY{o}{=} \PY{p}{[}\PY{n}{f}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.fasta}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}trees}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}211}]:} \PY{c+c1}{\PYZsh{} Convert individual genes to .fasta}
+          \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{CBD\PYZus{}nexus}\PY{p}{,} \PY{n}{CBD\PYZus{}fasta}\PY{p}{)}\PY{p}{:}
+              \PY{n}{input\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rU}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+              \PY{n}{output\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{w}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          
+              \PY{n}{alignments} \PY{o}{=} \PY{n}{AlignIO}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{n}{input\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nexus}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+              \PY{n}{AlignIO}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{alignments}\PY{p}{,} \PY{n}{output\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fasta}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          
+              \PY{n}{output\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+              \PY{n}{input\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+          
+          \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{VBD\PYZus{}nexus}\PY{p}{,} \PY{n}{VBD\PYZus{}fasta}\PY{p}{)}\PY{p}{:}
+              \PY{n}{input\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rU}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+              \PY{n}{output\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{w}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          
+              \PY{n}{alignments} \PY{o}{=} \PY{n}{AlignIO}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{n}{input\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nexus}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+              \PY{n}{AlignIO}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{alignments}\PY{p}{,} \PY{n}{output\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fasta}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          
+              \PY{n}{output\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+              \PY{n}{input\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+          
+          \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{VPB\PYZus{}nexus}\PY{p}{,} \PY{n}{VPB\PYZus{}fasta}\PY{p}{)}\PY{p}{:}
+              \PY{n}{input\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rU}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+              \PY{n}{output\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{w}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          
+              \PY{n}{alignments} \PY{o}{=} \PY{n}{AlignIO}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{n}{input\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nexus}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+              \PY{n}{AlignIO}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{alignments}\PY{p}{,} \PY{n}{output\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fasta}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          
+              \PY{n}{output\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+              \PY{n}{input\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}218}]:} \PY{c+c1}{\PYZsh{} Make directory structure for naive binning and move files}
+          \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+          cd CBD\PYZus{}outfiles/
+          mkdir genes\PYZus{}dir
+          mv ./nexus\PYZus{}gfiles/*.fasta genes\PYZus{}dir
+          
+          cd ../VBD\PYZus{}outfiles/
+          mkdir genes\PYZus{}dir
+          mv ./nexus\PYZus{}gfiles/*.fasta genes\PYZus{}dir
+          
+          cd ../VPB\PYZus{}outfiles/
+          mkdir genes\PYZus{}dir
+          mv ./nexus\PYZus{}gfiles/*.fasta genes\PYZus{}dir
+\end{Verbatim}
+
+    From here, each locus was given it's own directory along with it's
+respective gene tree.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CBD\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{label} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{f}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+             \PY{n}{os}\PY{o}{.}\PY{n}{mkdir}\PY{p}{(}\PY{n}{label}\PY{p}{)}
+             \PY{n}{move}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CBD\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label}\PY{p}{,} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{basename}\PY{p}{(}\PY{n}{f}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VBD\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{label} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{f}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+             \PY{n}{os}\PY{o}{.}\PY{n}{mkdir}\PY{p}{(}\PY{n}{label}\PY{p}{)}
+             \PY{n}{move}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VBD\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label}\PY{p}{,} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{basename}\PY{p}{(}\PY{n}{f}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VPB\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{label} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{f}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+             \PY{n}{os}\PY{o}{.}\PY{n}{mkdir}\PY{p}{(}\PY{n}{label}\PY{p}{)}
+             \PY{n}{move}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{label}\PY{p}{,} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{basename}\PY{p}{(}\PY{n}{f}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    Here I've written a slightly modified PAUP* command block because we
+need to keep every gene tree name identical but distribute them in the
+appropriate directory.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}260}]:} \PY{n}{newlines} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{BEGIN PAUP;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{set autoclose=yes;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{set increase=auto;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{Bootstrap search=fastStep nreps=10;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{savetrees file=PATH format=Newick supportValues=nodeLabels from=1}
+          \PY{n}{to}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{;}\PYZbs{}\PY{n}{n}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}
+                        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s1}{quit;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{End;}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}267}]:} \PY{c+c1}{\PYZsh{} Write PAUP* commands}
+          \PY{k}{for} \PY{n}{nexus} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}nexus}\PY{p}{:}
+              \PY{n}{label} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{nexus}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
+              \PY{n}{path} \PY{o}{=}
+          \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/Users/iangilman/pythonscripts/CBB555/final\PYZus{}proj/CBD\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{n}{label}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{pauptree.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+              \PY{n}{finallines} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PATH}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{newlines}\PY{p}{)}\PY{p}{)}
+              \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{nexus}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+                  \PY{n}{text} \PY{o}{=} \PY{n}{f}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+                  \PY{n}{text} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{paup\PYZus{}lines}\PY{p}{)}\PY{p}{,} \PY{n}{finallines}\PY{p}{,} \PY{n}{text}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{seek}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{text}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{truncate}\PY{p}{(}\PY{p}{)}
+          \PY{k}{for} \PY{n}{nexus} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}nexus}\PY{p}{:}
+              \PY{n}{label} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{nexus}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
+              \PY{n}{path} \PY{o}{=}
+          \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/Users/iangilman/pythonscripts/CBB555/final\PYZus{}proj/VBD\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{n}{label}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{pauptree.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+              \PY{n}{finallines} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PATH}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{newlines}\PY{p}{)}\PY{p}{)}
+              \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{nexus}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+                  \PY{n}{text} \PY{o}{=} \PY{n}{f}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+                  \PY{n}{text} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{paup\PYZus{}lines}\PY{p}{)}\PY{p}{,} \PY{n}{finallines}\PY{p}{,} \PY{n}{text}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{seek}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{text}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{truncate}\PY{p}{(}\PY{p}{)}
+          \PY{k}{for} \PY{n}{nexus} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}nexus}\PY{p}{:}
+              \PY{n}{label} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{nexus}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
+              \PY{n}{path} \PY{o}{=}
+          \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/Users/iangilman/pythonscripts/CBB555/final\PYZus{}proj/VPB\PYZus{}outfiles/genes\PYZus{}dir/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{n}{label}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{pauptree.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+              \PY{n}{finallines} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PATH}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{newlines}\PY{p}{)}\PY{p}{)}
+              \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{nexus}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+                  \PY{n}{text} \PY{o}{=} \PY{n}{f}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+                  \PY{n}{text} \PY{o}{=} \PY{n}{re}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{paup\PYZus{}lines}\PY{p}{)}\PY{p}{,} \PY{n}{finallines}\PY{p}{,} \PY{n}{text}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{seek}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{text}\PY{p}{)}
+                  \PY{n}{f}\PY{o}{.}\PY{n}{truncate}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}268}]:} \PY{c+c1}{\PYZsh{} Run PAUP* on individual genes}
+          \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+          for f in ./\PYZob{}CBD,VBD,VPB\PYZcb{}\PYZus{}outfiles/nexus\PYZus{}gfiles/*
+          do
+              paup \PYZhy{}n \PYZdl{}f
+          done
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
+Process is terminated.
+
+    \end{Verbatim}
+
+    After binning was completed the resulting supergene \texttt{.fasta}
+files were converted back to \texttt{.nexus}.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}81}]:} \PY{n}{CBD\PYZus{}SG\PYZus{}fastas} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{n}{CBD\PYZus{}SG\PYZus{}nexus} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{c+c1}{\PYZsh{} Write new nexus file name based on supergene label}
+         \PY{k}{for} \PY{n}{direc} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD\PYZus{}outfiles/SG\PYZus{}output/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{CBD\PYZus{}SG\PYZus{}fastas}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{direc}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{supergene.fasta}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+             \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{direc}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+             \PY{n}{CBD\PYZus{}SG\PYZus{}nexus}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{n}{direc}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{label}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{} Convert fasta to nexus}
+         \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{CBD\PYZus{}SG\PYZus{}fastas}\PY{p}{,} \PY{n}{CBD\PYZus{}SG\PYZus{}nexus}\PY{p}{)}\PY{p}{:}
+             \PY{n}{input\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rU}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{output\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{w}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{alignments} \PY{o}{=} \PY{n}{AlignIO}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{n}{input\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fasta}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{alphabet}\PY{o}{=}\PY{n}{Alphabet}\PY{o}{.}\PY{n}{generic\PYZus{}dna}\PY{p}{)}
+             \PY{n}{AlignIO}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{alignments}\PY{p}{,} \PY{n}{output\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nexus}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{output\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+             \PY{n}{input\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{VBD\PYZus{}SG\PYZus{}fastas} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{n}{VBD\PYZus{}SG\PYZus{}nexus} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{k}{for} \PY{n}{direc} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD\PYZus{}outfiles/SG\PYZus{}output/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{VBD\PYZus{}SG\PYZus{}fastas}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{direc}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{supergene.fasta}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+             \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{direc}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+             \PY{n}{VBD\PYZus{}SG\PYZus{}nexus}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{n}{direc}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{label}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+         \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{VBD\PYZus{}SG\PYZus{}fastas}\PY{p}{,} \PY{n}{VBD\PYZus{}SG\PYZus{}nexus}\PY{p}{)}\PY{p}{:}
+             \PY{n}{input\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rU}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{output\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{w}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+             \PY{n}{alignments} \PY{o}{=} \PY{n}{AlignIO}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{n}{input\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fasta}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{alphabet}\PY{o}{=}\PY{n}{Alphabet}\PY{o}{.}\PY{n}{generic\PYZus{}dna}\PY{p}{)}
+             \PY{n}{AlignIO}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{alignments}\PY{p}{,} \PY{n}{output\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nexus}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+             \PY{n}{output\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+             \PY{n}{input\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{VPB\PYZus{}SG\PYZus{}fastas} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{n}{VPB\PYZus{}SG\PYZus{}nexus} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{k}{for} \PY{n}{direc} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB\PYZus{}outfiles/SG\PYZus{}output/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{VPB\PYZus{}SG\PYZus{}fastas}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{direc}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{supergene.fasta}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+             \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{re}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[/.]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{direc}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+             \PY{n}{VPB\PYZus{}SG\PYZus{}nexus}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{n}{direc}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{label}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+         \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{VPB\PYZus{}SG\PYZus{}fastas}\PY{p}{,} \PY{n}{VPB\PYZus{}SG\PYZus{}nexus}\PY{p}{)}\PY{p}{:}
+             \PY{n}{input\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rU}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{output\PYZus{}handle} \PY{o}{=} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{w}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+             \PY{n}{alignments} \PY{o}{=} \PY{n}{AlignIO}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{n}{input\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fasta}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{alphabet}\PY{o}{=}\PY{n}{Alphabet}\PY{o}{.}\PY{n}{generic\PYZus{}dna}\PY{p}{)}
+             \PY{n}{AlignIO}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{n}{alignments}\PY{p}{,} \PY{n}{output\PYZus{}handle}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nexus}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         
+             \PY{n}{output\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+             \PY{n}{input\PYZus{}handle}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    In the final species tree preparation stage each supergene was given a
+PAUP* command to construct a neighbor-joining supergene tree.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}94}]:} \PY{c+c1}{\PYZsh{} Get list of all new nexus supergene files}
+         \PY{n}{unpauped\PYZus{}SG} \PY{o}{=} \PY{n}{flatten}\PY{p}{(}\PY{p}{[}\PY{n}{CBD\PYZus{}SG\PYZus{}nexus}\PY{p}{,} \PY{n}{VBD\PYZus{}SG\PYZus{}nexus}\PY{p}{,} \PY{n}{VPB\PYZus{}SG\PYZus{}nexus}\PY{p}{]}\PY{p}{)}
+         \PY{n}{unpauped\PYZus{}SG} \PY{o}{=} \PY{p}{[}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{n}{filename}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nexus\PYZus{}files}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+         \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{n}{filename}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)} \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{unpauped\PYZus{}SG}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}96}]:} \PY{c+c1}{\PYZsh{} Write PAUP* commands to supergene nexus files}
+         \PY{k}{for} \PY{n}{filename} \PY{o+ow}{in} \PY{n}{unpauped\PYZus{}SG}\PY{p}{:}
+             \PY{k}{if} \PY{n}{filename}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.nexus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{filename}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{n}\PY{p}{:}
+                     \PY{n}{n}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{paup\PYZus{}lines}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}35}]:} \PY{n}{CBD\PYZus{}bin\PYZus{}tre} \PY{o}{=} \PY{p}{[}\PY{n}{f} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD\PYZus{}outfiles/SG\PYZus{}output/nexus\PYZus{}files/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if}
+         \PY{n}{f}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{VBD\PYZus{}bin\PYZus{}tre} \PY{o}{=} \PY{p}{[}\PY{n}{f} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD\PYZus{}outfiles/SG\PYZus{}output/nexus\PYZus{}files/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if}
+         \PY{n}{f}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{VPB\PYZus{}bin\PYZus{}tre} \PY{o}{=} \PY{p}{[}\PY{n}{f} \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{listabs}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB\PYZus{}outfiles/SG\PYZus{}output/nexus\PYZus{}files/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{if}
+         \PY{n}{f}\PY{o}{.}\PY{n}{endswith}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}38}]:} \PY{c+c1}{\PYZsh{} Write ASTRAL\PYZhy{}II file for naive binning}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/CBD\PYZus{}bin.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+             \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{CBD\PYZus{}bin\PYZus{}tre}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{i}\PY{p}{:}
+                     \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{i}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VBD\PYZus{}bin.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+             \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VBD\PYZus{}bin\PYZus{}tre}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{i}\PY{p}{:}
+                     \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{i}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VPB\PYZus{}bin.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+             \PY{k}{for} \PY{n}{f} \PY{o+ow}{in} \PY{n}{VPB\PYZus{}bin\PYZus{}tre}\PY{p}{:}
+                 \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{i}\PY{p}{:}
+                     \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{i}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    ASTRAL-II was then run on all resulting binned supergenes.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor} }]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+        astral \PYZhy{}i CBD\PYZus{}bin.tre \PYZhy{}o CBD\PYZus{}bin\PYZus{}ASTRAL.tre 2\PYZgt{}CBD\PYZus{}bin\PYZus{}ASTRAL.log
+        astral \PYZhy{}i VBD\PYZus{}bin.tre \PYZhy{}o VBD\PYZus{}bin\PYZus{}ASTRAL.tre 2\PYZgt{}VBD\PYZus{}bin\PYZus{}ASTRAL.log
+        astral \PYZhy{}i VPB\PYZus{}bin.tre \PYZhy{}o VPB\PYZus{}bin\PYZus{}ASTRAL.tre 2\PYZgt{}VPB\PYZus{}bin\PYZus{}ASTRAL.log
+\end{Verbatim}
+
+    \subsubsection{3.3 RAxML}\label{raxml}
+
+RAxML was run on the Yale HPC's Farnam cluster for efficiency. It was
+called as following, but \texttt{raxml} was substituted for the MPI
+version.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor} }]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{bash}
+        raxml \PYZhy{}T 20 \PYZhy{}f a \PYZhy{}m GTRGAMMA \PYZhy{}p 12345 \PYZhy{}x 12345 \PYZhy{}\PYZsh{} 100 \PYZhy{}s CBD.phy \PYZhy{}n CBD
+        raxml \PYZhy{}T 20 \PYZhy{}f a \PYZhy{}m GTRGAMMA \PYZhy{}p 12345 \PYZhy{}x 12345 \PYZhy{}\PYZsh{} 100 \PYZhy{}s VBD.phy \PYZhy{}n VBD
+        raxml \PYZhy{}T 20 \PYZhy{}f a \PYZhy{}m GTRGAMMA \PYZhy{}p 12345 \PYZhy{}x 12345 \PYZhy{}\PYZsh{} 100 \PYZhy{}s VPB.phy \PYZhy{}n VPB
+\end{Verbatim}
+
+    \subsection{4. Comparing methods}\label{comparing-methods}
+
+The resulting species trees from the methods outlined above were
+compared to the true, simulated tree using the Robinson-Foulds distance.
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}109}]:} \PY{c+c1}{\PYZsh{} Write final bootstrap replicate of each RAxML run to final output tree}
+          \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}bootstrap.CBD}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+              \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}CBD.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+                  \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{f}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+          \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}bootstrap.VBD}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+              \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}VBD.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+                  \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{f}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+          \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}bootstrap.VPB}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+              \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}VPB.tre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{t}\PY{p}{:}
+                  \PY{n}{t}\PY{o}{.}\PY{n}{writelines}\PY{p}{(}\PY{n}{f}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}110}]:} \PY{c+c1}{\PYZsh{} Load all trees}
+          \PY{n}{trueCBD} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./CBD.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{trueVBD} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VBD.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{trueVPB} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./VPB.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{CBD\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/CBD\PYZus{}ASTRAL.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VBD\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VBD\PYZus{}ASTRAL.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VPB\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VPB\PYZus{}ASTRAL.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{CBD\PYZus{}bin\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/CBD\PYZus{}bin.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VBD\PYZus{}bin\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VBD\PYZus{}bin.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VPB\PYZus{}bin\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VPB\PYZus{}bin.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{CBD\PYZus{}GTCM\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/CBD\PYZus{}GTCM.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VBD\PYZus{}GTCM\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VBD\PYZus{}GTCM.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VPB\PYZus{}GTCM\PYZus{}ASTRAL} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./ASTRAL/VPB\PYZus{}GTCM.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{CBD\PYZus{}raxml} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}CBD.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VBD\PYZus{}raxml} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}VBD.tre}\PY{l+s+s1}{\PYZsq{}}
+          \PY{n}{VPB\PYZus{}raxml} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{./raxml/RAxML\PYZus{}VPB.tre}\PY{l+s+s1}{\PYZsq{}}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}111}]:} \PY{n}{all\PYZus{}CBD\PYZus{}trees} \PY{o}{=} \PY{p}{[}\PY{n}{CBD\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{CBD\PYZus{}bin\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{CBD\PYZus{}GTCM\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{CBD\PYZus{}raxml}\PY{p}{]}
+          \PY{n}{all\PYZus{}VBD\PYZus{}trees} \PY{o}{=} \PY{p}{[}\PY{n}{VBD\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{VBD\PYZus{}bin\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{VBD\PYZus{}GTCM\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{VBD\PYZus{}raxml}\PY{p}{]}
+          \PY{n}{all\PYZus{}VPB\PYZus{}trees} \PY{o}{=} \PY{p}{[}\PY{n}{VPB\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{VPB\PYZus{}bin\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{VPB\PYZus{}GTCM\PYZus{}ASTRAL}\PY{p}{,} \PY{n}{VPB\PYZus{}raxml}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}116}]:} \PY{k}{def} \PY{n+nf}{RFdist}\PY{p}{(}\PY{n}{t1}\PY{p}{,} \PY{n}{t2}\PY{p}{)}\PY{p}{:}
+              \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}A patch to the Robinson\PYZhy{}Foulds distance function. Running the naive binning}
+          \PY{l+s+sd}{    software required a different, and incompatible, version of dendropy. This was}
+          \PY{l+s+sd}{    written by Jeet Sukamara, the creator of dendropy.}
+          
+          \PY{l+s+sd}{    Parameters}
+          \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+          \PY{l+s+sd}{    t1 : path to a newick tree}
+          \PY{l+s+sd}{    t2 : path to a newick tree\PYZsq{}\PYZsq{}\PYZsq{}}
+              \PY{n}{taxon\PYZus{}namespace} \PY{o}{=} \PY{n}{dendropy}\PY{o}{.}\PY{n}{TaxonSet}\PY{p}{(}\PY{p}{)}
+              \PY{n}{lit\PYZus{}tree} \PY{o}{=} \PY{n}{dendropy}\PY{o}{.}\PY{n}{Tree}\PY{o}{.}\PY{n}{get\PYZus{}from\PYZus{}path}\PY{p}{(}
+                  \PY{n}{t1}\PY{p}{,}
+                  \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{newick}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                  \PY{n}{taxon\PYZus{}set}\PY{o}{=}\PY{n}{taxon\PYZus{}namespace}\PY{p}{)}
+              \PY{n}{ml} \PY{o}{=} \PY{n}{dendropy}\PY{o}{.}\PY{n}{Tree}\PY{o}{.}\PY{n}{get\PYZus{}from\PYZus{}path}\PY{p}{(}
+                  \PY{n}{t2}\PY{p}{,}
+                  \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{newick}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                  \PY{n}{taxon\PYZus{}set}\PY{o}{=}\PY{n}{taxon\PYZus{}namespace}\PY{p}{)}
+              \PY{n}{ml}\PY{o}{.}\PY{n}{is\PYZus{}rooted}
+              \PY{n}{lit\PYZus{}tree}\PY{o}{.}\PY{n}{is\PYZus{}rooted}
+              \PY{n}{ml}\PY{o}{.}\PY{n}{symmetric\PYZus{}difference}\PY{p}{(}\PY{n}{lit\PYZus{}tree}\PY{p}{)}
+              \PY{n}{ml}\PY{o}{.}\PY{n}{symmetric\PYZus{}difference}\PY{p}{(}\PY{n}{lit\PYZus{}tree}\PY{p}{)}
+              \PY{k}{return} \PY{n}{lit\PYZus{}tree}\PY{o}{.}\PY{n}{symmetric\PYZus{}difference}\PY{p}{(}\PY{n}{ml}\PY{p}{)}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}128}]:} \PY{n}{CBD\PYZus{}plot\PYZus{}RF} \PY{o}{=} \PY{p}{[}\PY{n}{RFdist}\PY{p}{(}\PY{n}{trueCBD}\PY{p}{,} \PY{n}{tree}\PY{p}{)} \PY{k}{for} \PY{n}{tree} \PY{o+ow}{in} \PY{n}{all\PYZus{}CBD\PYZus{}trees}\PY{p}{]}
+          \PY{n}{VBD\PYZus{}plot\PYZus{}RF} \PY{o}{=} \PY{p}{[}\PY{n}{RFdist}\PY{p}{(}\PY{n}{trueVBD}\PY{p}{,} \PY{n}{tree}\PY{p}{)} \PY{k}{for} \PY{n}{tree} \PY{o+ow}{in} \PY{n}{all\PYZus{}VBD\PYZus{}trees}\PY{p}{]}
+          \PY{n}{VPB\PYZus{}plot\PYZus{}RF} \PY{o}{=} \PY{p}{[}\PY{n}{RFdist}\PY{p}{(}\PY{n}{trueVPB}\PY{p}{,} \PY{n}{tree}\PY{p}{)} \PY{k}{for} \PY{n}{tree} \PY{o+ow}{in} \PY{n}{all\PYZus{}VPB\PYZus{}trees}\PY{p}{]}
+\end{Verbatim}
+
+   \begin{Verbatim}[commandchars=\\\{\},fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}177}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+          
+          \PY{n}{ax}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{)}\PY{p}{,} \PY{n}{flatten}\PY{p}{(}\PY{p}{[}\PY{n}{CBD\PYZus{}plot\PYZus{}RF}\PY{p}{,} \PY{n}{VBD\PYZus{}plot\PYZus{}RF}\PY{p}{,} \PY{n}{VPB\PYZus{}plot\PYZus{}RF}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{n}{color}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:pale red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:denim blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:amber}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{xkcd:moss}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticks}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{)}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ASTRAL\PYZhy{}II}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Naive binning}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{GTCM}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RAxML}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{,}
+          \PY{n}{rotation}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{vertical}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{150}\PY{p}{]}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{hlines}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{l+m+mi}{125}\PY{p}{,} \PY{n}{xmin}\PY{o}{=}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.25}\PY{p}{,} \PY{n}{xmax}\PY{o}{=}\PY{l+m+mf}{3.}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{hlines}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{l+m+mi}{125}\PY{p}{,} \PY{n}{xmin}\PY{o}{=}\PY{l+m+mf}{3.75}\PY{p}{,} \PY{n}{xmax}\PY{o}{=}\PY{l+m+mf}{7.}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{hlines}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{l+m+mi}{125}\PY{p}{,} \PY{n}{xmin}\PY{o}{=}\PY{l+m+mf}{7.75}\PY{p}{,} \PY{n}{xmax}\PY{o}{=}\PY{l+m+mi}{11}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.15}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mi}{130}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Constant birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+m+mf}{3.90}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mi}{130}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable birth\PYZhy{}death}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mi}{130}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Variable pure birth}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RF distance to true tree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}177}]:} <matplotlib.text.Text at 0x11f677d50>
+\end{Verbatim}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{gilman_ian_final_files/gilman_ian_final_89_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \subsection{4. Discussion}\label{discussion}
+
+Only in the constant birth-death topology was the gene tree clusting
+with modularity (GTCM) method most accurate. In general, both binning
+methods performed worse than using all genes individually or
+concatenating them. This runs contrary to the findings of Bayzid and
+Warnow (2013) and Mirarab et al. (2014). This is not immediately
+surprising, given that a number of methodological shortcuts were taken
+in the clustering (binning) analyses.
+
+The major source of error in the clustering analyses is that they rely
+on multiple rounds of gene tree and supergene tree construction through
+neighbor-joining. As mentioned above, neighbor-joining was employed
+because of its low computational cost, which comes at the expense of
+phylogenetic rigor. Although the non-binned ASTRAL-II analyses
+incorporated neighbor-joined gene trees, previous work (Gilman and Tank,
+\emph{in review}) has shown that most short, RADseq loci best fit a
+simple model of sequence evolution such as the Jukes-Cantor (JC) model,
+which was used to correct the neighbor-joining distance. Therefore, the
+use of neighbor-joining under the JC model to construct initial gene
+trees probably did not dramatically violate the assumptions of
+neighbor-joing tree construction. However, after clustering loci into
+supergenes, the assumption that a simple model of sequence evolution,
+with no likelihood or Bayesian analysis, would produce an accurate
+supergene tree was probably unwarranted.
+
+A second complication in the interpretation of these results is that
+they have not been replicated to gauge the variation in performance.
+Although there are relatively straightforward pipelines for commonly
+employed programs such as ASTRAL-II and RAxML with standard datasets,
+the added step of clustering genes is computationally expensive and
+still \emph{ad hoc}, even for the published method of Bayzid et al.
+(2013). Furthermore, the vast parameter space spanning simulations, gene
+tree construction, clustering, and species tree construction is not
+practically explorable. Here, I presented a small study into clustering
+gene trees under very limited scenarios, but further work into better
+parameterizing the clustering method is needed.
+
+Despite these caveats, clustering loci will likely still play an
+important role in phylogenomics. Some of the most computationally taxing
+problems in species tree analyses concern constructing species trees
+from single, enormous data matrices and from many, small matrices.
+Clustering sequence data into moderate chunks can therefore greatly ease
+the computational burderns of these analyses (e.g. analyzing full avian
+genomes, Mirarab et al., 2014). In addition, concatenating data with
+low, but congruent, signal can amplify that signal. Another lucrative
+path of study is the affect of cluster size distributions on species
+tree accuracy. The GTCM methods showed a very skewed relationship, in
+which most loci clustered into a handful of bins. This in contrast to
+the relatively even distribution of the naive binning approach (which
+has been shown to increase species tree accuracy) .
+
+In addition to the long-known discordant signal throughout individual
+genomes, it has recently been observed that some controversial
+phylogenetic relationships rely on support from as few as a single locus
+(Shen et al., 2017). These pieces of information suggest that extreme
+loci deserve more scrutiny. Gene clustering may be used for identifying
+these unique loci through the disparity in cluster sizes, and
+particularly in loci that form singletons. It may also prove useful in
+identification of paralogous genes (which may form significantly denser
+clusters) or contaminant genomic fragments (which may form clusters that
+are less connected to true genomic clusters).
+
+In conclusion, clustering genes for species tree analysis is a rich and
+under-explored branch of computational biology. In it's lowest
+realization it may improve the computational efficiency of species tree
+programs, but at best it will increase the accuracy and precision of
+species tree inference as well. I show, in a limited study, that there
+are conditions in which clustering gene trees using a greed modularity
+algorithm can improve the accuracy of species tree construction. Further
+work to better parameterize and utilize clustering will surely improve
+species tree estimation.
+
+    \subsection{5. References}\label{references}
+
+\begin{itemize}
+\tightlist
+\item
+  Baird, N. A., Etter, P. D., Atwood, T. S., Currey, M. C., Shiver, A.
+  L., Lewis, Z. A., et al. (2008). Rapid SNP Discovery and Genetic
+  Mapping Using Sequenced RAD Markers. PLoS ONE, 3(10), e3376--17.
+\item
+  Bayzid, M. S., \& Warnow, T. (2013). Naive binning improves
+  phylogenomic analyses. Bioinformatics, 29(18), 2277--2284.
+\item
+  Blondel, V. D., Guillaume, J.-L., Lambiotte, R., \& Lefebvre, E.
+  (2008). Fast unfolding of communities in large networks. Journal of
+  Statistical Mechanics: Theory and Experiment, 2008(10), P10008--13.
+\item
+  Eaton, D. A. R. (2014). PyRAD: assembly of de novo RADseq loci for
+  phylogenetic analyses. Bioinformatics, 30(13), 1844--1849.
+\item
+  Eaton, D. A. R., Spriggs, E. L., Park, B., \& Donoghue, M. J. (2017).
+  Misconceptions on Missing Data in RAD-seq Phylogenetics with a
+  Deep-scale Example from Flowering Plants. Systematic Biology, 66(3),
+  399--412.
+\item
+  Jarvis, E. D., Mirarab, S., Aberer, A. J., Li, B., Houde, P., Li, C.,
+  et al. (2014). Whole-genome analyses resolve early branches in the
+  tree of life of modern birds. Science, 346(6215), 1320--1331.
+\item
+  Jukes, T. H., \& Cantor, C. R. (1969). Evolution of Protein Molecules.
+  Mammalian Protein Metabolism (pp. 21--132). Elsevier.
+\item
+  Kingman, J. F. C. (1982). The coalescent. Stochastic Processes and
+  Their Applications, 13(3), 235--248.
+\item
+  Kingman, J. F. C. (1982). On the genealogy of large populations.
+  Journal of Applied Probability, 19(A), 27--43.
+\item
+  Maddison, W. P. (1997). Gene trees in species trees. Systematic
+  Biology, 46(3), 523--536.
+\item
+  Mirarab, S., Bayzid, M. S., Boussau, B., \& Warnow, T. (2014).
+  Statistical binning enables an accurate coalescent-based estimation of
+  the avian tree. Science, 346(6215), 1250463--1250463.
+\item
+  Mirarab, S., \& Warnow, T. (2015). ASTRAL-II: coalescent-based species
+  tree estimation with many hundreds of taxa and thousands of genes.
+  Bioinformatics, 31(12), i44--i52.
+\item
+  Robinson, D. F., \& Foulds, L. R. (1981). Comparison of phylogenetic
+  trees. Mathematical Biosciences, 53(1-2), 131--147.
+\item
+  Roch, S., \& Steel, M. (2014). Likelihood-based tree reconstruction on
+  a concatenation of aligned sequence data sets can be statistically
+  inconsistent. Theoretical Population Biology, 100C, 56--62.
+\item
+  Shen, X.-X., Hittinger, C. T., \& Rokas, A. (2017). Contentious
+  relationships in phylogenomic studies can be driven by a handful of
+  genes. Nature Ecology \& Evolution, 1(5), 1--10.
+\item
+  Stamatakis, A. (2014). RAxML version 8: a tool for phylogenetic
+  analysis and post-analysis of large phylogenies. Bioinformatics,
+  30(9), 1312--1313.
+\item
+  Swofford, D. L. 2002. PAUP\emph{. Phylogenetic Analysis Using
+  Parsimony (}and Other Methods). Version 4. Sinauer Associates,
+  Sunderland, Massachusetts.
+\end{itemize}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}

@@ -1,0 +1,71 @@
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.11 released by Alexandros Stamatakis on June 2017.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 44013 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 15.58%
+
+RAxML rapid bootstrapping and subsequent ML search
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+
+Executing 10 rapid bootstrap inferences and thereafter a thorough ML search 
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 44013
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+raxml -f a -m GTRGAMMA -p 12345 -x 12345 -# 10 -s ../CBD_outfiles/CBD.phy -T 4 -n CBD 
+
+
+
+Time for BS model parameter optimization 232.402646
+Bootstrap[0]: Time 7026.307944 seconds, bootstrap likelihood -411733.726121, best rearrangement setting 13
+Bootstrap[1]: Time 6138.658688 seconds, bootstrap likelihood -409601.960199, best rearrangement setting 13
+Bootstrap[2]: Time 7650.136412 seconds, bootstrap likelihood -410961.135199, best rearrangement setting 12
+Bootstrap[3]: Time 7457.730223 seconds, bootstrap likelihood -406860.390984, best rearrangement setting 15
+Bootstrap[4]: Time 4744.165996 seconds, bootstrap likelihood -409226.038319, best rearrangement setting 10
+Bootstrap[5]: Time 4632.678419 seconds, bootstrap likelihood -407546.823989, best rearrangement setting 10
+Bootstrap[6]: Time 4292.781838 seconds, bootstrap likelihood -410845.222590, best rearrangement setting 6
+Bootstrap[7]: Time 3928.347597 seconds, bootstrap likelihood -410829.486601, best rearrangement setting 14
+Bootstrap[8]: Time 4801.394553 seconds, bootstrap likelihood -411009.618769, best rearrangement setting 5
+Bootstrap[9]: Time 3885.822608 seconds, bootstrap likelihood -409880.423441, best rearrangement setting 7
+
+
+Overall Time for 10 Rapid Bootstraps 54566.203457 seconds
+Average Time per Rapid Bootstrap 5456.620346 seconds
+
+Starting ML Search ...
+
